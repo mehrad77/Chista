@@ -45,7 +45,7 @@ function chronus_customize_register_general_settings( $wp_customize ) {
 
 	// Add Post Layout Settings for archive posts.
 	$wp_customize->add_setting( 'chronus_theme_options[post_layout]', array(
-		'default'           => 'one-column',
+		'default'           => 'two-columns',
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'chronus_sanitize_select',

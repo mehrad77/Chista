@@ -32,13 +32,13 @@ function chronus_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
-		'site_description'					=> false,
+		'site_description'					=> true,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
 		'blog_title'						=> '',
 		'blog_description'					=> '',
-		'post_layout'						=> 'one-column',
+		'post_layout'						=> 'two-columns',
 		'excerpt_length' 					=> 20,
 		'meta_date'							=> true,
 		'meta_author'						=> true,

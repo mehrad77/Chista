@@ -69,7 +69,7 @@ function chronus_customize_register_options( $wp_customize ) {
 
 	// Add Display Tagline Setting.
 	$wp_customize->add_setting( 'chronus_theme_options[site_description]', array(
-		'default'           => false,
+		'default'           => true,
 		'type'           	=> 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_checkbox',
