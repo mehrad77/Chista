@@ -5,13 +5,13 @@
  * Display the latest posts from a selected category in a grid layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 /**
  * Magazine Widget Class
  */
-class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
+class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,11 +20,11 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'wellington-magazine-posts-grid', // ID.
-			esc_html__( 'Magazine (Grid)', 'wellington' ), // Name.
+			'chronus-magazine-posts-grid', // ID.
+			esc_html__( 'Magazine (Grid)', 'chronus' ), // Name.
 			array(
-				'classname' => 'wellington-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'wellington' ),
+				'classname' => 'chronus-magazine-grid-widget',
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'chronus' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -101,7 +101,7 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 	function render( $settings ) {
 
 		// Get cached post ids.
-		$post_ids = wellington_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
+		$post_ids = chronus_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
 
 		// Fetch posts from database.
 		$query_arguments = array(
@@ -118,7 +118,7 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 		if ( $posts_query->have_posts() ) :
 
 			// Limit the number of words for the excerpt.
-			add_filter( 'excerpt_length', 'wellington_magazine_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'chronus_magazine_posts_excerpt_length' );
 
 			// Display Posts.
 			while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
@@ -133,7 +133,7 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 			endwhile;
 
 			// Remove excerpt filter.
-			remove_filter( 'excerpt_length', 'wellington_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'chronus_magazine_posts_excerpt_length' );
 
 		endif;
 
@@ -155,7 +155,7 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 		if ( ! empty( $widget_title ) ) :
 
 			// Link Widget Title to category archive when possible.
-			$widget_title = wellington_magazine_widget_title( $widget_title, $settings['category'] );
+			$widget_title = chronus_magazine_widget_title( $widget_title, $settings['category'] );
 
 			// Display Widget Title.
 			echo $args['before_title'] . $widget_title . $args['after_title'];
@@ -178,7 +178,7 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance['layout'] = esc_attr( $new_instance['layout'] );
 		$instance['number'] = (int) $new_instance['number'];
 
-		wellington_flush_magazine_post_ids();
+		chronus_flush_magazine_post_ids();
 
 		return $instance;
 	}
@@ -195,16 +195,16 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'wellington' ); ?>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'chronus' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $settings['title'] ); ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'wellington' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'chronus' ); ?></label><br/>
 			<?php // Display Category Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'wellington' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'chronus' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category'],
@@ -216,15 +216,15 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'wellington' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'chronus' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>">
-				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'wellington' ); ?></option>
-				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'wellington' ); ?></option>
+				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'chronus' ); ?></option>
+				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'chronus' ); ?></option>
 			</select>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'wellington' ); ?>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'chronus' ); ?>
 				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint( $settings['number'] ); ?>" size="3" />
 			</label>
 		</p>
@@ -236,9 +236,9 @@ class Wellington_Magazine_Posts_Grid_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function wellington_register_magazine_posts_grid_widget() {
+function chronus_register_magazine_posts_grid_widget() {
 
-	register_widget( 'Wellington_Magazine_Posts_Grid_Widget' );
+	register_widget( 'Chronus_Magazine_Posts_Grid_Widget' );
 
 }
-add_action( 'widgets_init', 'wellington_register_magazine_posts_grid_widget' );
+add_action( 'widgets_init', 'chronus_register_magazine_posts_grid_widget' );

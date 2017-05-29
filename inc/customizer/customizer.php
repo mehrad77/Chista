@@ -2,7 +2,7 @@
 /**
  * Implement theme options in the Customizer
  *
- * @package Wellington
+ * @package Chronus
  */
 
 // Load Customizer Helper Functions.
@@ -21,20 +21,20 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade
  *
  * @param object $wp_customize / Customizer Object.
  */
-function wellington_customize_register_options( $wp_customize ) {
+function chronus_customize_register_options( $wp_customize ) {
 
 	// Add Theme Options Panel.
-	$wp_customize->add_panel( 'wellington_options_panel', array(
+	$wp_customize->add_panel( 'chronus_options_panel', array(
 		'priority'       => 180,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => esc_html__( 'Theme Options', 'wellington' ),
-		'description'    => wellington_customize_theme_links(),
+		'title'          => esc_html__( 'Theme Options', 'chronus' ),
+		'description'    => chronus_customize_theme_links(),
 	) );
 
 	// Change default background section.
 	$wp_customize->get_control( 'background_color' )->section   = 'background_image';
-	$wp_customize->get_section( 'background_image' )->title     = esc_html__( 'Background', 'wellington' );
+	$wp_customize->get_section( 'background_image' )->title     = esc_html__( 'Background', 'chronus' );
 
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -43,89 +43,89 @@ function wellington_customize_register_options( $wp_customize ) {
 	// Add selective refresh for site title and description.
 	$wp_customize->selective_refresh->add_partial( 'blogname', array(
 		'selector'        => '.site-title a',
-		'render_callback' => 'wellington_customize_partial_blogname',
+		'render_callback' => 'chronus_customize_partial_blogname',
 	) );
 	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 		'selector'        => '.site-description',
-		'render_callback' => 'wellington_customize_partial_blogdescription',
+		'render_callback' => 'chronus_customize_partial_blogdescription',
 	) );
 
 	// Add Display Site Title Setting.
-	$wp_customize->add_setting( 'wellington_theme_options[site_title]', array(
+	$wp_customize->add_setting( 'chronus_theme_options[site_title]', array(
 		'default'           => true,
 		'type'           	=> 'option',
 		'transport'         => 'postMessage',
-		'sanitize_callback' => 'wellington_sanitize_checkbox',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'wellington_theme_options[site_title]', array(
-		'label'    => esc_html__( 'Display Site Title', 'wellington' ),
+	$wp_customize->add_control( 'chronus_theme_options[site_title]', array(
+		'label'    => esc_html__( 'Display Site Title', 'chronus' ),
 		'section'  => 'title_tagline',
-		'settings' => 'wellington_theme_options[site_title]',
+		'settings' => 'chronus_theme_options[site_title]',
 		'type'     => 'checkbox',
 		'priority' => 10,
 		)
 	);
 
 	// Add Display Tagline Setting.
-	$wp_customize->add_setting( 'wellington_theme_options[site_description]', array(
+	$wp_customize->add_setting( 'chronus_theme_options[site_description]', array(
 		'default'           => false,
 		'type'           	=> 'option',
 		'transport'         => 'postMessage',
-		'sanitize_callback' => 'wellington_sanitize_checkbox',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'wellington_theme_options[site_description]', array(
-		'label'    => esc_html__( 'Display Tagline', 'wellington' ),
+	$wp_customize->add_control( 'chronus_theme_options[site_description]', array(
+		'label'    => esc_html__( 'Display Tagline', 'chronus' ),
 		'section'  => 'title_tagline',
-		'settings' => 'wellington_theme_options[site_description]',
+		'settings' => 'chronus_theme_options[site_description]',
 		'type'     => 'checkbox',
 		'priority' => 11,
 		)
 	);
 
 	// Add Header Image Link.
-	$wp_customize->add_setting( 'wellington_theme_options[custom_header_link]', array(
+	$wp_customize->add_setting( 'chronus_theme_options[custom_header_link]', array(
 		'default'           => '',
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'esc_url',
 		)
 	);
-	$wp_customize->add_control( 'wellington_control_custom_header_link', array(
-		'label'    => esc_html__( 'Header Image Link', 'wellington' ),
+	$wp_customize->add_control( 'chronus_control_custom_header_link', array(
+		'label'    => esc_html__( 'Header Image Link', 'chronus' ),
 		'section'  => 'header_image',
-		'settings' => 'wellington_theme_options[custom_header_link]',
+		'settings' => 'chronus_theme_options[custom_header_link]',
 		'type'     => 'url',
 		'priority' => 10,
 		)
 	);
 
 	// Add Custom Header Hide Checkbox.
-	$wp_customize->add_setting( 'wellington_theme_options[custom_header_hide]', array(
+	$wp_customize->add_setting( 'chronus_theme_options[custom_header_hide]', array(
 		'default'           => false,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
-		'sanitize_callback' => 'wellington_sanitize_checkbox',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
 		)
 	);
-	$wp_customize->add_control( 'wellington_control_custom_header_hide', array(
-		'label'    => esc_html__( 'Hide header image on front page', 'wellington' ),
+	$wp_customize->add_control( 'chronus_control_custom_header_hide', array(
+		'label'    => esc_html__( 'Hide header image on front page', 'chronus' ),
 		'section'  => 'header_image',
-		'settings' => 'wellington_theme_options[custom_header_hide]',
+		'settings' => 'chronus_theme_options[custom_header_hide]',
 		'type'     => 'checkbox',
 		'priority' => 15,
 		)
 	);
 
-} // wellington_customize_register_options()
-add_action( 'customize_register', 'wellington_customize_register_options' );
+} // chronus_customize_register_options()
+add_action( 'customize_register', 'chronus_customize_register_options' );
 
 
 /**
  * Render the site title for the selective refresh partial.
  */
-function wellington_customize_partial_blogname() {
+function chronus_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -133,7 +133,7 @@ function wellington_customize_partial_blogname() {
 /**
  * Render the site tagline for the selective refresh partial.
  */
-function wellington_customize_partial_blogdescription() {
+function chronus_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
@@ -141,53 +141,53 @@ function wellington_customize_partial_blogdescription() {
 /**
  * Embed JS file to make Theme Customizer preview reload changes asynchronously.
  */
-function wellington_customize_preview_js() {
-	wp_enqueue_script( 'wellington-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170515', true );
+function chronus_customize_preview_js() {
+	wp_enqueue_script( 'chronus-customizer-preview', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170515', true );
 }
-add_action( 'customize_preview_init', 'wellington_customize_preview_js' );
+add_action( 'customize_preview_init', 'chronus_customize_preview_js' );
 
 
 /**
  * Embed CSS styles for the theme options in the Customizer
  */
-function wellington_customize_preview_css() {
-	wp_enqueue_style( 'wellington-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
+function chronus_customize_preview_css() {
+	wp_enqueue_style( 'chronus-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20161214' );
 }
-add_action( 'customize_controls_print_styles', 'wellington_customize_preview_css' );
+add_action( 'customize_controls_print_styles', 'chronus_customize_preview_css' );
 
 /**
  * Returns Theme Links
  */
-function wellington_customize_theme_links() {
+function chronus_customize_theme_links() {
 
 	ob_start();
 	?>
 
 		<div class="theme-links">
 
-			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'wellington' ); ?></span>
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'chronus' ); ?></span>
 
 			<p>
-				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/wellington/', 'wellington' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=wellington&utm_content=theme-page" target="_blank">
-					<?php esc_html_e( 'Theme Page', 'wellington' ); ?>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/chronus/', 'chronus' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=chronus&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'chronus' ); ?>
 				</a>
 			</p>
 
 			<p>
-				<a href="http://preview.themezee.com/?demo=wellington&utm_source=customizer&utm_campaign=wellington" target="_blank">
-					<?php esc_html_e( 'Theme Demo', 'wellington' ); ?>
+				<a href="http://preview.themezee.com/?demo=chronus&utm_source=customizer&utm_campaign=chronus" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'chronus' ); ?>
 				</a>
 			</p>
 
 			<p>
-				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/wellington-documentation/', 'wellington' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=wellington&utm_content=documentation" target="_blank">
-					<?php esc_html_e( 'Theme Documentation', 'wellington' ); ?>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/chronus-documentation/', 'chronus' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=chronus&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'chronus' ); ?>
 				</a>
 			</p>
 
 			<p>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/wellington/reviews/?filter=5', 'wellington' ) ); ?>" target="_blank">
-					<?php esc_html_e( 'Rate this theme', 'wellington' ); ?>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chronus/reviews/?filter=5', 'chronus' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'chronus' ); ?>
 				</a>
 			</p>
 

@@ -1,6 +1,6 @@
-=== Wellington ===
+=== Chronus ===
 Author URI: https://themezee.com
-Theme URI: https://themezee.com/themes/wellington/
+Theme URI: https://themezee.com/themes/chronus/
 Contributors: themezee
 Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.4
@@ -8,70 +8,31 @@ Tested up to: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Wellington is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
+Chronus is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
 
 == Description ==
 
-Wellington is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors. The theme includes two different post layouts, a featured post slider and thoughtful theme settings in the Customizer.
+Chronus is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors. The theme includes two different post layouts, a featured post slider and thoughtful theme settings in the Customizer.
 
-For more information about Wellington please go to https://themezee.com/themes/wellington/
+For more information about Chronus please go to https://themezee.com/themes/chronus/
 
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Wellington in the search form and press the 'Enter' key on your keyboard.
+2. Type in Chronus in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://themezee.com/docs/wellington-documentation/ for a guide on how to customize this theme.
+4. Go to https://themezee.com/docs/chronus-documentation/ for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
-
-= 1.0.8 =
-* fixed alignment of site logo and site title when used together
-* fixed small live preview issue in Customizer for site title and tagline options
-* use localized theme name and description on theme info page
-
-= 1.0.7 =
-* added transient caching to post slider
-* added post hyperlinks to slider images in post slider
-* added own template function to display slider image for better child theme support
-* fixed slider images getting stretched when too small images are uploaded
-* improved Right-to-Left language stylesheets
-
-= 1.0.6 =
-* fixed flexbox layout issues appearing with the latest Safari 10.1 version
-* fixed horizontal scrolling issue on mobile devices when elements are hidden in theme options
-
-= 1.0.5 =
-* added own template function to display blog title and description
-* added extra template files for Magazine Widgets
-* improved Right-to-Left Language Stylesheets
-
-= 1.0.4 =
-* fixed smaller issues for wordpress.org theme review
-
-= 1.0.3 =
-* updated post slider
-* improved post meta and blog layout settings
-
-= 1.0.2 =
-* added template files for Magazine widgets to improve child theme compatibility
-* added transient caching for Magazine widgets to increase performance
-* added pluggable template functions for Magazine widgets
-* improved implementation of post meta settings for instant live preview in Customizer
-
-= 1.0.1 =
-* added Magazine Homepage widgets to blog index
-* added fullwidth page template for blog posts
-* added centered page template for posts and static pages
 
 = 1.0 =
 Initial Release
 
 == Copyright ==
 
-Wellington WordPress Theme, Copyright 2017 ThemeZee.com
-Wellington is distributed under the terms of the GNU GPL
+Chronus WordPress Theme, Copyright 2017 ThemeZee.com
+Chronus is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -85,7 +46,7 @@ GNU General Public License for more details.
 
 == Ressources ==
 
-Wellington bundles the following third-party resources:
+Chronus bundles the following third-party resources:
 
 1. Genericons Icon Font - http://genericons.com
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)

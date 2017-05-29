@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 // Check if Sidebar has widgets.

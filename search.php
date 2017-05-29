@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Wellington
+ * @package Chronus
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'wellington' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'chronus' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				<p><?php get_search_form(); ?></p>
 
 			</header><!-- .page-header -->
@@ -40,7 +40,7 @@ get_header(); ?>
 
 			</div>
 
-			<?php wellington_pagination(); ?>
+			<?php chronus_pagination(); ?>
 
 		<?php
 		else :

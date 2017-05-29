@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 /**
@@ -12,10 +12,10 @@
  *
  * @return array
  */
-function wellington_theme_options() {
+function chronus_theme_options() {
 
 	// Merge theme options array from database with default options array.
-	$theme_options = wp_parse_args( get_option( 'wellington_theme_options', array() ), wellington_default_options() );
+	$theme_options = wp_parse_args( get_option( 'chronus_theme_options', array() ), chronus_default_options() );
 
 	// Return theme options.
 	return $theme_options;
@@ -28,7 +28,7 @@ function wellington_theme_options() {
  *
  * @return array
  */
-function wellington_default_options() {
+function chronus_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,

@@ -7,16 +7,16 @@
  *
  * The template for displaying the slideshow can be found under /template-parts/post-slider.php
  *
- * @package Wellington
+ * @package Chronus
  */
 
 /**
  * Enqueue slider scripts and styles.
  */
-function wellington_slider_scripts() {
+function chronus_slider_scripts() {
 
 	// Get theme options from database.
-	$theme_options = wellington_theme_options();
+	$theme_options = chronus_theme_options();
 
 	// Register and enqueue FlexSlider JS and CSS if necessary.
 	if ( true === $theme_options['slider_active'] && is_front_page() ) :
@@ -25,15 +25,15 @@ function wellington_slider_scripts() {
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider setup.
-		wp_enqueue_script( 'wellington-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
+		wp_enqueue_script( 'chronus-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery-flexslider' ), '20170421' );
 
 		// Register and enqueue slider CSS.
-		wp_enqueue_style( 'wellington-slider', get_template_directory_uri() . '/css/flexslider.css', array(), '20170421' );
+		wp_enqueue_style( 'chronus-slider', get_template_directory_uri() . '/css/flexslider.css', array(), '20170421' );
 
 	endif;
 
 }
-add_action( 'wp_enqueue_scripts', 'wellington_slider_scripts' );
+add_action( 'wp_enqueue_scripts', 'chronus_slider_scripts' );
 
 
 /**
@@ -42,19 +42,19 @@ add_action( 'wp_enqueue_scripts', 'wellington_slider_scripts' );
  * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function wellington_slider_excerpt_length( $length ) {
+function chronus_slider_excerpt_length( $length ) {
 	return 15;
 }
 
 
-if ( ! function_exists( 'wellington_slider_image' ) ) :
+if ( ! function_exists( 'chronus_slider_image' ) ) :
 	/**
 	 * Displays the featured image of the post as slider image
 	 *
 	 * @param string $size Post thumbnail size.
 	 * @param array  $attr Post thumbnail attributes.
 	 */
-	function wellington_slider_image( $size = 'post-thumbnail', $attr = array() ) {
+	function chronus_slider_image( $size = 'post-thumbnail', $attr = array() ) {
 
 		// Display Post Thumbnail.
 		if ( has_post_thumbnail() ) : ?>
@@ -78,14 +78,14 @@ if ( ! function_exists( 'wellington_slider_image' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_slider_meta' ) ) :
+if ( ! function_exists( 'chronus_slider_meta' ) ) :
 	/**
 	 * Displays the date and author on slider posts
 	 */
-	function wellington_slider_meta() {
+	function chronus_slider_meta() {
 
-		$postmeta = wellington_meta_date();
-		$postmeta .= wellington_meta_author();
+		$postmeta = chronus_meta_date();
+		$postmeta .= chronus_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 
@@ -98,10 +98,10 @@ endif;
  *
  * Passes parameters from theme options to the javascript files (js/slider.js)
  */
-function wellington_slider_options() {
+function chronus_slider_options() {
 
 	// Get theme options from database.
-	$theme_options = wellington_theme_options();
+	$theme_options = chronus_theme_options();
 
 	// Set parameters array.
 	$params = array();
@@ -113,19 +113,19 @@ function wellington_slider_options() {
 	$params['speed'] = absint( $theme_options['slider_speed'] );
 
 	// Passing parameters to Flexslider.
-	wp_localize_script( 'wellington-slider', 'wellington_slider_params', $params );
+	wp_localize_script( 'chronus-slider', 'chronus_slider_params', $params );
 
 }
-add_action( 'wp_enqueue_scripts', 'wellington_slider_options' );
+add_action( 'wp_enqueue_scripts', 'chronus_slider_options' );
 
 
 /**
  * Display Post Slider
  */
-function wellington_slider() {
+function chronus_slider() {
 
 	// Get theme options from database.
-	$theme_options = wellington_theme_options();
+	$theme_options = chronus_theme_options();
 
 	// Display post slider only if activated.
 	if ( true === $theme_options['slider_active'] && is_front_page() ) :

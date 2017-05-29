@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 /*
@@ -27,7 +27,7 @@ if ( post_password_required() ) {
 		<header class="comments-header">
 
 			<h2 class="comments-title">
-				<?php comments_number( '', esc_html__( 'One comment', 'wellington' ), esc_html__( '% comments', 'wellington' ) );?>
+				<?php comments_number( '', esc_html__( 'One comment', 'chronus' ), esc_html__( '% comments', 'chronus' ) );?>
 			</h2>
 
 		</header><!-- .comment-header -->
@@ -52,11 +52,11 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-	<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wellington' ); ?></p>
+	<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'chronus' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form( array(
-		'title_reply' => '<span>' . esc_html__( 'Leave a Reply', 'wellington' ) . '</span>',
+		'title_reply' => '<span>' . esc_html__( 'Leave a Reply', 'chronus' ) . '</span>',
 		'comment_notes_after' => '',
 		)
 	); ?>

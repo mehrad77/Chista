@@ -4,11 +4,11 @@
  *
  * Custom Functions and Template tags used in the Magazine widgets and Magazine templates
  *
- * @package Wellington
+ * @package Chronus
  */
 
 
-if ( ! function_exists( 'wellington_magazine_widget_title' ) ) :
+if ( ! function_exists( 'chronus_magazine_widget_title' ) ) :
 	/**
 	 * Displays the widget title with link to the category archive
 	 *
@@ -16,13 +16,13 @@ if ( ! function_exists( 'wellington_magazine_widget_title' ) ) :
 	 * @param int    $category_id  Category ID.
 	 * @return String Widget Title
 	 */
-	function wellington_magazine_widget_title( $widget_title, $category_id ) {
+	function chronus_magazine_widget_title( $widget_title, $category_id ) {
 
 		// Check if widget shows a specific category.
 		if ( $category_id > 0 ) {
 
 			// Set URL and Title for Category.
-			$category_title = sprintf( esc_html__( 'View all posts from category %s', 'wellington' ), get_cat_name( $category_id ) );
+			$category_title = sprintf( esc_html__( 'View all posts from category %s', 'chronus' ), get_cat_name( $category_id ) );
 			$category_url = get_category_link( $category_id );
 
 			// Set Widget Title with link to category archive.
@@ -34,26 +34,26 @@ if ( ! function_exists( 'wellington_magazine_widget_title' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_magazine_entry_meta' ) ) :
+if ( ! function_exists( 'chronus_magazine_entry_meta' ) ) :
 	/**
 	 * Displays the date and author of magazine posts
 	 */
-	function wellington_magazine_entry_meta() {
+	function chronus_magazine_entry_meta() {
 
-		$postmeta = wellington_meta_date();
-		$postmeta .= wellington_meta_author();
+		$postmeta = chronus_meta_date();
+		$postmeta .= chronus_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
 
-if ( ! function_exists( 'wellington_magazine_entry_date' ) ) :
+if ( ! function_exists( 'chronus_magazine_entry_date' ) ) :
 	/**
 	 * Displays the date of magazine posts
 	 */
-	function wellington_magazine_entry_date() {
-		echo '<div class="entry-meta">' . wellington_meta_date() . '</div>';
+	function chronus_magazine_entry_date() {
+		echo '<div class="entry-meta">' . chronus_meta_date() . '</div>';
 	}
 endif;
 
@@ -64,7 +64,7 @@ endif;
  * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function wellington_magazine_posts_excerpt_length( $length ) {
+function chronus_magazine_posts_excerpt_length( $length ) {
 	return 12;
 }
 
@@ -77,10 +77,10 @@ function wellington_magazine_posts_excerpt_length( $length ) {
  * @param int    $number_of_posts Number of posts.
  * @return array Post IDs
  */
-function wellington_get_magazine_post_ids( $cache_id, $category, $number_of_posts ) {
+function chronus_get_magazine_post_ids( $cache_id, $category, $number_of_posts ) {
 
 	$cache_id = sanitize_key( $cache_id );
-	$post_ids = get_transient( 'wellington_magazine_post_ids' );
+	$post_ids = get_transient( 'chronus_magazine_post_ids' );
 
 	if ( ! isset( $post_ids[ $cache_id ] ) || is_customize_preview() ) {
 
@@ -98,10 +98,10 @@ function wellington_get_magazine_post_ids( $cache_id, $category, $number_of_post
 		$post_ids[ $cache_id ] = $query->posts;
 
 		// Set Transient.
-		set_transient( 'wellington_magazine_post_ids', $post_ids );
+		set_transient( 'chronus_magazine_post_ids', $post_ids );
 	}
 
-	return apply_filters( 'wellington_magazine_post_ids', $post_ids[ $cache_id ], $cache_id );
+	return apply_filters( 'chronus_magazine_post_ids', $post_ids[ $cache_id ], $cache_id );
 }
 
 
@@ -110,10 +110,10 @@ function wellington_get_magazine_post_ids( $cache_id, $category, $number_of_post
  *
  * @return void
  */
-function wellington_flush_magazine_post_ids() {
-	delete_transient( 'wellington_magazine_post_ids' );
+function chronus_flush_magazine_post_ids() {
+	delete_transient( 'chronus_magazine_post_ids' );
 }
-add_action( 'save_post', 'wellington_flush_magazine_post_ids' );
-add_action( 'deleted_post', 'wellington_flush_magazine_post_ids' );
-add_action( 'customize_save_after', 'wellington_flush_magazine_post_ids' );
-add_action( 'switch_theme', 'wellington_flush_magazine_post_ids' );
+add_action( 'save_post', 'chronus_flush_magazine_post_ids' );
+add_action( 'deleted_post', 'chronus_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'chronus_flush_magazine_post_ids' );
+add_action( 'switch_theme', 'chronus_flush_magazine_post_ids' );

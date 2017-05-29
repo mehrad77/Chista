@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Wellington
+ * @package Chronus
  */
 
 ?><!DOCTYPE html>
@@ -21,11 +21,11 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="header-top" class="header-bar-wrap"><?php do_action( 'wellington_header_bar' ); ?></div>
+	<div id="header-top" class="header-bar-wrap"><?php do_action( 'chronus_header_bar' ); ?></div>
 
 	<div id="page" class="hfeed site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wellington' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
@@ -33,9 +33,9 @@
 
 				<div id="logo" class="site-branding clearfix">
 
-					<?php wellington_site_logo(); ?>
-					<?php wellington_site_title(); ?>
-					<?php wellington_site_description(); ?>
+					<?php chronus_site_logo(); ?>
+					<?php chronus_site_title(); ?>
+					<?php chronus_site_description(); ?>
 
 				</div><!-- .site-branding -->
 
@@ -62,7 +62,7 @@
 							'container' => false,
 							'menu_class' => 'main-navigation-menu',
 							'echo' => true,
-							'fallback_cb' => 'wellington_default_menu',
+							'fallback_cb' => 'chronus_default_menu',
 							)
 						);
 					?>
@@ -72,10 +72,10 @@
 
 		</header><!-- #masthead -->
 
-		<?php wellington_header_image(); ?>
+		<?php chronus_header_image(); ?>
 
-		<?php wellington_slider(); ?>
+		<?php chronus_slider(); ?>
 
-		<?php wellington_breadcrumbs(); ?>
+		<?php chronus_breadcrumbs(); ?>
 
 		<div id="content" class="site-content container clearfix">

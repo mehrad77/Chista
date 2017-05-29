@@ -5,7 +5,7 @@
  *
  * Description: A custom template for displaying a fullwidth layout with no sidebar.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 get_header(); ?>

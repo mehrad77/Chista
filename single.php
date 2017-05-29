@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			wellington_related_posts();
+			chronus_related_posts();
 
 			comments_template();
 

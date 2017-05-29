@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package Wellington
+ * @package Chronus
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 		</div><!-- .entry-content -->
 
-		<div class="read-more"><?php wellington_more_link(); ?></div>
+		<div class="read-more"><?php chronus_more_link(); ?></div>
 
 	</article>
 

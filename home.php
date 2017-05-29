@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Wellington
+ * @package Chronus
  */
 
 get_header(); ?>
@@ -27,7 +27,7 @@ get_header(); ?>
 
 		if ( have_posts() ) :
 
-			wellington_blog_title(); ?>
+			chronus_blog_title(); ?>
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 
@@ -39,7 +39,7 @@ get_header(); ?>
 
 			</div>
 
-			<?php wellington_pagination(); ?>
+			<?php chronus_pagination(); ?>
 
 		<?php
 		else :

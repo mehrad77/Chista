@@ -5,14 +5,14 @@
  * This file contains several template functions which are used to print out specific HTML markup
  * in the theme. You can override these template functions within your child theme.
  *
- * @package Wellington
+ * @package Chronus
  */
 
-if ( ! function_exists( 'wellington_site_logo' ) ) :
+if ( ! function_exists( 'chronus_site_logo' ) ) :
 	/**
 	 * Displays the site logo in the header area
 	 */
-	function wellington_site_logo() {
+	function chronus_site_logo() {
 
 		if ( function_exists( 'the_custom_logo' ) ) {
 
@@ -23,11 +23,11 @@ if ( ! function_exists( 'wellington_site_logo' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_site_title' ) ) :
+if ( ! function_exists( 'chronus_site_title' ) ) :
 	/**
 	 * Displays the site title in the header area
 	 */
-	function wellington_site_title() {
+	function chronus_site_title() {
 
 		if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
 
@@ -43,11 +43,11 @@ if ( ! function_exists( 'wellington_site_title' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_site_description' ) ) :
+if ( ! function_exists( 'chronus_site_description' ) ) :
 	/**
 	 * Displays the site description in the header area
 	 */
-	function wellington_site_description() {
+	function chronus_site_description() {
 
 		$description = get_bloginfo( 'description', 'display' ); /* WPCS: xss ok. */
 
@@ -61,14 +61,14 @@ if ( ! function_exists( 'wellington_site_description' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_header_image' ) ) :
+if ( ! function_exists( 'chronus_header_image' ) ) :
 	/**
 	 * Displays the custom header image below the navigation menu
 	 */
-	function wellington_header_image() {
+	function chronus_header_image() {
 
 		// Get theme options from database.
-		$theme_options = wellington_theme_options();
+		$theme_options = chronus_theme_options();
 
 		// Display featured image as header image on static pages.
 		if ( get_header_image() ) :
@@ -102,14 +102,14 @@ if ( ! function_exists( 'wellington_header_image' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_blog_title' ) ) :
+if ( ! function_exists( 'chronus_blog_title' ) ) :
 	/**
 	 * Displays the archive title and archive description for the blog index
 	 */
-	function wellington_blog_title() {
+	function chronus_blog_title() {
 
 		// Get theme options from database.
-		$theme_options = wellington_theme_options();
+		$theme_options = chronus_theme_options();
 
 		// Display Blog Title.
 		if ( '' !== $theme_options['blog_title'] ) : ?>
@@ -132,14 +132,14 @@ if ( ! function_exists( 'wellington_blog_title' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_post_image' ) ) :
+if ( ! function_exists( 'chronus_post_image' ) ) :
 	/**
 	 * Displays the featured image on archive posts.
 	 *
 	 * @param string $size Post thumbnail size.
 	 * @param array  $attr Post thumbnail attributes.
 	 */
-	function wellington_post_image( $size = 'post-thumbnail', $attr = array() ) {
+	function chronus_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 		// Display Post Thumbnail.
 		if ( has_post_thumbnail() ) : ?>
@@ -154,14 +154,14 @@ if ( ! function_exists( 'wellington_post_image' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_post_image_single' ) ) :
+if ( ! function_exists( 'chronus_post_image_single' ) ) :
 	/**
 	 * Displays the featured image on single posts
 	 */
-	function wellington_post_image_single() {
+	function chronus_post_image_single() {
 
 		// Get theme options from database.
-		$theme_options = wellington_theme_options();
+		$theme_options = chronus_theme_options();
 
 		// Display Post Thumbnail if activated.
 		if ( true === $theme_options['post_image_single'] ) :
@@ -173,25 +173,25 @@ if ( ! function_exists( 'wellington_post_image_single' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_entry_meta' ) ) :
+if ( ! function_exists( 'chronus_entry_meta' ) ) :
 	/**
 	 * Displays the date, author and categories of a post
 	 */
-	function wellington_entry_meta() {
+	function chronus_entry_meta() {
 
-		$postmeta = wellington_meta_date();
-		$postmeta .= wellington_meta_author();
+		$postmeta = chronus_meta_date();
+		$postmeta .= chronus_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
 
-if ( ! function_exists( 'wellington_meta_date' ) ) :
+if ( ! function_exists( 'chronus_meta_date' ) ) :
 	/**
 	 * Displays the post date
 	 */
-	function wellington_meta_date() {
+	function chronus_meta_date() {
 
 		$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 			esc_url( get_permalink() ),
@@ -205,15 +205,15 @@ if ( ! function_exists( 'wellington_meta_date' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_meta_author' ) ) :
+if ( ! function_exists( 'chronus_meta_author' ) ) :
 	/**
 	 * Displays the post author
 	 */
-	function wellington_meta_author() {
+	function chronus_meta_author() {
 
 		$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'wellington' ), get_the_author() ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'chronus' ), get_the_author() ) ),
 			esc_html( get_the_author() )
 		);
 
@@ -222,11 +222,11 @@ if ( ! function_exists( 'wellington_meta_author' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_entry_categories' ) ) :
+if ( ! function_exists( 'chronus_entry_categories' ) ) :
 	/**
 	 * Displays the category of posts
 	 */
-	function wellington_entry_categories() {
+	function chronus_entry_categories() {
 		?>
 
 		<div class="entry-categories clearfix">
@@ -240,11 +240,11 @@ if ( ! function_exists( 'wellington_entry_categories' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_entry_tags' ) ) :
+if ( ! function_exists( 'chronus_entry_tags' ) ) :
 	/**
 	 * Displays the post tags on single post view
 	 */
-	function wellington_entry_tags() {
+	function chronus_entry_tags() {
 
 		// Get tags.
 		$tag_list = get_the_tag_list( '', '' );
@@ -264,34 +264,34 @@ if ( ! function_exists( 'wellington_entry_tags' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_more_link' ) ) :
+if ( ! function_exists( 'chronus_more_link' ) ) :
 	/**
 	 * Displays the more link on posts
 	 */
-	function wellington_more_link() {
+	function chronus_more_link() {
 		?>
 
-		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'wellington' ); ?></a>
+		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'chronus' ); ?></a>
 
 		<?php
 	}
 endif;
 
 
-if ( ! function_exists( 'wellington_post_navigation' ) ) :
+if ( ! function_exists( 'chronus_post_navigation' ) ) :
 	/**
 	 * Displays Single Post Navigation
 	 */
-	function wellington_post_navigation() {
+	function chronus_post_navigation() {
 
 		// Get theme options from database.
-		$theme_options = wellington_theme_options();
+		$theme_options = chronus_theme_options();
 
 		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
-				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'wellington' ) . '</span>%title',
-				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'wellington' ) . '</span>%title',
+				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'chronus' ) . '</span>%title',
+				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'chronus' ) . '</span>%title',
 			) );
 
 		}
@@ -299,11 +299,11 @@ if ( ! function_exists( 'wellington_post_navigation' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_breadcrumbs' ) ) :
+if ( ! function_exists( 'chronus_breadcrumbs' ) ) :
 	/**
 	 * Displays ThemeZee Breadcrumbs plugin
 	 */
-	function wellington_breadcrumbs() {
+	function chronus_breadcrumbs() {
 
 		if ( function_exists( 'themezee_breadcrumbs' ) ) {
 
@@ -317,11 +317,11 @@ if ( ! function_exists( 'wellington_breadcrumbs' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_related_posts' ) ) :
+if ( ! function_exists( 'chronus_related_posts' ) ) :
 	/**
 	 * Displays ThemeZee Related Posts plugin
 	 */
-	function wellington_related_posts() {
+	function chronus_related_posts() {
 
 		if ( function_exists( 'themezee_related_posts' ) ) {
 
@@ -336,16 +336,16 @@ if ( ! function_exists( 'wellington_related_posts' ) ) :
 endif;
 
 
-if ( ! function_exists( 'wellington_pagination' ) ) :
+if ( ! function_exists( 'chronus_pagination' ) ) :
 	/**
 	 * Displays pagination on archive pages
 	 */
-	function wellington_pagination() {
+	function chronus_pagination() {
 
 		the_posts_pagination( array(
 			'mid_size'  => 2,
-			'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'wellington' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'wellington' ) . '</span>&raquo;',
+			'prev_text' => '&laquo<span class="screen-reader-text">' . esc_html_x( 'Previous Posts', 'pagination', 'chronus' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Posts', 'pagination', 'chronus' ) . '</span>&raquo;',
 		) );
 
 	}
@@ -355,16 +355,16 @@ endif;
 /**
  * Displays credit link on footer line
  */
-function wellington_footer_text() {
+function chronus_footer_text() {
 	?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'wellington' ),
-			'<a href="' . esc_url( __( 'http://wordpress.org', 'wellington' ) ) . '" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/wellington/" title="Wellington WordPress Theme">Wellington</a>'
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'chronus' ),
+			'<a href="' . esc_url( __( 'http://wordpress.org', 'chronus' ) ) . '" title="WordPress">WordPress</a>',
+			'<a href="https://themezee.com/themes/chronus/" title="Chronus WordPress Theme">Chronus</a>'
 		); ?>
 	</span>
 
 	<?php
 }
-add_action( 'wellington_footer_text', 'wellington_footer_text' );
+add_action( 'chronus_footer_text', 'chronus_footer_text' );

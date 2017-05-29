@@ -5,7 +5,7 @@
  * Used to determine whether an option setting is displayed or not.
  * Called via the active_callback parameter of the add_control() function
  *
- * @package Wellington
+ * @package Chronus
  */
 
 /**
@@ -14,10 +14,10 @@
  * @param object $control / Instance of the Customizer Control.
  * @return bool
  */
-function wellington_control_post_content_callback( $control ) {
+function chronus_control_post_content_callback( $control ) {
 
 	// Check if excerpt mode is selected.
-	if ( 'excerpt' === $control->manager->get_setting( 'wellington_theme_options[post_content]' )->value() ) :
+	if ( 'excerpt' === $control->manager->get_setting( 'chronus_theme_options[post_content]' )->value() ) :
 		return true;
 	else :
 		return false;
@@ -32,10 +32,10 @@ function wellington_control_post_content_callback( $control ) {
  * @param object $control / Instance of the Customizer Control.
  * @return bool
  */
-function wellington_slider_activated_callback( $control ) {
+function chronus_slider_activated_callback( $control ) {
 
 	// Check if Slider is turned on.
-	if ( true === $control->manager->get_setting( 'wellington_theme_options[slider_active]' )->value() ) :
+	if ( true === $control->manager->get_setting( 'chronus_theme_options[slider_active]' )->value() ) :
 		return true;
 	else :
 		return false;

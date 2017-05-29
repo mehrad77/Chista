@@ -3,44 +3,44 @@
  *
  * Adjusts styling for theme option controls in the Customizer
  *
- * @package Wellington
+ * @package Chronus
  */
 
 .customize-control-checkbox {
 	margin-bottom: 4px;
 }
 
-#customize-control-wellington_theme_options-site_description {
+#customize-control-chronus_theme_options-site_description {
 	margin-bottom: 16px;
 }
 
-#customize-control-wellington_theme_options-blog_title,
-#customize-control-wellington_theme_options-blog_description,
-#customize-control-wellington_theme_options-excerpt_length,
-#customize-control-wellington_theme_options-postmeta_headline,
-#customize-control-wellington_theme_options-single_post_headline,
-#customize-control-wellington_theme_options-slider_category,
-#customize-control-wellington_theme_options-slider_limit,
-#customize-control-wellington_theme_options-slider_animation {
+#customize-control-chronus_theme_options-blog_title,
+#customize-control-chronus_theme_options-blog_description,
+#customize-control-chronus_theme_options-excerpt_length,
+#customize-control-chronus_theme_options-postmeta_headline,
+#customize-control-chronus_theme_options-single_post_headline,
+#customize-control-chronus_theme_options-slider_category,
+#customize-control-chronus_theme_options-slider_limit,
+#customize-control-chronus_theme_options-slider_animation {
 	margin-top: 16px;
 }
 
-#customize-control-wellington_theme_options-postmeta_headline,
-#customize-control-wellington_theme_options-single_post_headline,
-#customize-control-wellington_theme_options-slider_activate {
+#customize-control-chronus_theme_options-postmeta_headline,
+#customize-control-chronus_theme_options-single_post_headline,
+#customize-control-chronus_theme_options-slider_activate {
 	margin-bottom: 0;
 }
 
-#customize-control-wellington_theme_options-pro_version div {
+#customize-control-chronus_theme_options-pro_version div {
 	margin: 4px 0 16px;
 }
 
-#customize-theme-controls [id$=accordion-panel-wellington_options_panel] .customize-info .customize-help-toggle {
+#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle {
 	top: 24px;
 	right: 4px;
 }
 
-#customize-theme-controls [id$=accordion-panel-wellington_options_panel] .customize-info .customize-help-toggle::before {
+#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle::before {
 	top: 0;
 	left: 0;
 	padding: 0;
@@ -49,14 +49,14 @@
 	font-size: 28px;
 }
 
-#customize-theme-controls [id$=accordion-panel-wellington_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
+#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
 	content: "\f335";
 }
 
-#customize-theme-controls [id$=accordion-panel-wellington_options_panel] .customize-info .customize-help-toggle:hover::before {
+#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle:hover::before {
 	color: #72777c;
 }
 
-#customize-theme-controls [id$=accordion-panel-wellington_options_panel] .customize-info .customize-help-toggle:focus::before {
+#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle:focus::before {
 	box-shadow: none;
 }

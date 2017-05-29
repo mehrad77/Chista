@@ -4,14 +4,14 @@
  *
  * Queries posts by selected slider category and displays slideshow
  *
- * @package Wellington
+ * @package Chronus
  */
 
 // Get Theme Options from Database.
-$theme_options = wellington_theme_options();
+$theme_options = chronus_theme_options();
 
 // Get cached post ids.
-$post_ids = wellington_get_magazine_post_ids( 'post-slider', $theme_options['slider_category'], $theme_options['slider_limit'] );
+$post_ids = chronus_get_magazine_post_ids( 'post-slider', $theme_options['slider_category'], $theme_options['slider_limit'] );
 
 // Fetch posts from database.
 $query_arguments = array(
@@ -25,7 +25,7 @@ $slider_query = new WP_Query( $query_arguments );
 if ( $slider_query->have_posts() ) :
 
 	// Limit the number of words in slideshow post excerpts.
-	add_filter( 'excerpt_length', 'wellington_slider_excerpt_length' );
+	add_filter( 'excerpt_length', 'chronus_slider_excerpt_length' );
 
 ?>
 
@@ -56,7 +56,7 @@ if ( $slider_query->have_posts() ) :
 <?php
 
 	// Remove excerpt filter.
-	remove_filter( 'excerpt_length', 'wellington_slider_excerpt_length' );
+	remove_filter( 'excerpt_length', 'chronus_slider_excerpt_length' );
 
 endif;
 

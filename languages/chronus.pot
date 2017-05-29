@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Wellington\n"
+"Project-Id-Version: Chronus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2017-03-28 11:38+0200\n"
 "PO-Revision-Date: 2016-09-16 12:49+0100\n"
@@ -122,7 +122,7 @@ msgid "Theme Links"
 msgstr ""
 
 #: inc/customizer/customizer.php:171 inc/theme-info.php:47
-msgid "https://themezee.com/themes/wellington/"
+msgid "https://themezee.com/themes/chronus/"
 msgstr ""
 
 #: inc/customizer/customizer.php:172 inc/theme-info.php:47
@@ -135,7 +135,7 @@ msgstr ""
 
 #: inc/customizer/customizer.php:183 inc/theme-info.php:49
 #: inc/theme-info.php:70
-msgid "https://themezee.com/docs/wellington-documentation/"
+msgid "https://themezee.com/docs/chronus-documentation/"
 msgstr ""
 
 #: inc/customizer/customizer.php:184 inc/theme-info.php:49
@@ -145,7 +145,7 @@ msgstr ""
 
 #: inc/customizer/customizer.php:189 inc/theme-info.php:50
 #: inc/theme-info.php:152
-msgid "https://wordpress.org/support/theme/wellington/reviews/?filter=5"
+msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
 msgstr ""
 
 #: inc/customizer/customizer.php:190 inc/theme-info.php:50
@@ -171,7 +171,7 @@ msgid ""
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:106 inc/theme-info.php:116
-msgid "https://themezee.com/addons/wellington-pro/"
+msgid "https://themezee.com/addons/chronus-pro/"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:107 inc/theme-info.php:117
@@ -402,7 +402,7 @@ msgid "https://themezee.com/"
 msgstr ""
 
 #: inc/theme-info.php:152
-msgid "Review Wellington"
+msgid "Review Chronus"
 msgstr ""
 
 #: inc/theme-info.php:152

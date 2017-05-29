@@ -2,20 +2,20 @@
 /**
  * The template for displaying posts in the Magazine Sidebar widget
  *
- * @package Wellington
+ * @package Chronus
  */
 
 // Get widget settings.
-$post_excerpt = get_query_var( 'wellington_post_excerpt', false );
+$post_excerpt = get_query_var( 'chronus_post_excerpt', false );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php wellington_post_image(); ?>
+	<?php chronus_post_image(); ?>
 
 	<header class="entry-header">
 
-		<?php wellington_magazine_entry_meta(); ?>
+		<?php chronus_magazine_entry_meta(); ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -27,7 +27,7 @@ $post_excerpt = get_query_var( 'wellington_post_excerpt', false );
 		<div class="entry-content clearfix">
 
 			<?php the_excerpt(); ?>
-			<?php wellington_more_link(); ?>
+			<?php chronus_more_link(); ?>
 
 		</div><!-- .entry-content -->
 

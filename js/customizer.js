@@ -3,7 +3,7 @@
  *
  * Reloads changes on Theme Customizer Preview asynchronously for better usability
  *
- * @package Wellington
+ * @package Chronus
  */
 
 ( function( $ ) {
@@ -23,7 +23,7 @@
 	} );
 
 	// Site Title checkbox.
-	wp.customize( 'wellington_theme_options[site_title]', function( value ) {
+	wp.customize( 'chronus_theme_options[site_title]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-title' );
@@ -34,7 +34,7 @@
 	} );
 
 	// Site Description checkbox.
-	wp.customize( 'wellington_theme_options[site_description]', function( value ) {
+	wp.customize( 'chronus_theme_options[site_description]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-description' );
@@ -45,7 +45,7 @@
 	} );
 
 	// Post Date checkbox.
-	wp.customize( 'wellington_theme_options[meta_date]', function( value ) {
+	wp.customize( 'chronus_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'date-hidden' );
@@ -56,7 +56,7 @@
 	} );
 
 	// Post Author checkbox.
-	wp.customize( 'wellington_theme_options[meta_author]', function( value ) {
+	wp.customize( 'chronus_theme_options[meta_author]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'author-hidden' );
@@ -67,7 +67,7 @@
 	} );
 
 	// Post Category checkbox.
-	wp.customize( 'wellington_theme_options[meta_category]', function( value ) {
+	wp.customize( 'chronus_theme_options[meta_category]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.type-post .entry-footer .entry-categories' );
@@ -78,7 +78,7 @@
 	} );
 
 	// Post Tags checkbox.
-	wp.customize( 'wellington_theme_options[meta_tags]', function( value ) {
+	wp.customize( 'chronus_theme_options[meta_tags]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.type-post .entry-footer .entry-tags' );
@@ -89,7 +89,7 @@
 	} );
 
 	// Post Navigation checkbox.
-	wp.customize( 'wellington_theme_options[post_navigation]', function( value ) {
+	wp.customize( 'chronus_theme_options[post_navigation]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.type-post .entry-footer .post-navigation' );

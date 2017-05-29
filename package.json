@@ -1,5 +1,5 @@
 {
-  "name": "wellington",
+  "name": "chronus",
   "version": "1.0.0",
   "description": "WordPress Theme",
   "main": "gulpfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThemeZee/wellington.git"
+    "url": "git+https://github.com/ThemeZee/chronus.git"
   },
   "author": "Thomas Weichselbaumer <contact@themezee.com> (https://themezee.com)",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/ThemeZee/wellington/issues"
+    "url": "https://github.com/ThemeZee/chronus/issues"
   },
-  "homepage": "https://github.com/ThemeZee/wellington#readme",
+  "homepage": "https://github.com/ThemeZee/chronus#readme",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "gulp": "^3.9.1",

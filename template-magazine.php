@@ -4,7 +4,7 @@
  *
  * Description: A custom page template for displaying the magazine homepage widgets.
  *
- * @package Wellington
+ * @package Chronus
  */
 
 get_header(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 			if ( current_user_can( 'edit_theme_options' ) ) : ?>
 
 				<p class="empty-widget-area">
-					<?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine Posts widgets to set up the theme like the demo website.', 'wellington' ); ?>
+					<?php esc_html_e( 'Please go to Appearance &#8594; Widgets and add at least one widget to the "Magazine Homepage" widget area. You can use the Magazine Posts widgets to set up the theme like the demo website.', 'chronus' ); ?>
 				</p>
 
 			<?php endif;

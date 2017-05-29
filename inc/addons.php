@@ -2,16 +2,16 @@
 /**
  * Add Support for Theme Addons
  *
- * @package Wellington
+ * @package Chronus
  */
 
 /**
  * Register support for Jetpack and theme addons
  */
-function wellington_theme_addons_setup() {
+function chronus_theme_addons_setup() {
 
-	// Add theme support for Wellington Pro plugin.
-	add_theme_support( 'wellington-pro' );
+	// Add theme support for Chronus Pro plugin.
+	add_theme_support( 'chronus-pro' );
 
 	// Add theme support for ThemeZee Plugins.
 	add_theme_support( 'themezee-breadcrumbs' );
@@ -32,18 +32,18 @@ function wellington_theme_addons_setup() {
 		'container'      => 'post-wrapper',
 		'footer_widgets' => 'footer',
 		'wrapper'        => false,
-		'render'         => 'wellington_infinite_scroll_render',
+		'render'         => 'chronus_infinite_scroll_render',
 		'posts_per_page' => 6,
 	) );
 
 }
-add_action( 'after_setup_theme', 'wellington_theme_addons_setup' );
+add_action( 'after_setup_theme', 'chronus_theme_addons_setup' );
 
 
 /**
  * Load custom stylesheets for theme addons
  */
-function wellington_theme_addons_scripts() {
+function chronus_theme_addons_scripts() {
 
 	// Load widget bundle styles if widgets are active.
 	if ( is_active_widget( 'TZWB_Facebook_Likebox_Widget', false, 'tzwb-facebook-likebox' )
@@ -67,13 +67,13 @@ function wellington_theme_addons_scripts() {
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'wellington_theme_addons_scripts' );
+add_action( 'wp_enqueue_scripts', 'chronus_theme_addons_scripts' );
 
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function wellington_infinite_scroll_render() {
+function chronus_infinite_scroll_render() {
 
 	while ( have_posts() ) {
 		the_post();
