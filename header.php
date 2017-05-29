@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="header-top" class="header-bar-wrap"><?php do_action( 'chronus_header_bar' ); ?></div>
+	<?php get_template_part( 'template-parts/header/navigation', 'top' ); ?>
 
 	<div id="page" class="hfeed site">
 

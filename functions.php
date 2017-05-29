@@ -38,8 +38,12 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		// Set detfault Post Thumbnail size.
 		set_post_thumbnail_size( 880, 660, true );
 
-		// Register Navigation Menu.
-		register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'chronus' ) );
+		// Register Navigation Menus.
+		register_nav_menus( array(
+			'primary'   => esc_html__( 'Main Navigation', 'chronus' ),
+			'secondary' => esc_html__( 'Top Navigation', 'chronus' ),
+			'social'    => esc_html__( 'Social Icons', 'chronus' ),
+		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
 		add_theme_support( 'html5', array(
