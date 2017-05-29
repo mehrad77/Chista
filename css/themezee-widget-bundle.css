@@ -1,0 +1,173 @@
+/*
+ * ThemeZee Widget Bundle CSS
+ * https://themezee.com/plugins/widget-bundle/
+ *
+ * Copyright(C) 2015, ThemeZee.com - support@themezee.com
+ * License: GPL v3
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * @package Wellington
+ */
+
+
+/*--------------------------------------------------------------
+# General Styles
+---------------------------------------------------------------- */
+
+/* Clearing Floats */
+.tzwb-clearfix:before,
+.tzwb-clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.tzwb-clearfix:after {
+	clear: both;
+}
+
+.tzwb-clearfix {
+	*zoom: 1; /* For IE 6/7 only */
+}
+
+
+/*--------------------------------------------------------------
+# Posts List
+---------------------------------------------------------------- */
+.tzwb-posts-list li {
+	overflow: auto;
+	margin-bottom: 0.5em;
+	padding: 0;
+	list-style: none;
+}
+
+.tzwb-posts-list .tzwb-excerpt p {
+	margin: 0;
+	padding: 0;
+}
+
+.tzwb-posts-list .wp-post-image {
+	float: left;
+	margin: 0.3em 0.8em 1em 0;
+	max-width: 90px;
+	height: auto;
+}
+
+.tzwb-posts-list .tzwb-entry-meta {
+	margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Comments List
+---------------------------------------------------------------- */
+.tzwb-comments-list li {
+	overflow: auto;
+	margin-bottom: 0.5em;
+	list-style: none;
+}
+
+.tzwb-comments-list .avatar {
+	float: left;
+	margin: 0.3em 0.8em 0.8em 0;
+}
+
+.tzwb-comments-list .tzwb-comment-content {
+	font-style: italic;
+}
+
+.tzwb-comments-list .tzwb-comment-date {
+	color: #303030;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+
+/*--------------------------------------------------------------
+# Tabbed Content Widget
+---------------------------------------------------------------- */
+.tzwb-tabbed-content .tzwb-tabnavi-wrap {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi {
+	position: relative;
+	float: left;
+	width: 100%;
+	list-style: none;
+	list-style-position: outside;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li {
+	position: relative;
+	float: left;
+	margin: 0 3px 3px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a {
+	display: block;
+	margin: 0;
+	padding: 0.3em 0.8em;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a:link,
+.tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+	background: #303030;
+	color: #fff;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a:hover,
+.tzwb-tabbed-content .tzwb-tabnavi li a:active {
+	background: #ee3333;
+	text-decoration: none;
+}
+
+.tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
+	background: #ee3333;
+}
+
+.tzwb-tabbed-content .tzwb-tabcontent {
+	margin: 1em 0 0 0;
+	padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Social Icons Widget
+---------------------------------------------------------------- */
+.tzwb-social-icons .social-icons-menu {
+	list-style: none;
+	line-height: 1;
+}
+
+.tzwb-social-icons .social-icons-menu li {
+	margin: 0 2px 2px 0;
+}
+
+.tzwb-social-icons .social-icons-menu li a {
+	padding: 0.75em;
+	background: #ee3333;
+}
+
+.tzwb-social-icons .social-icons-menu li a:before {
+	font-size: 24px;
+}
+
+.tzwb-social-icons .social-icons-menu li a:hover {
+	background: #303030;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Facebook Like Box Widget
+---------------------------------------------------------------- */
+.tzwb-facebook-likebox .tzwb-content {
+	overflow: hidden;
+}
