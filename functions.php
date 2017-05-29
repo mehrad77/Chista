@@ -117,16 +117,6 @@ function chronus_widgets_init() {
 	));
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header', 'chronus' ),
-		'id' => 'header',
-		'description' => esc_html__( 'Appears on header area. You can use a search or ad widget here.', 'chronus' ),
-		'before_widget' => '<aside id="%1$s" class="header-widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="header-widget-title">',
-		'after_title' => '</h4>',
-	));
-
-	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'chronus' ),
 		'id' => 'magazine-homepage',
 		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'chronus' ),
