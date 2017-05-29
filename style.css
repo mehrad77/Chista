@@ -463,13 +463,13 @@ td {
 }
 
 a {
-	color: #ee3333;
+	color: #cc5555;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #ee3333;
+	color: #cc5555;
 }
 
 a:hover,
@@ -497,7 +497,7 @@ input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
 	border: none;
-	background: #ee3333;
+	background: #cc5555;
 	color: #fff;
 	text-decoration: none;
 	font-size: 17px;
@@ -624,11 +624,15 @@ textarea {
 # 8.0 - Layout Structure
 --------------------------------------------------------------*/
 .site {
+	margin: 0;
+	width: 100%;
+}
+
+.container {
 	margin: 0 auto;
 	padding: 0 3em;
 	max-width: 1340px;
 	width: 100%;
-	background: #fff;
 	box-sizing: border-box;
 }
 
@@ -679,7 +683,7 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .header-main {
-	padding: 2.5em 3em;
+	padding: 2.5em 0;
 	text-align: center;
 }
 
@@ -716,7 +720,7 @@ textarea {
 
 .site-title a:hover,
 .site-title a:active {
-	color: #ee3333;
+	color: #cc5555;
 }
 
 .site-branding .custom-logo {
@@ -757,10 +761,6 @@ textarea {
 
 .header-bar {
 	position: relative;
-	margin: 0 auto;
-	padding: 0 3em;
-	max-width: 1340px;
-	box-sizing: border-box;
 }
 
 .top-navigation-toggle {
@@ -870,7 +870,7 @@ textarea {
 }
 
 .top-navigation-menu li.current-menu-item > a {
-	background: rgba(255,255,255,0.075);
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -971,36 +971,49 @@ textarea {
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
 	margin: 0 0 3em;
-	background: #303030;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 .main-navigation-toggle {
 	display: none;
 }
 
-.main-navigation-menu {
-	position: relative;
-	float: left;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	list-style-position: outside;
-	list-style-type: none;
+.primary-navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	justify-content: center;
 }
 
-.main-navigation-menu li {
-	float: left;
+.main-navigation-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style-position: outside;
+	list-style-type: none;
 }
 
 .main-navigation-menu a {
 	display: block;
 	margin: 0;
-	padding: 1em 1.5em;
-	color: #fff;
+	padding: 0.75em 1em;
+	color: #303030;
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
-	font-family: 'Gudea', Tahoma, Arial;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-family: 'Magra', Tahoma, Arial;
 }
 
 .main-navigation-menu > .menu-item-has-children > a:after {
@@ -1018,13 +1031,13 @@ textarea {
 
 .main-navigation-menu a:link,
 .main-navigation-menu a:visited {
-	color: #fff;
+	color: #303030;
 	text-decoration: none;
 }
 
 .main-navigation-menu a:hover,
 .main-navigation-menu a:active {
-	color: rgba(255,255,255,0.5);
+	color: #cc5555;
 }
 
 .main-navigation-menu ul {
@@ -1033,8 +1046,7 @@ textarea {
 	display: none;
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid #fff;
-	background: #303030;
+	background: #cc5555;
 	color: #fff;
 	list-style-position: outside;
 	list-style-type: none;
@@ -1051,8 +1063,18 @@ textarea {
 	min-width: 250px;
 	min-width: 16rem;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.main-navigation-menu ul a:link,
+.main-navigation-menu ul a:visited {
+	color: #fff;
+}
+
+.main-navigation-menu ul a:hover,
+.main-navigation-menu ul a:active {
+	color: rgba(255,255,255,0.5);
 }
 
 .main-navigation-menu ul .menu-item-has-children > a:after {
@@ -1071,9 +1093,8 @@ textarea {
 }
 
 .main-navigation-menu li ul ul {
-	top: 1px;
+	top: 0;
 	left: 100%;
-	border-top: none;
 }
 
 .main-navigation-menu li.menu-item-has-children:hover > ul,
@@ -1092,14 +1113,16 @@ textarea {
 .widget {
 	margin: 0 0 3em 0;
 	padding: 1.5em 2em;
-	background: #f5f5f5;
+	border: 1px solid #ddd;
 	max-width: 100%;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .widget-header {
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
+	padding: 0 0 0.5em;
+	border-bottom: 1px solid #ddd;
 }
 
 .widget-title {
@@ -1110,6 +1133,7 @@ textarea {
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: 'Magra', Tahoma, Arial;
+	font-weight: normal;
 }
 
 .widget ul {
@@ -1136,7 +1160,7 @@ textarea {
 
 .widget-title a:hover,
 .widget-title a:active  {
-	color: #ee3333;
+	color: #cc5555;
 }
 
 /*--------------------------------------------------------------
@@ -1334,7 +1358,7 @@ textarea {
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #ee3333;
+	color: #cc5555;
 }
 
 .type-post .wp-post-image,
@@ -1362,7 +1386,7 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
-	background: #ee3333;
+	background: #cc5555;
 	color: #fff;
 	text-decoration: none;
 	font-size: 15px;
@@ -1448,7 +1472,7 @@ textarea {
 	float: left;
 	margin: 0 2px 2px 0;
 	padding: 0.4em 0.8em;
-	background: #ee3333;
+	background: #cc5555;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -1526,7 +1550,7 @@ body.date-hidden.author-hidden .content-area .entry-meta {
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
-	background: #ee3333;
+	background: #cc5555;
 	color: #fff;
 }
 
@@ -1579,7 +1603,7 @@ body.date-hidden.author-hidden .content-area .entry-meta {
 .pagination a:hover,
 .pagination a:active,
 .pagination .current {
-	background: #ee3333;
+	background: #cc5555;
 }
 
 /* Infinite Scroll Pagination */
@@ -1610,7 +1634,7 @@ body.date-hidden.author-hidden .content-area .entry-meta {
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background: #ee3333;
+	background: #cc5555;
 }
 
 /* Archives and Search Heading */
@@ -2762,8 +2786,7 @@ object {
 
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 60.001em) {
-	.top-navigation-menu,
-	.main-navigation-menu {
+	.top-navigation-menu {
 		display: block !important;
 	}
 }

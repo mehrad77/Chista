@@ -10,7 +10,7 @@ if ( has_nav_menu( 'social' ) or has_nav_menu( 'secondary' ) ) : ?>
 
 	<div id="header-top" class="header-bar-wrap">
 
-		<div id="header-bar" class="header-bar clearfix">
+		<div id="header-bar" class="header-bar container clearfix">
 
 			<?php
 			// Check if there is a social icons menu

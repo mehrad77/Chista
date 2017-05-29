@@ -9,7 +9,9 @@
 
 ?>
 
-	</div><!-- #content -->
+		</div><!-- #content -->
+
+	</div><!-- #page -->
 
 	<?php do_action( 'chronus_before_footer' ); ?>
 
@@ -26,8 +28,6 @@
 		</footer><!-- #colophon -->
 
 	</div>
-
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

@@ -21,11 +21,11 @@
 
 <body <?php body_class(); ?>>
 
-	<?php get_template_part( 'template-parts/header/navigation', 'top' ); ?>
-
 	<div id="page" class="hfeed site">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
+
+		<?php get_template_part( 'template-parts/header/navigation', 'top' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 
