@@ -11,21 +11,25 @@
 
 	<?php the_post_thumbnail(); ?>
 
-	<header class="entry-header">
+	<div class="post-content">
 
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<header class="entry-header">
 
-	</header><!-- .entry-header -->
+			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 
-	<div class="entry-content clearfix">
+		</header><!-- .entry-header -->
 
-		<?php the_content(); ?>
+		<div class="entry-content clearfix">
 
-		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
-			'after'  => '</div>',
-		) ); ?>
+			<?php the_content(); ?>
 
-	</div><!-- .entry-content -->
+			<?php wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
+				'after'  => '</div>',
+			) ); ?>
+
+		</div><!-- .entry-content -->
+
+	</div>
 
 </article>

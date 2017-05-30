@@ -11,31 +11,35 @@
 
 	<?php chronus_post_image_single(); ?>
 
-	<header class="entry-header">
+	<div class="post-content">
 
-		<?php chronus_entry_meta(); ?>
+		<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-	</header><!-- .entry-header -->
+			<?php chronus_entry_meta(); ?>
 
-	<div class="entry-content clearfix">
+		</header><!-- .entry-header -->
 
-		<?php the_content(); ?>
+		<div class="entry-content clearfix">
 
-		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
-			'after'  => '</div>',
-		) ); ?>
+			<?php the_content(); ?>
 
-	</div><!-- .entry-content -->
+			<?php wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
+				'after'  => '</div>',
+			) ); ?>
 
-	<footer class="entry-footer">
+		</div><!-- .entry-content -->
 
-		<?php chronus_entry_categories(); ?>
-		<?php chronus_entry_tags(); ?>
-		<?php chronus_post_navigation(); ?>
+		<footer class="entry-footer">
 
-	</footer><!-- .entry-footer -->
+			<?php chronus_entry_categories(); ?>
+			<?php chronus_entry_tags(); ?>
+			<?php chronus_post_navigation(); ?>
+
+		</footer><!-- .entry-footer -->
+
+	</div>
 
 </article>

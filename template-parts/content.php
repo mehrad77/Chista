@@ -13,18 +13,22 @@
 
 		<?php chronus_post_image(); ?>
 
-		<header class="entry-header">
+		<div class="post-content">
 
-			<?php chronus_entry_meta(); ?>
+			<header class="entry-header">
 
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>	
+				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		</header><!-- .entry-header -->
+				<?php chronus_entry_meta(); ?>
 
-		<div class="entry-content entry-excerpt clearfix">
-			<?php the_excerpt(); ?>
-			<?php chronus_more_link(); ?>
-		</div><!-- .entry-content -->
+			</header><!-- .entry-header -->
+
+			<div class="entry-content entry-excerpt clearfix">
+				<?php the_excerpt(); ?>
+				<?php chronus_more_link(); ?>
+			</div><!-- .entry-content -->
+
+		</div>
 
 	</article>
 

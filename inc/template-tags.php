@@ -200,7 +200,9 @@ if ( ! function_exists( 'chronus_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		return '<span class="meta-date">' . $time_string . '</span>';
+		$posted_on = sprintf( esc_html_x( 'Posted on %s', 'post date', 'chronus' ), $time_string );
+
+		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
 endif;
 
@@ -217,7 +219,9 @@ if ( ! function_exists( 'chronus_meta_author' ) ) :
 			esc_html( get_the_author() )
 		);
 
-		return '<span class="meta-author"> ' . $author_string . '</span>';
+		$posted_by = sprintf( esc_html_x( 'by %s', 'post author', 'chronus' ), $author_string );
+
+		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
 endif;
 
