@@ -22,27 +22,22 @@ get_header(); ?>
 
 			</header><!-- .page-header -->
 
-			<div id="post-wrapper" class="post-wrapper clearfix">
+			<?php while ( have_posts() ) : the_post();
 
-				<?php while ( have_posts() ) : the_post();
+				if ( 'post' === get_post_type() ) :
 
-					if ( 'post' === get_post_type() ) :
+					get_template_part( 'template-parts/content' );
 
-						get_template_part( 'template-parts/content' );
+				else :
 
-					else :
+					get_template_part( 'template-parts/content', 'search' );
 
-						get_template_part( 'template-parts/content', 'search' );
+				endif;
 
-					endif;
+			endwhile;
 
-				endwhile; ?>
+			chronus_pagination();
 
-			</div>
-
-			<?php chronus_pagination(); ?>
-
-		<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

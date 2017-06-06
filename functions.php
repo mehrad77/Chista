@@ -36,7 +36,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Set detfault Post Thumbnail size.
-		set_post_thumbnail_size( 880, 660, true );
+		set_post_thumbnail_size( 800, 500, true );
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
@@ -172,7 +172,7 @@ add_action( 'wp_enqueue_scripts', 'chronus_scripts' );
 function chronus_google_fonts_url() {
 
 	// Set default Fonts.
-	$font_families = array( 'Gudea:400,400italic,700,700italic', 'Magra:400,400italic,700,700italic' );
+	$font_families = array( 'Raleway:400,400italic,700,700italic', 'Rambla:400,400italic,700,700italic' );
 
 	// Build Fonts URL.
 	$query_args = array(
@@ -195,8 +195,8 @@ function chronus_add_image_sizes() {
 
 	// Add different thumbnail sizes for Magazine Posts widgets.
 	add_image_size( 'chronus-thumbnail-small', 120, 80, true );
-	add_image_size( 'chronus-thumbnail-medium', 360, 230, true );
-	add_image_size( 'chronus-thumbnail-large', 600, 380, true );
+	add_image_size( 'chronus-thumbnail-medium', 320, 200, true );
+	add_image_size( 'chronus-thumbnail-large', 560, 350, true );
 
 }
 add_action( 'after_setup_theme', 'chronus_add_image_sizes' );

@@ -16,7 +16,7 @@ get_header(); ?>
 		// Display Magazine Homepage Widgets.
 		if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
 
-			<div id="magazine-homepage-widgets" class="widget-area clearfix">
+			<div id="magazine-homepage-widgets" class="widget-area magazine-widget-area clearfix">
 
 				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
 
@@ -27,21 +27,16 @@ get_header(); ?>
 
 		if ( have_posts() ) :
 
-			chronus_blog_title(); ?>
+			chronus_blog_title();
 
-			<div id="post-wrapper" class="post-wrapper clearfix">
+			while ( have_posts() ) : the_post();
 
-				<?php while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content' );
 
-					get_template_part( 'template-parts/content' );
+			endwhile;
 
-				endwhile; ?>
+			chronus_pagination();
 
-			</div>
-
-			<?php chronus_pagination(); ?>
-
-		<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

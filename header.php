@@ -25,7 +25,8 @@
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
 
-		<?php get_template_part( 'template-parts/header/navigation', 'top' ); ?>
+		<?php #get_template_part( 'template-parts/header/navigation', 'top' ); ?>
+		<?php do_action( 'chronus_header_bar' ); ?>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 

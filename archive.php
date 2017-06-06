@@ -22,19 +22,14 @@ get_header(); ?>
 
 			</header><!-- .page-header -->
 
-			<div id="post-wrapper" class="post-wrapper clearfix">
+			<?php while ( have_posts() ) : the_post();
 
-				<?php while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content' );
 
-					get_template_part( 'template-parts/content' );
+			endwhile;
 
-				endwhile; ?>
+			chronus_pagination();
 
-			</div>
-
-			<?php chronus_pagination(); ?>
-
-		<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

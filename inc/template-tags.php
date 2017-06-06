@@ -251,7 +251,7 @@ if ( ! function_exists( 'chronus_entry_tags' ) ) :
 	function chronus_entry_tags() {
 
 		// Get tags.
-		$tag_list = get_the_tag_list( '', '' );
+		$tag_list = get_the_tag_list( esc_html__( 'Tagged with ', 'chronus' ), ', ' );
 
 		// Display tags.
 		if ( $tag_list ) : ?>
@@ -264,6 +264,27 @@ if ( ! function_exists( 'chronus_entry_tags' ) ) :
 
 		<?php
 		endif;
+	}
+endif;
+
+
+if ( ! function_exists( 'chronus_entry_comments' ) ) :
+	/**
+	 * Displays the post comments
+	 */
+	function chronus_entry_comments() {
+
+		// Start Output Buffering.
+		ob_start();
+
+		// Display Comments.
+		comments_popup_link( esc_html__( 'Leave a comment', 'chronus' ), esc_html__( 'One comment', 'chronus' ), esc_html__( '% comments', 'chronus' ) );
+		$comments = ob_get_contents();
+
+		// End Output Buffering.
+		ob_end_clean();
+
+		echo '<span class="meta-comments"> ' . $comments . '</span>';
 	}
 endif;
 
@@ -294,8 +315,8 @@ if ( ! function_exists( 'chronus_post_navigation' ) ) :
 		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
 
 			the_post_navigation( array(
-				'prev_text' => '<span class="screen-reader-text">' . esc_html_x( 'Previous Post:', 'post navigation', 'chronus' ) . '</span>%title',
-				'next_text' => '<span class="screen-reader-text">' . esc_html_x( 'Next Post:', 'post navigation', 'chronus' ) . '</span>%title',
+				'prev_text' => '<span class="nav-link-text">' . esc_html_x( 'Previous Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',
+				'next_text' => '<span class="nav-link-text">' . esc_html_x( 'Next Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',
 			) );
 
 		}

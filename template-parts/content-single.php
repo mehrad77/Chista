@@ -30,12 +30,12 @@
 				'after'  => '</div>',
 			) ); ?>
 
+			<?php chronus_entry_tags(); ?>
+
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
 
-			<?php chronus_entry_categories(); ?>
-			<?php chronus_entry_tags(); ?>
 			<?php chronus_post_navigation(); ?>
 
 		</footer><!-- .entry-footer -->
