@@ -70,9 +70,9 @@
 	wp.customize( 'chronus_theme_options[meta_category]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
-				hideElement( '.type-post .entry-footer .entry-categories' );
+				$( 'body' ).addClass( 'categories-hidden' );
 			} else {
-				showElement( '.type-post .entry-footer .entry-categories' );
+				$( 'body' ).removeClass( 'categories-hidden' );
 			}
 		} );
 	} );

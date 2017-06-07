@@ -19,10 +19,8 @@
 
 		<div class="entry-content entry-excerpt clearfix">
 			<?php the_excerpt(); ?>
-
+			<?php chronus_more_link(); ?>
 		</div><!-- .entry-content -->
-
-		<div class="read-more"><?php chronus_more_link(); ?></div>
 
 	</article>
 

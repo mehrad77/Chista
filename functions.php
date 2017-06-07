@@ -68,8 +68,8 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		// Set up the WordPress core custom header feature.
 		add_theme_support( 'custom-header', apply_filters( 'chronus_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1280,
-			'height' => 400,
+			'width'	=> 1160,
+			'height' => 360,
 			'flex-height' => true,
 		) ) );
 

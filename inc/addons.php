@@ -29,11 +29,9 @@ function chronus_theme_addons_setup() {
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container'      => 'post-wrapper',
+		'container'      => 'main',
 		'footer_widgets' => 'footer',
-		'wrapper'        => false,
 		'render'         => 'chronus_infinite_scroll_render',
-		'posts_per_page' => 6,
 	) );
 
 }

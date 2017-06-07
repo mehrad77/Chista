@@ -9,17 +9,15 @@
 
 ?>
 
-		</div><!-- #content -->
+	</div><!-- #content -->
 
-	</div><!-- #page -->
+	<?php do_action( 'chronus_footer_menu' ); ?>
 
 	<?php do_action( 'chronus_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
 
 		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
-
-			<?php do_action( 'chronus_footer_menu' ); ?>
 
 			<div id="footer-text" class="site-info">
 				<?php do_action( 'chronus_footer_text' ); ?>
@@ -28,6 +26,8 @@
 		</footer><!-- #colophon -->
 
 	</div>
+
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

@@ -24,7 +24,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
-		'default'           => 10,
+		'default'           => 40,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'absint',
@@ -35,24 +35,17 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[excerpt_length]',
 		'type'     => 'text',
-		'priority' => 2,
+		'priority' => 20,
 		)
 	);
 
-	// Add Post Meta Settings.
-	$wp_customize->add_setting( 'chronus_theme_options[postmeta_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-		)
-	);
+	// Add Post Details Headline.
 	$wp_customize->add_control( new Chronus_Customize_Header_Control(
-		$wp_customize, 'chronus_theme_options[postmeta_headline]', array(
-		'label' => esc_html__( 'Post Meta', 'chronus' ),
+		$wp_customize, 'chronus_theme_options[post_details]', array(
+		'label' => esc_html__( 'Post Details', 'chronus' ),
 		'section' => 'chronus_section_post',
-		'settings' => 'chronus_theme_options[postmeta_headline]',
-		'priority' => 20,
+		'settings' => array(),
+		'priority' => 30,
 		)
 	) );
 
@@ -64,11 +57,11 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'chronus_theme_options[meta_date]', array(
-		'label'    => esc_html__( 'Display post date', 'chronus' ),
+		'label'    => esc_html__( 'Display date', 'chronus' ),
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 30,
+		'priority' => 40,
 		)
 	);
 
@@ -80,45 +73,11 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'chronus_theme_options[meta_author]', array(
-		'label'    => esc_html__( 'Display post author', 'chronus' ),
+		'label'    => esc_html__( 'Display author', 'chronus' ),
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 40,
-		)
-	);
-
-	// Add Single Post Settings.
-	$wp_customize->add_setting( 'chronus_theme_options[single_post_headline]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new Chronus_Customize_Header_Control(
-		$wp_customize, 'chronus_theme_options[single_post_headline]', array(
-		'label' => esc_html__( 'Single Posts', 'chronus' ),
-		'section' => 'chronus_section_post',
-		'settings' => 'chronus_theme_options[single_post_headline]',
 		'priority' => 50,
-		)
-	) );
-
-	// Featured Image Setting.
-	$wp_customize->add_setting( 'chronus_theme_options[post_image_single]', array(
-		'default'           => true,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'chronus_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control( 'chronus_theme_options[post_image_single]', array(
-		'label'    => esc_html__( 'Display featured image on single posts', 'chronus' ),
-		'section'  => 'chronus_section_post',
-		'settings' => 'chronus_theme_options[post_image_single]',
-		'type'     => 'checkbox',
-		'priority' => 60,
 		)
 	);
 
@@ -130,13 +89,23 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'chronus_theme_options[meta_category]', array(
-		'label'    => esc_html__( 'Display post categories on single posts', 'chronus' ),
+		'label'    => esc_html__( 'Display categories', 'chronus' ),
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 60,
 		)
 	);
+
+	// Add Single Post Headline.
+	$wp_customize->add_control( new Chronus_Customize_Header_Control(
+		$wp_customize, 'chronus_theme_options[single_post]', array(
+		'label' => esc_html__( 'Single Post', 'chronus' ),
+		'section' => 'chronus_section_post',
+		'settings' => array(),
+		'priority' => 70,
+		)
+	) );
 
 	$wp_customize->add_setting( 'chronus_theme_options[meta_tags]', array(
 		'default'           => true,
@@ -146,7 +115,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'chronus_theme_options[meta_tags]', array(
-		'label'    => esc_html__( 'Display post tags on single posts', 'chronus' ),
+		'label'    => esc_html__( 'Display tags', 'chronus' ),
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_tags]',
 		'type'     => 'checkbox',
@@ -162,7 +131,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'chronus_theme_options[post_navigation]', array(
-		'label'    => esc_html__( 'Display post navigation on single posts', 'chronus' ),
+		'label'    => esc_html__( 'Display post navigation', 'chronus' ),
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[post_navigation]',
 		'type'     => 'checkbox',
@@ -170,5 +139,46 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
+	// Add Featured Images Headline.
+	$wp_customize->add_control( new Chronus_Customize_Header_Control(
+		$wp_customize, 'chronus_theme_options[featured_images]', array(
+		'label' => esc_html__( 'Featured Images', 'chronus' ),
+		'section' => 'chronus_section_post',
+		'settings' => array(),
+		'priority' => 100,
+		)
+	) );
+
+	$wp_customize->add_setting( 'chronus_theme_options[post_image_archives]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control( 'chronus_theme_options[post_image_archives]', array(
+		'label'    => esc_html__( 'Display images on blog and archives', 'chronus' ),
+		'section'  => 'chronus_section_post',
+		'settings' => 'chronus_theme_options[post_image_archives]',
+		'type'     => 'checkbox',
+		'priority' => 110,
+		)
+	);
+
+	$wp_customize->add_setting( 'chronus_theme_options[post_image_single]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control( 'chronus_theme_options[post_image_single]', array(
+		'label'    => esc_html__( 'Display image on single posts', 'chronus' ),
+		'section'  => 'chronus_section_post',
+		'settings' => 'chronus_theme_options[post_image_single]',
+		'type'     => 'checkbox',
+		'priority' => 120,
+		)
+	);
 }
 add_action( 'customize_register', 'chronus_customize_register_post_settings' );

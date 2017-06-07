@@ -134,18 +134,40 @@ endif;
 
 if ( ! function_exists( 'chronus_post_image' ) ) :
 	/**
-	 * Displays the featured image on archive posts.
+	 * Displays the featured image in Magazine widgets and featured section.
 	 *
 	 * @param string $size Post thumbnail size.
 	 * @param array  $attr Post thumbnail attributes.
 	 */
 	function chronus_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
-		// Display Post Thumbnail.
+		// Check if post has thumbnail.
 		if ( has_post_thumbnail() ) : ?>
 
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( $size, $attr ); ?>
+			</a>
+
+		<?php
+		endif;
+	}
+endif;
+
+
+if ( ! function_exists( 'chronus_post_image_archives' ) ) :
+	/**
+	 * Displays the featured image on archive posts.
+	 */
+	function chronus_post_image_archives() {
+
+		// Get theme options from database.
+		$theme_options = chronus_theme_options();
+
+		// Display Post Thumbnail if activated.
+		if ( true === $theme_options['post_image_archives'] && has_post_thumbnail() ) : ?>
+
+			<a href="<?php the_permalink(); ?>" rel="bookmark">
+				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 			</a>
 
 		<?php
@@ -179,8 +201,9 @@ if ( ! function_exists( 'chronus_entry_meta' ) ) :
 	 */
 	function chronus_entry_meta() {
 
-		$postmeta = chronus_meta_date();
-		$postmeta .= chronus_meta_author();
+		$postmeta = chronus_meta_author();
+		$postmeta .= chronus_meta_date();
+		$postmeta .= chronus_meta_category();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
@@ -200,7 +223,7 @@ if ( ! function_exists( 'chronus_meta_date' ) ) :
 			esc_html( get_the_date() )
 		);
 
-		$posted_on = sprintf( esc_html_x( 'Posted on %s', 'post date', 'chronus' ), $time_string );
+		$posted_on = sprintf( esc_html_x( 'On %s', 'post date', 'chronus' ), $time_string );
 
 		return '<span class="meta-date">' . $posted_on . '</span>';
 	}
@@ -219,27 +242,21 @@ if ( ! function_exists( 'chronus_meta_author' ) ) :
 			esc_html( get_the_author() )
 		);
 
-		$posted_by = sprintf( esc_html_x( 'by %s', 'post author', 'chronus' ), $author_string );
+		$posted_by = sprintf( esc_html_x( 'By %s', 'post author', 'chronus' ), $author_string );
 
 		return '<span class="meta-author"> ' . $posted_by . '</span>';
 	}
 endif;
 
-
-if ( ! function_exists( 'chronus_entry_categories' ) ) :
+if ( ! function_exists( 'chronus_meta_category' ) ) :
 	/**
-	 * Displays the category of posts
+	 * Displays the post category
 	 */
-	function chronus_entry_categories() {
-		?>
+	function chronus_meta_category() {
 
-		<div class="entry-categories clearfix">
-			<span class="meta-categories">
-				<?php echo get_the_category_list( ' ' ); ?>
-			</span>
-		</div><!-- .entry-categories -->
+		$posted_in = sprintf( esc_html_x( 'In %s', 'post category', 'chronus' ), get_the_category_list( ', ' ) );
 
-		<?php
+		return '<span class="meta-category"> ' . $posted_in . '</span>';
 	}
 endif;
 

@@ -35,13 +35,6 @@ function chronus_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 
-	// Add post columns classes.
-	if ( 'two-columns' == $theme_options['post_layout'] ) {
-		$classes[] = 'post-layout-two-columns post-layout-columns';
-	} else {
-		$classes[] = 'post-layout-one-column';
-	}
-
 	// Hide Date?
 	if ( false === $theme_options['meta_date'] ) {
 		$classes[] = 'date-hidden';
@@ -50,6 +43,11 @@ function chronus_body_classes( $classes ) {
 	// Hide Author?
 	if ( false === $theme_options['meta_author'] ) {
 		$classes[] = 'author-hidden';
+	}
+
+	// Hide Category?
+	if ( false === $theme_options['meta_category'] ) {
+		$classes[] = 'categories-hidden';
 	}
 
 	return $classes;
@@ -77,11 +75,6 @@ function chronus_hide_elements() {
 	// Hide Site Description?
 	if ( false === $theme_options['site_description'] ) {
 		$elements[] = '.site-description';
-	}
-
-	// Hide Post Categories?
-	if ( false === $theme_options['meta_category'] ) {
-		$elements[] = '.type-post .entry-footer .entry-categories';
 	}
 
 	// Hide Post Tags?
@@ -128,7 +121,7 @@ function chronus_excerpt_length( $length ) {
 	if ( isset( $theme_options['excerpt_length'] ) and $theme_options['excerpt_length'] >= 0 ) :
 		return absint( $theme_options['excerpt_length'] );
 	else :
-		return 30; // Number of words.
+		return 40; // Number of words.
 	endif;
 }
 add_filter( 'excerpt_length', 'chronus_excerpt_length' );
@@ -146,7 +139,7 @@ function chronus_excerpt_more( $more_text ) {
 		return $more_text;
 	}
 
-	return '';
+	return ' &hellip;';
 }
 add_filter( 'excerpt_more', 'chronus_excerpt_more' );
 

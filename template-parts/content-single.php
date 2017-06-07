@@ -11,35 +11,31 @@
 
 	<?php chronus_post_image_single(); ?>
 
-	<div class="post-content">
+	<header class="entry-header">
 
-		<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php chronus_entry_meta(); ?>
 
-			<?php chronus_entry_meta(); ?>
+	</header><!-- .entry-header -->
 
-		</header><!-- .entry-header -->
+	<div class="entry-content clearfix">
 
-		<div class="entry-content clearfix">
+		<?php the_content(); ?>
 
-			<?php the_content(); ?>
+		<?php wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
+			'after'  => '</div>',
+		) ); ?>
 
-			<?php wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
-				'after'  => '</div>',
-			) ); ?>
+	</div><!-- .entry-content -->
 
-			<?php chronus_entry_tags(); ?>
+	<footer class="entry-footer">
 
-		</div><!-- .entry-content -->
+		<?php chronus_entry_tags(); ?>
 
-		<footer class="entry-footer">
+		<?php chronus_post_navigation(); ?>
 
-			<?php chronus_post_navigation(); ?>
-
-		</footer><!-- .entry-footer -->
-
-	</div>
+	</footer><!-- .entry-footer -->
 
 </article>

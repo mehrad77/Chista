@@ -17,17 +17,18 @@
 #customize-control-chronus_theme_options-blog_title,
 #customize-control-chronus_theme_options-blog_description,
 #customize-control-chronus_theme_options-excerpt_length,
-#customize-control-chronus_theme_options-postmeta_headline,
-#customize-control-chronus_theme_options-single_post_headline,
+#customize-control-chronus_theme_options-post_details,
+#customize-control-chronus_theme_options-single_post,
+#customize-control-chronus_theme_options-featured_images,
 #customize-control-chronus_theme_options-slider_category,
 #customize-control-chronus_theme_options-slider_limit,
 #customize-control-chronus_theme_options-slider_animation {
 	margin-top: 16px;
 }
 
-#customize-control-chronus_theme_options-postmeta_headline,
-#customize-control-chronus_theme_options-single_post_headline,
-#customize-control-chronus_theme_options-slider_activate {
+#customize-control-chronus_theme_options-post_details,
+#customize-control-chronus_theme_options-single_post,
+#customize-control-chronus_theme_options-featured_images {
 	margin-bottom: 0;
 }
 
