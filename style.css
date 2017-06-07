@@ -2197,14 +2197,16 @@ object {
 	order: 2;
 	-webkit-box-ordinal-group: 3;
 	-ms-flex-order: 2;
+	padding-left: 2em;
+	padding-right: 0;
 }
 
 .sidebar-left .sidebar {
 	order: 1;
-	border-right: 1px solid #ddd;
-	border-left: none;
 	-webkit-box-ordinal-group: 2;
 	-ms-flex-order: 1;
+	padding-left: 0;
+	padding-right: 2em;
 }
 
 @media only screen and (max-width: 70em) {
