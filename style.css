@@ -1481,6 +1481,43 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 }
 
 /*--------------------------------------------------------------
+# 11.0 - Featured Posts
+--------------------------------------------------------------*/
+.featured-posts-wrap {
+	margin-bottom: 2.5em;
+	border-bottom: 1px solid #eee;
+}
+
+.featured-posts {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -2.5em;
+}
+
+.featured-posts .featured-post {
+	box-sizing: border-box;
+	padding-right: 2.5em;
+	width: 25%;
+}
+
+.featured-posts .featured-post:first-child {
+	width: 50%;
+}
+
+.featured-posts .featured-post .type-post .entry-title {
+	font-size: 26px;
+	font-size: 1.625rem;
+}
+
+.featured-posts .featured-post .type-post .entry-content {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+/*--------------------------------------------------------------
 # 11.0 - Comments
 --------------------------------------------------------------*/
 

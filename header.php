@@ -47,7 +47,7 @@
 
 		<?php chronus_header_image(); ?>
 
-		<?php chronus_slider(); ?>
+		<?php chronus_featured_content(); ?>
 
 		<?php chronus_breadcrumbs(); ?>
 
