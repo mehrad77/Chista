@@ -679,8 +679,9 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	background: #fff;
 	margin: 0 0 2.5em;
+	background: #fff;
+	border-bottom: 1px solid #eee;
 }
 
 .header-main {
@@ -753,104 +754,121 @@ textarea {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## 10.1 - Top Navigation
+## 10.1 - Main Navigation
 --------------------------------------------------------------*/
-.header-bar-wrap {
-	width: 100%;
-	background: #cc5555;
+.primary-navigation-wrap {
+	border-top: 1px solid #eee;
 }
 
-.header-bar {
-	position: relative;
-}
-
-.top-navigation-toggle {
+.main-navigation-toggle {
 	display: none;
 }
 
-.top-navigation-menu {
-	display: inline;
-	float: left;
+.primary-navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	justify-content: center;
+}
+
+.main-navigation-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	position: relative;
 	margin: 0;
 	padding: 0;
 	list-style-position: outside;
 	list-style-type: none;
 }
 
-.top-navigation-menu li {
-	float: left;
-}
-
-.top-navigation-menu a {
+.main-navigation-menu a {
 	display: block;
 	margin: 0;
-	padding: 1em 1.5em;
-	color: #fff;
+	padding: 0.75em 1em;
+	color: #303030;
 	text-decoration: none;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
 }
 
-.top-navigation-menu > .menu-item-has-children > a:after {
+.main-navigation-menu > .menu-item-has-children > a:after {
 	display: inline-block;
-	margin: 0.5em 0 0 0.3em;
+	margin: 0.4em 0 0 0.3em;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Genericons';
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.top-navigation-menu a:link,
-.top-navigation-menu a:visited {
-	color: #fff;
+.main-navigation-menu a:link,
+.main-navigation-menu a:visited {
+	color: #303030;
 	text-decoration: none;
 }
 
-.top-navigation-menu a:hover,
-.top-navigation-menu a:active {
-	color: rgba(255,255,255,0.5);
+.main-navigation-menu a:hover,
+.main-navigation-menu a:active {
+	color: #cc5555;
 }
 
-.top-navigation-menu ul {
+.main-navigation-menu ul {
 	position: absolute;
 	z-index: 99;
 	display: none;
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid #fff;
 	background: #cc5555;
 	color: #fff;
 	list-style-position: outside;
 	list-style-type: none;
 }
 
-.top-navigation-menu ul li {
+.main-navigation-menu ul li{
 	position: relative;
 	float: none;
 	margin: 0;
 }
 
-.top-navigation-menu ul a {
+.main-navigation-menu ul a {
 	padding: 1em;
 	min-width: 250px;
 	min-width: 16rem;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 16px;
+	font-size: 1rem;
 }
 
-.top-navigation-menu ul .menu-item-has-children > a:after {
+.main-navigation-menu ul a:link,
+.main-navigation-menu ul a:visited {
+	color: #fff;
+}
+
+.main-navigation-menu ul a:hover,
+.main-navigation-menu ul a:active {
+	color: rgba(255,255,255,0.5);
+}
+
+.main-navigation-menu ul .menu-item-has-children > a:after {
 	display: inline-block;
 	margin: 0.3em 0 0 0.3em;
 	content: '\f431';
 	vertical-align: top;
 	text-decoration: inherit;
-	font-size: 14px;
+	font-size: 16px;
 	font-family: 'Genericons';
 	line-height: 1;
 	-webkit-transform: rotate(270deg);
@@ -859,23 +877,27 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.top-navigation-menu li ul ul {
-	top: 1px;
+.main-navigation-menu li ul ul {
+	top: 0;
 	left: 100%;
-	border-top: none;
 }
 
-.top-navigation-menu li.menu-item-has-children:hover > ul,
-.top-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
+.main-navigation-menu li.menu-item-has-children:hover > ul,
+.main-navigation-menu li.page_item_has_children:hover > ul,
+.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
 	display: block;
 }
 
-.top-navigation-menu li.current-menu-item > a {
+.main-navigation-menu li.current-menu-item > a {
 	text-decoration: underline;
 }
 
+.main-navigation-menu li.current-menu-item > a:after {
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
-## 10.2 - Header Social Icons
+## 10.2 - Social Icons
 --------------------------------------------------------------*/
 .social-icons-menu {
 	margin: 0;
@@ -947,165 +969,6 @@ textarea {
 .social-icons-menu li a[href*="?feed=rss2"]:before,
 .social-icons-menu li a[href*="feedburner.google.com"]:before,
 .social-icons-menu li a[href*="feedburner.com"]:before { content: '\f413'; }
-
-.header-bar .social-icons-navigation {
-	float: right;
-	margin: 0;
-}
-
-.header-bar .social-icons-menu li a {
-	padding: 1em;
-}
-
-.header-bar .social-icons-menu li a:before {
-	font-size: 28px;
-}
-
-.header-bar .social-icons-menu li a:hover,
-.header-bar .social-icons-menu li a:active {
-	color: rgba(255,255,255,0.5);
-	text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-## 10.3 - Main Navigation
---------------------------------------------------------------*/
-.primary-navigation-wrap {
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-}
-
-.main-navigation-toggle {
-	display: none;
-}
-
-.primary-navigation {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	justify-content: center;
-}
-
-.main-navigation-menu {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	list-style-position: outside;
-	list-style-type: none;
-}
-
-.main-navigation-menu a {
-	display: block;
-	margin: 0;
-	padding: 0.75em 1em;
-	color: #303030;
-	text-decoration: none;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
-}
-
-.main-navigation-menu > .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.5em 0 0 0.3em;
-	content: '\f431';
-	vertical-align: top;
-	text-decoration: inherit;
-	font-size: 16px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.main-navigation-menu a:link,
-.main-navigation-menu a:visited {
-	color: #303030;
-	text-decoration: none;
-}
-
-.main-navigation-menu a:hover,
-.main-navigation-menu a:active {
-	color: #cc5555;
-}
-
-.main-navigation-menu ul {
-	position: absolute;
-	z-index: 99;
-	display: none;
-	margin: 0;
-	padding: 0;
-	background: #cc5555;
-	color: #fff;
-	list-style-position: outside;
-	list-style-type: none;
-}
-
-.main-navigation-menu ul li{
-	position: relative;
-	float: none;
-	margin: 0;
-}
-
-.main-navigation-menu ul a {
-	padding: 1em;
-	min-width: 250px;
-	min-width: 16rem;
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-	font-size: 16px;
-	font-size: 1rem;
-}
-
-.main-navigation-menu ul a:link,
-.main-navigation-menu ul a:visited {
-	color: #fff;
-}
-
-.main-navigation-menu ul a:hover,
-.main-navigation-menu ul a:active {
-	color: rgba(255,255,255,0.5);
-}
-
-.main-navigation-menu ul .menu-item-has-children > a:after {
-	display: inline-block;
-	margin: 0.3em 0 0 0.3em;
-	content: '\f431';
-	vertical-align: top;
-	text-decoration: inherit;
-	font-size: 14px;
-	font-family: 'Genericons';
-	line-height: 1;
-	-webkit-transform: rotate(270deg);
-	transform: rotate(270deg);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.main-navigation-menu li ul ul {
-	top: 0;
-	left: 100%;
-}
-
-.main-navigation-menu li.menu-item-has-children:hover > ul,
-.main-navigation-menu li.page_item_has_children:hover > ul,
-.main-navigation-menu li.menu-item-has-children[aria-expanded="true"] > ul {
-	display: block;
-}
-
-.main-navigation-menu li.current-menu-item > a {
-	background: rgba(255,255,255,0.075);
-}
 
 /*--------------------------------------------------------------
 # 11.0 - Widgets

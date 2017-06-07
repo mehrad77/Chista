@@ -18,7 +18,7 @@ if ( has_nav_menu( 'primary' ) ) : ?>
 					'container' => false,
 					'menu_class' => 'main-navigation-menu',
 					'echo' => true,
-					'fallback_cb' => 'chronus_default_menu',
+					'fallback_cb' => '',
 					)
 				);
 			?>
