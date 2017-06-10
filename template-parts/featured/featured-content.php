@@ -32,11 +32,29 @@ if ( $featured_query->have_posts() ) :
 
 		<div id="featured-posts" class="featured-posts clearfix">
 
-			<?php while ( $featured_query->have_posts() ) : $featured_query->the_post();
+			<?php
+			// Display Posts.
+			while ( $featured_query->have_posts() ) :
 
-				get_template_part( 'template-parts/featured/content', 'featured' );
+				$featured_query->the_post();
 
-			endwhile; ?>
+				// Display first post differently.
+				if ( 0 === $featured_query->current_post ) :
+
+					get_template_part( 'template-parts/featured/featured', 'large-post' );
+
+					echo '<div class="featured-grid-posts clearfix">';
+
+				else :
+
+					get_template_part( 'template-parts/featured/featured', 'small-post' );
+
+				endif;
+
+			endwhile;
+
+			echo '</div><!-- end .featured-grid-posts -->';
+			?>
 
 		</div>
 

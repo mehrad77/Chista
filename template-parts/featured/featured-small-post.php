@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="featured-post clearfix">
+<div class="featured-small-post featured-post-wrap clearfix">
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -20,11 +20,6 @@
 			<?php chronus_featured_entry_meta(); ?>
 
 		</header><!-- .entry-header -->
-
-		<div class="entry-content entry-excerpt clearfix">
-			<?php the_excerpt(); ?>
-			<?php chronus_more_link(); ?>
-		</div><!-- .entry-content -->
 
 	</article>
 

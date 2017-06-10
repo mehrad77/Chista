@@ -21,7 +21,7 @@ function chronus_featured_content() {
 	// Display post slider only if activated.
 	if ( true === $theme_options['slider_active'] && is_front_page() ) :
 
-		get_template_part( 'template-parts/featured/featured-content-area' );
+		get_template_part( 'template-parts/featured/featured-content' );
 
 	endif;
 }

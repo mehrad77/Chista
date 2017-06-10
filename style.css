@@ -1497,24 +1497,70 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	margin-right: -2.5em;
 }
 
-.featured-posts .featured-post {
+.featured-posts .featured-large-post,
+.featured-posts .featured-grid-posts {
 	box-sizing: border-box;
-	padding-right: 2.5em;
-	width: 25%;
-}
-
-.featured-posts .featured-post:first-child {
 	width: 50%;
 }
 
-.featured-posts .featured-post .type-post .entry-title {
-	font-size: 26px;
-	font-size: 1.625rem;
+.featured-posts .featured-large-post {
+	padding-right: 1.25em;
 }
 
-.featured-posts .featured-post .type-post .entry-content {
-	font-size: 17px;
-	font-size: 1.0625rem;
+.featured-posts .featured-grid-posts {
+	padding-left: 1.25em;
+}
+
+.featured-posts .featured-large-post .type-post .entry-title {
+	font-size: 32px;
+	font-size: 2rem;
+}
+
+.featured-posts .featured-large-post .type-post .entry-meta .meta-author:after {
+	display: none;
+}
+
+.featured-posts .featured-grid-posts {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post {
+	box-sizing: border-box;
+	padding-right: 2.5em;
+	width: 50%;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post .type-post .wp-post-image {
+	margin: 0 0 0.75em;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-meta {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-meta .meta-date,
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-meta .meta-author {
+	display: block;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-meta .meta-author {
+	display: none;
+}
+
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-meta .meta-date:after,
+.featured-posts .featured-grid-posts .featured-small-post .type-post .entry-meta .meta-author:after {
+	display: none;
 }
 
 /*--------------------------------------------------------------

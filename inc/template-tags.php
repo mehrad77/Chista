@@ -201,8 +201,8 @@ if ( ! function_exists( 'chronus_entry_meta' ) ) :
 	 */
 	function chronus_entry_meta() {
 
-		$postmeta = chronus_meta_author();
-		$postmeta .= chronus_meta_date();
+		$postmeta = chronus_meta_date();
+		$postmeta .= chronus_meta_author();
 		$postmeta .= chronus_meta_category();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
