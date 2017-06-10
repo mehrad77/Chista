@@ -1057,7 +1057,7 @@ textarea {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0.5em 1.5em 0.5em 0.7em;
-	min-width: 300px;
+	min-width: 150px;
 	width: 100%;
 	-webkit-appearance: none;
 }
@@ -1846,6 +1846,14 @@ object {
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
+	.content-area {
+		width: 67%;
+	}
+
+	.sidebar {
+		width: 33%;
+	}
+
 	.site-title {
 		font-size: 44px;
 		font-size: 2.75rem;
@@ -1892,9 +1900,19 @@ object {
 		padding: 2em 0 0;
 	}
 
-/*	.header-main {
+	.header-main {
 		padding-top: 1.5em;
-	} */
+	}
+
+	.site-title {
+		font-size: 40px;
+		font-size: 2.5rem;
+	}
+
+	.site-description {
+		font-size: 16px;
+		font-size: 1rem;
+	}
 
 	.entry-title {
 		font-size: 36px;
@@ -2069,25 +2087,6 @@ object {
 ## 14.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
-	.header-main {
-		padding: 1em 1.5em 1.5em;
-	}
-
-	.content-area,
-	.sidebar {
-		padding: 1.5em 1.5em 0;
-	}
-
-	.widget,
-	.page-header,
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.pagination,
-	.comments-area {
-		margin-bottom: 1.5em;
-	}
-
 	.entry-title {
 		font-size: 32px;
 		font-size: 2rem;
@@ -2121,9 +2120,52 @@ object {
 ## 14.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
-	.type-post .wp-post-image,
-	.type-page .wp-post-image {
-		margin: 0;
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.site {
+		padding: 0 1.5em;
+	}
+
+	.header-main {
+		padding: 1em 1.5em 1.5em;
+	}
+
+	.site-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	.site-description {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.main-navigation-toggle,
+	.main-navigation-menu a {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.site-header,
+	.header-image,
+	.widget,
+	.site-main article,
+	.type-post,
+	.type-page,
+	.type-attachment,
+	.comments-area,
+	.entry-tags,
+	.pagination,
+	.infinite-scroll #infinite-handle span,
+	.footer-wrap {
+		margin-bottom: 1.5em;
 	}
 
 	.entry-title {
@@ -2131,9 +2173,13 @@ object {
 		font-size: 1.75rem;
 	}
 
-	.entry-content {
-		font-size: 17px;
-		font-size: 1.0625rem;
+	.wp-post-image {
+		margin: 0 0 0.75em;
+	}
+
+	.entry-meta {
+		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 
 	/* Magazine Post Widgets */
@@ -2178,29 +2224,6 @@ object {
 ## 14.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-	.header-main {
-		padding: 0.75em 1.25em 1.25em;
-	}
-
-	.content-area,
-	.sidebar {
-		padding: 1.25em 1.25em 0;
-	}
-
-	.widget,
-	.page-header,
-	.type-post,
-	.type-page,
-	.type-attachment,
-	.pagination,
-	.comments-area {
-		margin-bottom: 1.25em;
-	}
-
-	.site-branding .site-title {
-		font-size: 36px;
-		font-size: 2.25rem;
-	}
 
 	.entry-title {
 		font-size: 24px;
@@ -2225,17 +2248,25 @@ object {
 	}
 }
 
+@media only screen and (max-width: 25em) {
+	.entry-meta .meta-date,
+	.entry-meta .meta-category {
+		display: block;
+	}
+
+	.entry-meta .meta-date:after,
+	.entry-meta .meta-author:after {
+		display: none;
+	}
+}
+
 /*--------------------------------------------------------------
 ## 14.10 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 20em) {
-	.site-branding .site-title {
+	.site-title {
 		font-size: 32px;
 		font-size: 2rem;
-	}
-
-	.site-branding .custom-logo {
-		margin: 0.5em 0 0 0;
 	}
 
 	.entry-title {
@@ -2243,14 +2274,6 @@ object {
 		font-size: 1.25rem;
 	}
 
-	.entry-meta .meta-date,
-	.entry-meta .meta-category {
-		display: block;
-	}
-
-	.entry-meta span:after {
-		display: none;
-	}
 
 	/* Magazine Homepage: Category Post Widgets */
 	.widget-magazine-posts .large-post .entry-title {
@@ -2294,19 +2317,25 @@ object {
 	padding-right: 2em;
 }
 
-@media only screen and (max-width: 70em) {
+@media only screen and (max-width: 80em) {
 	.sidebar-left .content-area {
-		padding-right: 0;
-		padding-left: 3em;
+		padding-left: 1em;
+	}
+
+	.sidebar-left .sidebar {
+		padding-right: 1em;
 	}
 }
 
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 57.5em) {
 	.sidebar-left .content-area {
 		padding: 0;
 	}
-}
 
+	.sidebar-left .sidebar {
+		padding: 2em 0 0;
+	}
+}
 
 /*--------------------------------------------------------------
 # 16.0 - Media Query Fixes
@@ -2314,10 +2343,6 @@ object {
 
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 57.501em) {
-	.top-navigation-menu {
-		display: block !important;
-	}
-
 	.main-navigation-menu {
 		display: flex !important;
 	}
