@@ -627,7 +627,7 @@ textarea {
 .site {
 	margin: 0 auto;
 	padding: 0 2.5em;
-	max-width: 1245px;
+	max-width: 1300px;
 	width: 100%;
 	background: #fff;
 }
@@ -663,7 +663,7 @@ textarea {
 .no-sidebar .content-area,
 .site-content .centered-content-area {
 	margin: 0 auto;
-	max-width: 900px;
+	max-width: 870px;
 	width: 100%;
 }
 
@@ -710,8 +710,8 @@ textarea {
 	color: #303030;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 44px;
-	font-size: 2.75rem;
+	font-size: 48px;
+	font-size: 3rem;
 	font-family: 'Rambla', Tahoma, Arial;
 }
 
@@ -1584,6 +1584,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
+	font-weight: normal;
 }
 
 /* Comment List */
@@ -1808,27 +1809,35 @@ object {
 /*--------------------------------------------------------------
 ## 14.1 - Desktop X-Large ( < 1200px )
 --------------------------------------------------------------*/
-@media only screen and (max-width: 85em) {
+@media only screen and (max-width: 80em) {
 	.site {
-		margin: 0;
+		padding: 0 2em;
+	}
+
+	.content-area {
+		padding-right: 1em;
+	}
+
+	.sidebar {
+		padding-left: 1em;
 	}
 
 	.header-main {
-		padding: 2em;
+		padding: 2em 0;
 	}
 
-	.content-area,
-	.sidebar {
-		padding: 2em 2em 0;
-	}
-
+	.site-header,
+	.header-image,
 	.widget,
-	.page-header,
+	.site-main article,
 	.type-post,
 	.type-page,
 	.type-attachment,
+	.comments-area,
+	.entry-tags,
 	.pagination,
-	.comments-area {
+	.infinite-scroll #infinite-handle span,
+	.footer-wrap {
 		margin-bottom: 2em;
 	}
 }
@@ -1838,8 +1847,8 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
 	.site-title {
-		font-size: 40px;
-		font-size: 2.5rem;
+		font-size: 44px;
+		font-size: 2.75rem;
 	}
 
 	.entry-title {
@@ -1868,24 +1877,24 @@ object {
 /*--------------------------------------------------------------
 ## 14.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 57.5em) {
 	.site-content {
 		display: block;
 	}
 
 	.content-area {
 		width: 100%;
+		padding: 0;
 	}
 
 	.sidebar {
 		width: 100%;
-		border-top: 1px solid #eee;
-		border-left: none;
+		padding: 2em 0 0;
 	}
 
-	.header-main {
+/*	.header-main {
 		padding-top: 1.5em;
-	}
+	} */
 
 	.entry-title {
 		font-size: 36px;
@@ -1910,6 +1919,7 @@ object {
 	.main-navigation-menu ul a {
 		float: none;
 		width: auto;
+		min-width: auto;
 	}
 
 	.main-navigation-menu li ul ul {
@@ -1924,13 +1934,22 @@ object {
 	}
 
 	/* Main Navigation Toggle */
+	.primary-navigation-wrap {
+		text-align: center;
+	}
+
 	.main-navigation-toggle {
 		display: inline-block;
-		float: left;
 		margin: 0;
-		padding: 1em;
+		padding: 0.75em 1em;
+		color: #303030;
 		background: none;
-		color: #fff;
+		border: none;
+		text-decoration: none;
+		font-size: 20px;
+		font-size: 1.25rem;
+		font-family: 'Rambla', Tahoma, Arial;
+		font-weight: normal;
 	}
 
 	.main-navigation-toggle:hover,
@@ -1941,14 +1960,14 @@ object {
 
 	.main-navigation-toggle:hover,
 	.main-navigation-toggle:active {
-		color: rgba(255,255,255,0.5);
+		color: #cc5555;
 		cursor: pointer;
 	}
 
 	.main-navigation-toggle:before {
 		display: inline-block;
 		float: left;
-		margin: 0.15em 0.5em 0 0;
+		margin: 0.2em 0.5em 0 0;
 		content: '\f419';
 		vertical-align: top;
 		text-decoration: inherit;
@@ -1962,11 +1981,10 @@ object {
 	/* Main Navigation Menu */
 	.main-navigation-menu {
 		display: none;
-		float: left;
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		border-top: 1px solid #fff;
+		border-top: 1px solid #eee;
 	}
 
 	.main-navigation-menu li {
@@ -1974,56 +1992,35 @@ object {
 	}
 
 	.main-navigation-menu a {
-		display: block;
-		clear: left;
-		padding: 1em 1.5em;
-		border-bottom: 1px solid rgba(255,255,255,0.1);
-	}
-
-	.main-navigation-menu li:last-child a {
-		border-bottom: none;
+		position: relative;
+		display: inline-block;
+		padding: 0.75em 1em;
 	}
 
 	.main-navigation-menu ul {
 		width: 100%;
 		border: none;
+		border-top: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.main-navigation-menu ul li {
+		border-bottom: 1px solid rgba(255,255,255,0.1);
 	}
 
 	.main-navigation-menu ul a {
-		display: block;
-		padding-left: 3em;
-		width: 100%;
-	}
-
-	.main-navigation-menu ul li ul a {
-		padding-left: 4em;
-	}
-
-	.main-navigation-menu ul li ul li ul a {
-		padding-left: 5em;
-	}
-
-	.main-navigation-menu ul li ul li ul li ul a {
-		padding-left: 6em;
-	}
-
-	.main-navigation-menu ul li:last-child a {
-		border-bottom: 1px solid rgba(255,255,255,0.1);
+		display: inline-block;
+		border: none;
 	}
 
 	/* Mobile Submenu Dropdowns */
 	.main-navigation-menu .submenu-dropdown-toggle {
-		display: block;
-		float: right;
-		margin: 0;
-		padding: 0.9em 1.2em;
-		background: none;
-		color: #fff;
+		position: absolute;
+		padding: 0.9em;
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle:hover,
 	.main-navigation-menu .submenu-dropdown-toggle:active {
-		color: rgba(255,255,255,0.5);
+		color: #cc5555;
 		cursor: pointer;
 	}
 
@@ -2031,7 +2028,7 @@ object {
 		content: '\f431';
 		vertical-align: middle;
 		text-decoration: inherit;
-		font-size: 32px;
+		font-size: 28px;
 		font-family: 'Genericons';
 		line-height: 1;
 		-webkit-font-smoothing: antialiased;
@@ -2043,11 +2040,16 @@ object {
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle {
-		padding: 0.65em 1em;
+		padding: 0.8em;
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle:before {
-		font-size: 24px;
+		font-size: 22px;
+	}
+
+	.main-navigation-menu ul .submenu-dropdown-toggle:hover,
+	.main-navigation-menu ul .submenu-dropdown-toggle:active {
+		color: rgba(255,255,255,0.5);
 	}
 
 	/* Magazine Post Widgets */
@@ -2311,9 +2313,13 @@ object {
 --------------------------------------------------------------*/
 
 /* Ensure navigation is visible on desktop view */
-@media only screen and (min-width: 60.001em) {
+@media only screen and (min-width: 57.501em) {
 	.top-navigation-menu {
 		display: block !important;
+	}
+
+	.main-navigation-menu {
+		display: flex !important;
 	}
 }
 

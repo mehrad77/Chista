@@ -21,11 +21,11 @@
 
 <body <?php body_class(); ?>>
 
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
+
 	<?php do_action( 'chronus_header_bar' ); ?>
 
 	<div id="page" class="hfeed site">
-
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
 
 		<header id="masthead" class="site-header clearfix" role="banner">
 

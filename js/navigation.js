@@ -115,7 +115,7 @@
 		$this.before( '<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>' );
 
 		/* Add dropdown toggle for submenus on mobile navigation */
-		$menu.find( 'li.menu-item-has-children' ).prepend( '<span class=\"submenu-dropdown-toggle\"></span>' );
+		$menu.find( 'li.menu-item-has-children > a' ).after( '<span class=\"submenu-dropdown-toggle\"></span>' );
 
 		/* Add dropdown slide animation for mobile devices */
 		$( '#' + toggleID ).on( 'click', function() {
@@ -127,7 +127,8 @@
 		$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
 			$( this ).hide();
 		} );
-		$menu.find( '.submenu-dropdown-toggle' ).on( 'click', function() {
+		$menu.find( '.submenu-dropdown-toggle' ).on( 'click', function(e) {
+			e.preventDefault();
 			$( this ).parent().find( 'ul:first' ).slideToggle();
 			$( this ).toggleClass( 'active' );
 		});
@@ -144,14 +145,14 @@
 			menuClass: 'main-navigation-menu',
 			toggleClass: 'main-navigation-toggle',
 			toggleText: chronus_menu_title,
-			maxWidth: '60em'
+			maxWidth: '57.5em'
 		} );
 
 		/* Setup Top Navigation */
 		$( '#top-navigation' ).responsiveMenu( {
 			menuClass: 'top-navigation-menu',
 			toggleClass: 'top-navigation-toggle',
-			maxWidth: '60em'
+			maxWidth: '57.5em'
 		} );
 
 	} );

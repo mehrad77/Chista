@@ -19,12 +19,12 @@ function chronus_theme_addons_setup() {
 
 	// Add theme support for Widget Bundle.
 	add_theme_support( 'themezee-widget-bundle', array(
-		'thumbnail_size' => array( 80, 80 ),
+		'thumbnail_size' => array( 120, 80 ),
 	) );
 
 	// Add theme support for Related Posts.
 	add_theme_support( 'themezee-related-posts', array(
-		'thumbnail_size' => array( 480, 320 ),
+		'thumbnail_size' => array( 400, 250 ),
 	) );
 
 	// Add theme support for Infinite Scroll.

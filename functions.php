@@ -36,7 +36,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Set detfault Post Thumbnail size.
-		set_post_thumbnail_size( 800, 500, true );
+		set_post_thumbnail_size( 840, 525, true );
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
@@ -146,7 +146,7 @@ function chronus_scripts() {
 	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160719' );
 
 	// Passing Parameters to navigation.js.
-	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', esc_html__( 'Navigation', 'chronus' ) );
+	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', esc_html__( 'Menu', 'chronus' ) );
 
 	// Register and Enqueue Google Fonts.
 	wp_enqueue_style( 'chronus-default-fonts', chronus_google_fonts_url(), array(), null );

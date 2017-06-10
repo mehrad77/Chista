@@ -11,8 +11,6 @@
 
 	</div><!-- #content -->
 
-	<?php do_action( 'chronus_footer_menu' ); ?>
-
 	<?php do_action( 'chronus_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
