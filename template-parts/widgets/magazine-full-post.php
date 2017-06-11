@@ -9,13 +9,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php chronus_post_image( 'chronus-thumbnail-single' ); ?>
+	<?php chronus_post_image(); ?>
 
 	<header class="entry-header">
 
-		<?php chronus_entry_meta(); ?>
-
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+		<?php chronus_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 

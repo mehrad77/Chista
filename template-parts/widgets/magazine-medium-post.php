@@ -7,16 +7,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post clearfix' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post' ); ?>>
 
 	<?php chronus_post_image( 'chronus-thumbnail-medium' ); ?>
 
-	<header class="entry-header">
+	<div class="post-content">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<header class="entry-header">
 
-		<?php chronus_magazine_entry_date(); ?>
+			<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-	</header><!-- .entry-header -->
+			<?php chronus_magazine_entry_date(); ?>
+
+		</header><!-- .entry-header -->
+
+	</div>
 
 </article>

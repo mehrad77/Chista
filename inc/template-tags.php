@@ -144,7 +144,7 @@ if ( ! function_exists( 'chronus_post_image' ) ) :
 		// Check if post has thumbnail.
 		if ( has_post_thumbnail() ) : ?>
 
-			<a href="<?php the_permalink(); ?>" rel="bookmark">
+			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( $size, $attr ); ?>
 			</a>
 
@@ -166,7 +166,7 @@ if ( ! function_exists( 'chronus_post_image_archives' ) ) :
 		// Display Post Thumbnail if activated.
 		if ( true === $theme_options['post_image_archives'] && has_post_thumbnail() ) : ?>
 
-			<a href="<?php the_permalink(); ?>" rel="bookmark">
+			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 			</a>
 

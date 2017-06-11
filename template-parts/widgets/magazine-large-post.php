@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post' ); ?>>
 
 	<?php chronus_post_image( 'chronus-thumbnail-large' ); ?>
 

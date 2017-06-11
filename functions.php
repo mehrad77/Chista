@@ -184,13 +184,10 @@ function chronus_google_fonts_url() {
  */
 function chronus_add_image_sizes() {
 
-	// Add Slider Image Size.
-	add_image_size( 'chronus-slider-image', 1280, 450, true );
-
 	// Add different thumbnail sizes for Magazine Posts widgets.
 	add_image_size( 'chronus-thumbnail-small', 120, 80, true );
-	add_image_size( 'chronus-thumbnail-medium', 320, 200, true );
-	add_image_size( 'chronus-thumbnail-large', 560, 350, true );
+	add_image_size( 'chronus-thumbnail-medium', 280, 175, true );
+	add_image_size( 'chronus-thumbnail-large', 600, 375, true );
 
 }
 add_action( 'after_setup_theme', 'chronus_add_image_sizes' );

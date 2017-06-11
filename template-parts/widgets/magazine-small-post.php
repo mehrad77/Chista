@@ -7,11 +7,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post' ); ?>>
 
 	<?php chronus_post_image( 'chronus-thumbnail-small' ); ?>
 
-	<div class="post-content clearfix">
+	<div class="post-content">
 
 		<header class="entry-header">
 
