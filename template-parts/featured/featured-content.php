@@ -15,9 +15,10 @@ $post_ids = chronus_get_magazine_post_ids( 'featured-content', $theme_options['f
 
 // Fetch posts from database.
 $query_arguments = array(
-	'post__in'       => $post_ids,
-	'posts_per_page' => 5,
-	'no_found_rows'  => true,
+	'post__in'            => $post_ids,
+	'posts_per_page'      => 5,
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
 );
 $featured_query = new WP_Query( $query_arguments );
 
