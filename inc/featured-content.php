@@ -56,7 +56,7 @@ if ( ! function_exists( 'chronus_featured_post_image' ) ) :
 		<?php else : ?>
 
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/default-slider-image.png" class="featured-image default-featured-image wp-post-image" />
+				<img src="<?php echo get_template_directory_uri(); ?>/images/default-featured-image.png" class="featured-image default-featured-image wp-post-image" />
 			</a>
 
 		<?php endif;

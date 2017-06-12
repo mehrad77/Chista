@@ -2,7 +2,7 @@
 Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/chronus/
 Contributors: themezee
-Tags: two-columns, blog, news, custom-background, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.4
 Tested up to: 4.8
 License: GPLv2 or later
@@ -12,7 +12,7 @@ Chronus is a clean and simple Magazine WordPress theme with beautiful typography
 
 == Description ==
 
-Chronus is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors. The theme includes two different post layouts, a featured post slider and thoughtful theme settings in the Customizer.
+Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
 
 For more information about Chronus please go to https://themezee.com/themes/chronus/
 
@@ -60,32 +60,44 @@ Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
 License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
 Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 
-4. FlexSlider - https://github.com/woothemes/FlexSlider
-License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
-Copyright: 2015 WooThemes, http://www.woothemes.com
-
-5. HTML5 Shiv - https://github.com/aFarkas/html5shiv
+4. HTML5 Shiv - https://github.com/aFarkas/html5shiv
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright: 2015 @afarkas @jdalton @jon_neal @rem
 
-6. Gudea Font - https://www.google.com/fonts/specimen/Gudea
+5. Raleway Font - https://www.google.com/fonts/specimen/Raleway
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: Agustina Mingote
+Copyright: Pablo Impallari and Rodrigo Fuenzalida
 
-7. Magra Font - https://www.google.com/fonts/specimen/Magra
+6. Rambla Font - https://www.google.com/fonts/specimen/Rambla
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: FontFuror
+Copyright: Martin Sommaruga
 
-8. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
-Image 1: https://pixabay.com/en/bottom-bracket-gear-mountain-bike-1204870/
+Image 1: https://pixabay.com/en/office-home-glasses-workspace-820390/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2015 Stefan Schweihofer (https://pixabay.com/en/users/stux-12364/)
+Copyright: 2015 fancycrave1 (https://pixabay.com/en/users/fancycrave1-1115284/)
 
-Image 2: https://pixabay.com/en/ice-hockey-goalie-goal-sport-team-557578/
+Image 2: https://pixabay.com/en/blur-close-up-computer-drink-focus-1867997/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2007 skeeze (https://pixabay.com/en/users/skeeze-272447/)
+Copyright: 2016 Pexels (https://pixabay.com/en/users/Pexels-2286921/)
 
-Image 3: https://pixabay.com/en/sports-skate-sport-teens-together-1260307/
+Image 3: https://pixabay.com/en/computer-macbook-tablet-editing-767781/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: 2014 FlorVegana (https://pixabay.com/en/users/FlorVegana-2142832/)
+Copyright: 2015 Lalmch (https://pixabay.com/en/users/Lalmch-1026205/)
+
+Image 4: https://pixabay.com/en/apple-computer-electronics-keyboard-1846666/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2017 Pexels (https://pixabay.com/en/users/Pexels-2286921/)
+
+Image 5: https://pixabay.com/en/office-work-computer-portable-2009693/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2016 Aracely Mitsu (https://pixabay.com/en/users/aracelymitsu-4366904/)
+
+Image 6: https://pixabay.com/en/floor-gang-input-entrance-hall-2228277/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2017 Orlando (https://pixabay.com/en/users/PIRO4D-2707530/)
+
+Image 7: https://pixabay.com/en/computer-laptop-table-technology-2242274/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2017 engin akyurt (https://pixabay.com/en/users/Engin_Akyurt-3656355/)
