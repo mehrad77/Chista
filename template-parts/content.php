@@ -20,7 +20,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content clearfix">
-		<?php the_content( esc_html__( 'Continue reading &raquo;', 'poseidon' ) ); ?>
+		<?php the_content( esc_html__( 'Continue reading &raquo;', 'chronus' ) ); ?>
 	</div><!-- .entry-content -->
 
 </article>
