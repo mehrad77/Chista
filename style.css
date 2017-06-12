@@ -1299,8 +1299,8 @@ body.categories-hidden .entry-meta .meta-category {
 	  overflow: hidden
 }
 
-body.categories-hidden .content-area .entry-meta .meta-date:after,
-body.date-hidden.categories-hidden .content-area .entry-meta .meta-author:after,
+body.categories-hidden .content-area .entry-meta .meta-author:after,
+body.author-hidden.categories-hidden .content-area .entry-meta .meta-date:after,
 body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	display: none;
 }

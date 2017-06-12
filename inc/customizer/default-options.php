@@ -36,6 +36,7 @@ function chronus_default_options() {
 		'custom_header_link'  => '',
 		'custom_header_hide'  => false,
 		'layout'              => 'right-sidebar',
+		'blog_layout'         => 'excerpt',
 		'blog_title'          => '',
 		'blog_description'    => '',
 		'excerpt_length'      => 40,

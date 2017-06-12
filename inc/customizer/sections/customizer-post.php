@@ -22,6 +22,27 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
+	// Add Settings and Controls for post content.
+	$wp_customize->add_setting( 'chronus_theme_options[blog_layout]', array(
+		'default'           => 'excerpt',
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chronus_sanitize_select',
+		)
+	);
+	$wp_customize->add_control( 'chronus_theme_options[blog_layout]', array(
+		'label'    => esc_html__( 'Blog Layout', 'chronus' ),
+		'section'  => 'chronus_section_post',
+		'settings' => 'chronus_theme_options[blog_layout]',
+		'type'     => 'radio',
+		'priority' => 10,
+		'choices'  => array(
+			'index' => esc_html__( 'Show full posts', 'chronus' ),
+			'excerpt' => esc_html__( 'Show post excerpts', 'chronus' ),
+			),
+		)
+	);
+
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
 		'default'           => 40,
@@ -31,11 +52,12 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( 'chronus_theme_options[excerpt_length]', array(
-		'label'    => esc_html__( 'Excerpt Length', 'chronus' ),
-		'section'  => 'chronus_section_post',
-		'settings' => 'chronus_theme_options[excerpt_length]',
-		'type'     => 'text',
-		'priority' => 20,
+		'label'           => esc_html__( 'Excerpt Length', 'chronus' ),
+		'section'         => 'chronus_section_post',
+		'settings'        => 'chronus_theme_options[excerpt_length]',
+		'type'            => 'text',
+		'priority'        => 20,
+		'active_callback' => 'chronus_control_blog_layout_callback',
 		)
 	);
 

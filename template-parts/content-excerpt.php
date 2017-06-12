@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying articles in the loop with full content
+ * The template for displaying articles in the loop with post excerpts
  *
  * @package Chronus
  */
@@ -19,8 +19,9 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content clearfix">
-		<?php the_content( esc_html__( 'Continue reading &raquo;', 'poseidon' ) ); ?>
+	<div class="entry-content entry-excerpt clearfix">
+		<?php the_excerpt(); ?>
+		<?php chronus_more_link(); ?>
 	</div><!-- .entry-content -->
 
 </article>

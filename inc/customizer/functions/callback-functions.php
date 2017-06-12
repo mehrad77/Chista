@@ -14,10 +14,10 @@
  * @param object $control / Instance of the Customizer Control.
  * @return bool
  */
-function chronus_control_post_content_callback( $control ) {
+function chronus_control_blog_layout_callback( $control ) {
 
 	// Check if excerpt mode is selected.
-	if ( 'excerpt' === $control->manager->get_setting( 'chronus_theme_options[post_content]' )->value() ) :
+	if ( 'excerpt' === $control->manager->get_setting( 'chronus_theme_options[blog_layout]' )->value() ) :
 		return true;
 	else :
 		return false;

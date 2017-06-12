@@ -7,7 +7,11 @@
  * @package Chronus
  */
 
-get_header(); ?>
+get_header();
+
+// Get Theme Options from Database.
+$theme_options = chronus_theme_options();
+?>
 
 	<section id="primary" class="content-archive content-area">
 		<main id="main" class="site-main" role="main">
@@ -31,7 +35,7 @@ get_header(); ?>
 
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content' );
+				get_template_part( 'template-parts/content', esc_attr( $theme_options['blog_layout'] ) );
 
 			endwhile;
 
