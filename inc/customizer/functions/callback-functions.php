@@ -32,10 +32,10 @@ function chronus_control_blog_layout_callback( $control ) {
  * @param object $control / Instance of the Customizer Control.
  * @return bool
  */
-function chronus_slider_activated_callback( $control ) {
+function chronus_featured_activated_callback( $control ) {
 
 	// Check if Slider is turned on.
-	if ( true === $control->manager->get_setting( 'chronus_theme_options[slider_active]' )->value() ) :
+	if ( true === $control->manager->get_setting( 'chronus_theme_options[featured_posts]' )->value() ) :
 		return true;
 	else :
 		return false;

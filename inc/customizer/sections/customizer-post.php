@@ -45,7 +45,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
-		'default'           => 40,
+		'default'           => 35,
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'absint',

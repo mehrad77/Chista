@@ -13,7 +13,7 @@ require( get_template_directory() . '/inc/customizer/functions/callback-function
 // Load Customizer Section Files.
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-featured.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
 
 /**

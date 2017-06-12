@@ -19,7 +19,7 @@ function chronus_featured_content() {
 	$theme_options = chronus_theme_options();
 
 	// Display post slider only if activated.
-	if ( true === $theme_options['slider_active'] && is_front_page() ) :
+	if ( true === $theme_options['featured_posts'] && is_front_page() ) :
 
 		get_template_part( 'template-parts/featured/featured-content' );
 

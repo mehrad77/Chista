@@ -19,15 +19,14 @@
 #customize-control-chronus_theme_options-post_details,
 #customize-control-chronus_theme_options-single_post,
 #customize-control-chronus_theme_options-featured_images,
-#customize-control-chronus_theme_options-slider_category,
-#customize-control-chronus_theme_options-slider_limit,
-#customize-control-chronus_theme_options-slider_animation {
+#customize-control-chronus_theme_options-featured_category {
 	margin-top: 16px;
 }
 
 #customize-control-chronus_theme_options-post_details,
 #customize-control-chronus_theme_options-single_post,
-#customize-control-chronus_theme_options-featured_images {
+#customize-control-chronus_theme_options-featured_images,
+#customize-control-chronus_theme_options-activate_featured_posts {
 	margin-bottom: 0;
 }
 

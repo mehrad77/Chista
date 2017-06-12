@@ -11,7 +11,7 @@
 $theme_options = chronus_theme_options();
 
 // Get cached post ids.
-$post_ids = chronus_get_magazine_post_ids( 'featured-content', $theme_options['slider_category'], 5 );
+$post_ids = chronus_get_magazine_post_ids( 'featured-content', $theme_options['featured_category'], 5 );
 
 // Fetch posts from database.
 $query_arguments = array(

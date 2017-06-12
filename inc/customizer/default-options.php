@@ -39,7 +39,7 @@ function chronus_default_options() {
 		'blog_layout'         => 'excerpt',
 		'blog_title'          => '',
 		'blog_description'    => '',
-		'excerpt_length'      => 40,
+		'excerpt_length'      => 35,
 		'meta_date'           => true,
 		'meta_author'         => true,
 		'meta_category'       => true,
@@ -47,11 +47,8 @@ function chronus_default_options() {
 		'post_navigation'     => true,
 		'post_image_archives' => true,
 		'post_image_single'   => true,
-		'slider_active'       => false,
-		'slider_category'     => 0,
-		'slider_limit'        => 8,
-		'slider_animation'    => 'slide',
-		'slider_speed'        => 7000,
+		'featured_posts'      => false,
+		'featured_category'   => 0,
 	);
 
 	return $default_options;
