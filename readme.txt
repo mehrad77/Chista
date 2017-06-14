@@ -48,9 +48,9 @@ GNU General Public License for more details.
 
 Chronus bundles the following third-party resources:
 
-1. Genericons Icon Font - http://genericons.com
+1. Genericons Neue - https://github.com/Automattic/genericons-neue
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
-Copyright: 2015 Automattic, Inc., https://automattic.com/
+Copyright: 2017 Automattic, Inc., https://automattic.com/
 
 2. Underscores - http://underscores.me/
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)

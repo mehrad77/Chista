@@ -67,6 +67,20 @@
 				/* Remove ARIA states on mobile devices */
 				$menu.find( 'li.menu-item-has-children > a' ).unbind( 'focus.aria mouseenter.aria blur.aria  mouseleave.aria' );
 
+				/* Create Sub Menu Dropdown Toggles on mobile devices */
+				$menu.find( 'li.menu-item-has-children a .sub-menu-icon' ).each( function() {
+					$( this ).addClass( 'submenu-dropdown-toggle' ).parent().after(this);
+				} );
+
+				/* Add dropdown animation for submenus on mobile navigation */
+				$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
+					$( this ).hide();
+				} );
+				$menu.find( 'li.menu-item-has-children .submenu-dropdown-toggle' ).on( 'click', function(e) {
+					$( this ).parent().find( 'ul:first' ).slideToggle();
+					$( this ).toggleClass( 'active' );
+				});
+
 			} else {
 
 				/* Add dropdown animation for desktop navigation menu */
@@ -103,6 +117,11 @@
 
 				} );
 
+				/* Remove Sub Menu Dropdown Toggles on desktop screens */
+				$menu.find( 'li.menu-item-has-children .submenu-dropdown-toggle' ).each( function() {
+					$( this ).removeClass( 'submenu-dropdown-toggle' ).appendTo( $( this ).prev() );
+				} );
+
 			}
 
 		}
@@ -114,22 +133,9 @@
 		/* Add Menu Toggle Button for mobile navigation */
 		$this.before( '<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>' );
 
-		/* Add dropdown toggle for submenus on mobile navigation */
-		$menu.find( 'li.menu-item-has-children > a' ).after( '<span class=\"submenu-dropdown-toggle\"></span>' );
-
 		/* Add dropdown slide animation for mobile devices */
 		$( '#' + toggleID ).on( 'click', function() {
 			$menu.slideToggle();
-			$( this ).toggleClass( 'active' );
-		});
-
-		/* Add dropdown animation for submenus on mobile navigation */
-		$menu.find( 'li.menu-item-has-children .sub-menu' ).each( function () {
-			$( this ).hide();
-		} );
-		$menu.find( '.submenu-dropdown-toggle' ).on( 'click', function(e) {
-			e.preventDefault();
-			$( this ).parent().find( 'ul:first' ).slideToggle();
 			$( this ).toggleClass( 'active' );
 		});
 
