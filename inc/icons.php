@@ -6,21 +6,6 @@
  */
 
 /**
- * Add SVG definitions to the footer.
- */
-function chronus_include_svg_icons() {
-	// Define SVG sprite file.
-	$svg_icons = get_parent_theme_file_path( '/assets/icons/genericons-neue.svg' );
-
-	// If it exists, include it.
-	if ( file_exists( $svg_icons ) ) {
-		require_once( $svg_icons );
-	}
-}
-add_action( 'wp_footer', 'chronus_include_svg_icons', 9999 );
-
-
-/**
  * Return SVG markup.
  *
  * @param string $icon  Required SVG icon filename.
@@ -34,7 +19,7 @@ function chronus_get_svg( $icon = null ) {
 
 	// Display the icon.
 	$svg = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
-	$svg .= ' <use href="#' . esc_html( $icon ) . '" xlink:href="#' . esc_html( $icon ) . '"></use> ';
+	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/genericons-neue.svg#' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
 	return $svg;

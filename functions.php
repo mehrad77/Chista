@@ -136,15 +136,14 @@ function chronus_scripts() {
 	// Register and Enqueue Stylesheet.
 	wp_enqueue_style( 'chronus-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
-	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
-	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
-
 	// Register and enqueue navigation.js.
 	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20160719' );
 
 	// Passing Parameters to navigation.js.
 	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', chronus_get_svg( 'menu' ) . esc_html__( 'Menu', 'chronus' ) );
+
+	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
+	wp_enqueue_script( 'svg4everybody', get_template_directory_uri() . '/assets/js/svg4everybody.js', array( 'jquery' ), '2.1.8' );
 
 	// Register and Enqueue Google Fonts.
 	wp_enqueue_style( 'chronus-default-fonts', chronus_google_fonts_url(), array(), null );
