@@ -8,8 +8,8 @@
 /**
  * Return SVG markup.
  *
- * @param string $icon  Required SVG icon filename.
- * @return string SVG markup.
+ * @param string $icon SVG icon id.
+ * @return string $svg SVG markup.
  */
 function chronus_get_svg( $icon = null ) {
 	// Return early if no icon was defined.
@@ -17,13 +17,14 @@ function chronus_get_svg( $icon = null ) {
 		return;
 	}
 
-	// Display the icon.
+	// Create SVG markup.
 	$svg = '<svg class="icon icon-' . esc_attr( $icon ) . '" aria-hidden="true" role="img">';
 	$svg .= ' <use xlink:href="' . get_parent_theme_file_uri( '/assets/icons/genericons-neue.svg#' ) . esc_html( $icon ) . '"></use> ';
 	$svg .= '</svg>';
 
 	return $svg;
 }
+
 
 /**
  * Add dropdown icon if menu item has children.

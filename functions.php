@@ -142,8 +142,8 @@ function chronus_scripts() {
 	// Passing Parameters to navigation.js.
 	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', chronus_get_svg( 'menu' ) . esc_html__( 'Menu', 'chronus' ) );
 
-	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions.
-	wp_enqueue_script( 'svg4everybody', get_template_directory_uri() . '/assets/js/svg4everybody.js', array( 'jquery' ), '2.1.8' );
+	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
+	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );
 
 	// Register and Enqueue Google Fonts.
 	wp_enqueue_style( 'chronus-default-fonts', chronus_google_fonts_url(), array(), null );
