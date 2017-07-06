@@ -68,3 +68,21 @@ function chronus_customize_register_featured_settings( $wp_customize ) {
 
 }
 add_action( 'customize_register', 'chronus_customize_register_featured_settings' );
+
+
+/**
+ * Adds a callback function to retrieve wether slider is activated or not
+ *
+ * @param object $control / Instance of the Customizer Control.
+ * @return bool
+ */
+function chronus_featured_activated_callback( $control ) {
+
+	// Check if Slider is turned on.
+	if ( true === $control->manager->get_setting( 'chronus_theme_options[featured_posts]' )->value() ) :
+		return true;
+	else :
+		return false;
+	endif;
+
+}

@@ -5,13 +5,16 @@
  * @package Chronus
  */
 
-// Load Customizer Helper Functions.
-require( get_template_directory() . '/inc/customizer/functions/custom-controls.php' );
-require( get_template_directory() . '/inc/customizer/functions/magazine-widget-area-control.php' );
-require( get_template_directory() . '/inc/customizer/functions/sanitize-functions.php' );
-require( get_template_directory() . '/inc/customizer/functions/callback-functions.php' );
+// Load Sanitize Functions.
+require( get_template_directory() . '/inc/customizer/sanitize-functions.php' );
 
-// Load Customizer Section Files.
+// Load Custom Controls.
+require( get_template_directory() . '/inc/customizer/controls/category-dropdown-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/headline-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/magazine-widget-area-control.php' );
+require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
+
+// Load Customizer Sections.
 require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );

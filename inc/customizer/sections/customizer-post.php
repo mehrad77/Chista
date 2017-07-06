@@ -204,3 +204,21 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 	);
 }
 add_action( 'customize_register', 'chronus_customize_register_post_settings' );
+
+
+/**
+ * Adds a callback function to retrieve wether post content is set to excerpt or not
+ *
+ * @param object $control / Instance of the Customizer Control.
+ * @return bool
+ */
+function chronus_control_blog_layout_callback( $control ) {
+
+	// Check if excerpt mode is selected.
+	if ( 'excerpt' === $control->manager->get_setting( 'chronus_theme_options[blog_layout]' )->value() ) :
+		return true;
+	else :
+		return false;
+	endif;
+
+}
