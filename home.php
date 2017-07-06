@@ -18,16 +18,7 @@ $theme_options = chronus_theme_options();
 
 		<?php
 		// Display Magazine Homepage Widgets.
-		if ( ! is_paged() && is_active_sidebar( 'magazine-homepage' ) ) : ?>
-
-			<div id="magazine-homepage-widgets" class="widget-area magazine-widget-area clearfix">
-
-				<?php dynamic_sidebar( 'magazine-homepage' ); ?>
-
-			</div><!-- #magazine-homepage-widgets -->
-
-			<?php
-		endif;
+		chronus_magazine_widgets();
 
 		if ( have_posts() ) :
 

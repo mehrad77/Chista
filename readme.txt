@@ -26,6 +26,10 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.1 =
+* added SVG Icons instead of Genericons font
+* added custom Magazine Widget Control in Customizer
+
 = 1.0 =
 Initial Release
 
@@ -60,9 +64,9 @@ Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
 License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
 Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 
-4. HTML5 Shiv - https://github.com/aFarkas/html5shiv
-License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
-Copyright: 2015 @afarkas @jdalton @jon_neal @rem
+4. svgxuse - https://github.com/Keyamoon/svgxuse
+License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
+Copyright: 2017 IcoMoon.io
 
 5. Raleway Font - https://www.google.com/fonts/specimen/Raleway
 License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)

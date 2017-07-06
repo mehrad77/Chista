@@ -24,7 +24,7 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Columns)', 'chronus' ), // Name.
 			array(
 				'classname' => 'chronus-magazine-columns-widget',
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'chronus' ),
+				'description' => esc_html__( 'Displays your posts from two selected categories.', 'chronus' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,12 +36,12 @@ class Chronus_Magazine_Posts_Columns_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'category_one'			=> 0,
-			'category_two'			=> 0,
-			'category_one_title'	=> '',
-			'category_two_title'	=> '',
-			'number'				=> 4,
-			'highlight_post'		=> true,
+			'category_one'       => 0,
+			'category_two'       => 0,
+			'category_one_title' => esc_html__( 'Left Category', 'chronus' ),
+			'category_two_title' => esc_html__( 'Right Category', 'chronus' ),
+			'number'             => 4,
+			'highlight_post'     => true,
 		);
 
 		return $defaults;
