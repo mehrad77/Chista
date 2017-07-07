@@ -20,6 +20,7 @@ function chronus_theme_addons_setup() {
 	// Add theme support for Widget Bundle.
 	add_theme_support( 'themezee-widget-bundle', array(
 		'thumbnail_size' => array( 120, 80 ),
+		'svg_icons'      => true,
 	) );
 
 	// Add theme support for Related Posts.

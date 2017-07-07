@@ -160,28 +160,37 @@
 # Social Icons Widget
 ---------------------------------------------------------------- */
 .tzwb-social-icons .social-icons-menu {
+	margin: 0;
+	padding: 0;
 	list-style: none;
-	line-height: 1;
+	border: none;
 }
 
 .tzwb-social-icons .social-icons-menu li {
-	margin: 3px 6px 3px 0;
+	float: left;
+	margin: 0;
 	padding: 0;
+	list-style: none;
 	border: none;
 }
 
 .tzwb-social-icons .social-icons-menu li a {
-	padding: 0.8em;
+	display: block;
+	margin: 0 5px 5px 0;
+	padding: 0.4em 0.5em;
 	border: 1px solid #eee;
-	color: #cc5555;
 }
 
-.tzwb-social-icons .social-icons-menu li a:before {
-	font-size: 28px;
+.tzwb-social-icons .social-icons-menu li a .icon {
+	margin: 0;
+	height: 24px;
+	width: 24px;
+	vertical-align: middle;
+	fill: #cc5555;
 }
 
-.tzwb-social-icons .social-icons-menu li a:hover {
-	color: #303030;
+.tzwb-social-icons .social-icons-menu li a:hover .icon {
+	fill: #303030;
 }
 
 /*--------------------------------------------------------------
