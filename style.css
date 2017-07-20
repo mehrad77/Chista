@@ -1766,9 +1766,12 @@ object {
 	.comments-area,
 	.entry-tags,
 	.pagination,
-	.infinite-scroll #infinite-handle span,
-	.footer-wrap {
+	.infinite-scroll #infinite-handle span {
 		margin-bottom: 2em;
+	}
+
+	.footer-wrap {
+		padding-bottom: 2em;
 	}
 
 	/* Featured Posts */
@@ -2171,9 +2174,12 @@ object {
 	.comments-area,
 	.entry-tags,
 	.pagination,
-	.infinite-scroll #infinite-handle span,
-	.footer-wrap {
+	.infinite-scroll #infinite-handle span {
 		margin-bottom: 1.5em;
+	}
+
+	.footer-wrap {
+		padding-bottom: 1.5em;
 	}
 
 	.entry-title {
