@@ -158,6 +158,7 @@
 		$( '#top-navigation' ).responsiveMenu( {
 			menuClass: 'top-navigation-menu',
 			toggleClass: 'top-navigation-toggle',
+			toggleText: chronus_menu_title,
 			maxWidth: '57.5em'
 		} );
 

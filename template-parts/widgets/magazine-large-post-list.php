@@ -7,9 +7,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
 
-	<?php chronus_post_image(); ?>
+	<?php chronus_post_image( 'chronus-thumbnail-large' ); ?>
 
 	<div class="post-content">
 
@@ -21,7 +21,7 @@
 
 		</header><!-- .entry-header -->
 
-		<div class="entry-content clearfix">
+		<div class="entry-content">
 
 			<?php the_excerpt(); ?>
 			<?php chronus_more_link(); ?>
