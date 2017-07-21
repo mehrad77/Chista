@@ -99,6 +99,17 @@
 		} );
 	} );
 
+	// Site Description checkbox.
+	wp.customize( 'chronus_theme_options[credit_link]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.site-info .credit-link' );
+			} else {
+				showElement( '.site-info .credit-link' );
+			}
+		} );
+	} );
+
 	function hideElement( element ) {
 		$( element ).css({
 			clip: 'rect(1px, 1px, 1px, 1px)',

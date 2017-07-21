@@ -19,6 +19,7 @@
 
 			<div id="footer-text" class="site-info">
 				<?php do_action( 'chronus_footer_text' ); ?>
+				<?php chronus_credit_link(); ?>
 			</div><!-- .site-info -->
 
 		</footer><!-- #colophon -->

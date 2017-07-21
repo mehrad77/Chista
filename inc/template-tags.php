@@ -397,7 +397,7 @@ endif;
 /**
  * Displays credit link on footer line
  */
-function chronus_footer_text() {
+function chronus_credit_link() {
 	?>
 
 	<span class="credit-link">
@@ -409,4 +409,3 @@ function chronus_footer_text() {
 
 	<?php
 }
-add_action( 'chronus_footer_text', 'chronus_footer_text' );

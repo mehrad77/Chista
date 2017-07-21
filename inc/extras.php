@@ -75,6 +75,9 @@ function chronus_hide_elements() {
 		$elements[] = '.type-post .entry-footer .post-navigation';
 	}
 
+	// Allow plugins to add own elements.
+	$elements = apply_filters( 'chronus_hide_elements', $elements );
+
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
 		return;
