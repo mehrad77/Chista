@@ -14,8 +14,8 @@
 	margin-bottom: 16px;
 }
 
-#customize-control-chronus_theme_options-blog_title,
 #customize-control-chronus_theme_options-blog_description,
+#customize-control-chronus_theme_options-blog_layout,
 #customize-control-chronus_theme_options-post_details,
 #customize-control-chronus_theme_options-single_post,
 #customize-control-chronus_theme_options-featured_images,
@@ -28,6 +28,10 @@
 #customize-control-chronus_theme_options-featured_images,
 #customize-control-chronus_theme_options-activate_featured_posts {
 	margin-bottom: 0;
+}
+
+#customize-control-chronus_theme_options-blog_description textarea {
+	height: 4em;
 }
 
 #customize-control-chronus_theme_options-pro_version div {

@@ -112,16 +112,21 @@ if ( ! function_exists( 'chronus_blog_title' ) ) :
 		$theme_options = chronus_theme_options();
 
 		// Display Blog Title.
-		if ( '' !== $theme_options['blog_title'] ) : ?>
+		if ( '' !== $theme_options['blog_title'] || '' !== $theme_options['blog_description'] || is_customize_preview() ) : ?>
 
-			<header class="page-header clearfix">
+			<header class="page-header blog-header clearfix">
 
-				<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+				<?php // Display Blog Description.
+				if ( '' !== $theme_options['blog_title'] || is_customize_preview() ) : ?>
 
-				<?php // Display Blog Description
-				if ( '' !== $theme_options['blog_description'] ) : ?>
+					<h1 class="archive-title blog-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
 
-					<p class="homepage-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
+				<?php endif;
+
+				// Display Blog Description.
+				if ( '' !== $theme_options['blog_description'] || is_customize_preview() ) : ?>
+
+					<p class="blog-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
 
 				<?php endif; ?>
 
