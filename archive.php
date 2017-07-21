@@ -26,12 +26,17 @@ $theme_options = chronus_theme_options();
 
 			</header><!-- .page-header -->
 
+			<div class="post-wrapper">
+
 			<?php while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', esc_attr( $theme_options['blog_layout'] ) );
 
-			endwhile;
+			endwhile; ?>
 
+			</div>
+
+			<?php
 			chronus_pagination();
 
 		else :

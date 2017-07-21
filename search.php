@@ -26,6 +26,8 @@ $theme_options = chronus_theme_options();
 
 			</header><!-- .page-header -->
 
+			<div class="post-wrapper">
+
 			<?php while ( have_posts() ) : the_post();
 
 				if ( 'post' === get_post_type() ) :
@@ -38,8 +40,11 @@ $theme_options = chronus_theme_options();
 
 				endif;
 
-			endwhile;
+			endwhile; ?>
 
+			</div>
+
+			<?php
 			chronus_pagination();
 
 		else :

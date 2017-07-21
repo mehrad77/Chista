@@ -67,7 +67,7 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'chronus_theme_options[blog_layout]', array(
 		'default'           => 'excerpt',
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_select',
 	) );
 
@@ -83,11 +83,16 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 		),
 	) );
 
+	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[blog_layout]', array(
+		'selector'        => '.site-main .post-wrapper',
+		'render_callback' => 'chronus_customize_partial_blog_layout',
+	) );
+
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
 		'default'           => 35,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
@@ -97,7 +102,11 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 		'settings'        => 'chronus_theme_options[excerpt_length]',
 		'type'            => 'text',
 		'priority'        => 40,
-		'active_callback' => 'chronus_control_blog_layout_callback',
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[excerpt_length]', array(
+		'selector'        => '.site-main .post-wrapper',
+		'render_callback' => 'chronus_customize_partial_blog_layout',
 	) );
 }
 add_action( 'customize_register', 'chronus_customize_register_blog_settings' );
@@ -119,17 +128,12 @@ function chronus_customize_partial_blog_description() {
 }
 
 /**
- * Adds a callback function to retrieve wether blog content is set to excerpt or not
- *
- * @param object $control / Instance of the Customizer Control.
- * @return bool
+ * Render the blog description for the selective refresh partial.
  */
-function chronus_control_blog_layout_callback( $control ) {
-
-	// Check if excerpt mode is selected.
-	if ( 'excerpt' === $control->manager->get_setting( 'chronus_theme_options[blog_layout]' )->value() ) {
-		return true;
+function chronus_customize_partial_blog_layout() {
+	$theme_options = chronus_theme_options();
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', esc_attr( $theme_options['blog_layout'] ) );
 	}
-
-	return false;
 }

@@ -24,11 +24,15 @@ $theme_options = chronus_theme_options();
 
 			chronus_blog_title();
 
+			echo '<div class="post-wrapper">';
+
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', esc_attr( $theme_options['blog_layout'] ) );
 
 			endwhile;
+
+			echo '</div>';
 
 			chronus_pagination();
 
