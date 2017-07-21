@@ -19,7 +19,7 @@ function chronus_body_classes( $classes ) {
 	// Check if sidebar widget area is empty or switch sidebar layout to left.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
-	} elseif ( 'left-sidebar' == $theme_options['layout'] ) {
+	} elseif ( 'left-sidebar' == $theme_options['sidebar_position'] ) {
 		$classes[] = 'sidebar-left';
 	}
 

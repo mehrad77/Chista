@@ -663,13 +663,15 @@ textarea {
 .no-sidebar .content-area,
 .site-content .centered-content-area {
 	margin: 0 auto;
-	max-width: 870px;
+	padding: 0;
+	max-width: 840px;
 	width: 100%;
 }
 
 /* Fullwidth Template */
 .site-content .fullwidth-content-area {
 	margin: 0;
+	padding: 0;
 	max-width: 100%;
 	width: 100%;
 }

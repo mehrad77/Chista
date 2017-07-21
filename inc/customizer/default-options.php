@@ -35,7 +35,7 @@ function chronus_default_options() {
 		'site_description'    => true,
 		'custom_header_link'  => '',
 		'custom_header_hide'  => false,
-		'layout'              => 'right-sidebar',
+		'sidebar_position'    => 'right-sidebar',
 		'blog_layout'         => 'excerpt',
 		'blog_title'          => '',
 		'blog_description'    => '',

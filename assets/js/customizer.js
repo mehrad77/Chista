@@ -44,6 +44,18 @@
 		} );
 	} );
 
+	// Sidebar Position.
+	wp.customize( 'chronus_theme_options[sidebar_position]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'left-sidebar' === newval && false === $( 'body' ).hasClass( 'no-sidebar' ) ) {
+				$( 'body' ).addClass( 'sidebar-left' );
+				console.log('sidebar-left');
+			} else {
+				$( 'body' ).removeClass( 'sidebar-left' );
+			}
+		} );
+	} );
+
 	// Post Date checkbox.
 	wp.customize( 'chronus_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
