@@ -22,52 +22,13 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
-	// Add Settings and Controls for post content.
-	$wp_customize->add_setting( 'chronus_theme_options[blog_layout]', array(
-		'default'           => 'excerpt',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'chronus_sanitize_select',
-		)
-	);
-	$wp_customize->add_control( 'chronus_theme_options[blog_layout]', array(
-		'label'    => esc_html__( 'Blog Layout', 'chronus' ),
-		'section'  => 'chronus_section_post',
-		'settings' => 'chronus_theme_options[blog_layout]',
-		'type'     => 'radio',
-		'priority' => 10,
-		'choices'  => array(
-			'index' => esc_html__( 'Show full posts', 'chronus' ),
-			'excerpt' => esc_html__( 'Show post excerpts', 'chronus' ),
-			),
-		)
-	);
-
-	// Add Setting and Control for Excerpt Length.
-	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
-		'default'           => 35,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'absint',
-		)
-	);
-	$wp_customize->add_control( 'chronus_theme_options[excerpt_length]', array(
-		'label'           => esc_html__( 'Excerpt Length', 'chronus' ),
-		'section'         => 'chronus_section_post',
-		'settings'        => 'chronus_theme_options[excerpt_length]',
-		'type'            => 'text',
-		'priority'        => 20,
-		'active_callback' => 'chronus_control_blog_layout_callback',
-		)
-	);
-
 	// Add Post Details Headline.
 	$wp_customize->add_control( new Chronus_Customize_Header_Control(
 		$wp_customize, 'chronus_theme_options[post_details]', array(
 		'label' => esc_html__( 'Post Details', 'chronus' ),
 		'section' => 'chronus_section_post',
 		'settings' => array(),
-		'priority' => 30,
+		'priority' => 10,
 		)
 	) );
 
@@ -83,7 +44,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 40,
+		'priority' => 20,
 		)
 	);
 
@@ -99,7 +60,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 50,
+		'priority' => 30,
 		)
 	);
 
@@ -115,7 +76,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_category]',
 		'type'     => 'checkbox',
-		'priority' => 60,
+		'priority' => 40,
 		)
 	);
 
@@ -125,7 +86,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'label' => esc_html__( 'Single Post', 'chronus' ),
 		'section' => 'chronus_section_post',
 		'settings' => array(),
-		'priority' => 70,
+		'priority' => 50,
 		)
 	) );
 
@@ -141,7 +102,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 80,
+		'priority' => 60,
 		)
 	);
 
@@ -157,7 +118,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 90,
+		'priority' => 70,
 		)
 	);
 
@@ -167,7 +128,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'label' => esc_html__( 'Featured Images', 'chronus' ),
 		'section' => 'chronus_section_post',
 		'settings' => array(),
-		'priority' => 100,
+		'priority' => 80,
 		)
 	) );
 
@@ -183,7 +144,7 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[post_image_archives]',
 		'type'     => 'checkbox',
-		'priority' => 110,
+		'priority' => 90,
 		)
 	);
 
@@ -199,26 +160,8 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'section'  => 'chronus_section_post',
 		'settings' => 'chronus_theme_options[post_image_single]',
 		'type'     => 'checkbox',
-		'priority' => 120,
+		'priority' => 100,
 		)
 	);
 }
 add_action( 'customize_register', 'chronus_customize_register_post_settings' );
-
-
-/**
- * Adds a callback function to retrieve wether post content is set to excerpt or not
- *
- * @param object $control / Instance of the Customizer Control.
- * @return bool
- */
-function chronus_control_blog_layout_callback( $control ) {
-
-	// Check if excerpt mode is selected.
-	if ( 'excerpt' === $control->manager->get_setting( 'chronus_theme_options[blog_layout]' )->value() ) :
-		return true;
-	else :
-		return false;
-	endif;
-
-}

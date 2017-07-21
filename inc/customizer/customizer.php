@@ -15,7 +15,8 @@ require( get_template_directory() . '/inc/customizer/controls/magazine-widget-ar
 require( get_template_directory() . '/inc/customizer/controls/upgrade-control.php' );
 
 // Load Customizer Sections.
-require( get_template_directory() . '/inc/customizer/sections/customizer-general.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-layout.php' );
+require( get_template_directory() . '/inc/customizer/sections/customizer-blog.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-magazine.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-featured.php' );
