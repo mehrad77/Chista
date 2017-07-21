@@ -132,10 +132,11 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	) );
 
+	// Add Setting and Control for featured images on blog and archives.
 	$wp_customize->add_setting( 'chronus_theme_options[post_image_archives]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_checkbox',
 		)
 	);
@@ -148,10 +149,17 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[post_image_archives]', array(
+		'selector'         => '.site-main .post-wrapper',
+		'render_callback'  => 'chronus_customize_partial_blog_layout',
+		'fallback_refresh' => false,
+	) );
+
+	// Add Setting and Control for featured images on single posts.
 	$wp_customize->add_setting( 'chronus_theme_options[post_image_single]', array(
 		'default'           => true,
 		'type'           	=> 'option',
-		'transport'         => 'refresh',
+		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_checkbox',
 		)
 	);
@@ -163,5 +171,24 @@ function chronus_customize_register_post_settings( $wp_customize ) {
 		'priority' => 100,
 		)
 	);
+
+	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[post_image_single]', array(
+		'selector'        => '.content-single .site-main',
+		'render_callback' => 'chronus_customize_partial_post_image_single',
+		'fallback_refresh' => false,
+	) );
 }
 add_action( 'customize_register', 'chronus_customize_register_post_settings' );
+
+
+/**
+ * Render featured image on single posts for the selective refresh partial.
+ */
+function chronus_customize_partial_post_image_single() {
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'template-parts/content', 'single' );
+		chronus_related_posts();
+		comments_template();
+	}
+}

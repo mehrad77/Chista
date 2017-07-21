@@ -2524,8 +2524,13 @@ object {
 	border: 2px dashed #0085ba;
 }
 
-/* Add some space around the visual edit shortcut buttons. */
+/* Add some styling for visual edit shortcut buttons. */
 .magazine-widgets-placeholder .customize-partial-edit-shortcut button {
 	left: 15px;
 	top: 14px;
+}
+
+.customize-partial-edit-shortcut-chronus_theme_options-blog_description,
+.customize-partial-edit-shortcut-chronus_blog_layout_partial {
+	left: -9999px;
 }

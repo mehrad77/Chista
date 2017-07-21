@@ -83,11 +83,6 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 		),
 	) );
 
-	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[blog_layout]', array(
-		'selector'        => '.site-main .post-wrapper',
-		'render_callback' => 'chronus_customize_partial_blog_layout',
-	) );
-
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
 		'default'           => 35,
@@ -104,9 +99,15 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 		'priority'        => 40,
 	) );
 
-	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[excerpt_length]', array(
+	// Add Partial for Blog Layout and Excerpt Length.
+	$wp_customize->selective_refresh->add_partial( 'chronus_blog_layout_partial', array(
 		'selector'        => '.site-main .post-wrapper',
+		'settings'        => array(
+			'chronus_theme_options[blog_layout]',
+			'chronus_theme_options[excerpt_length]',
+		),
 		'render_callback' => 'chronus_customize_partial_blog_layout',
+		'fallback_refresh' => false,
 	) );
 }
 add_action( 'customize_register', 'chronus_customize_register_blog_settings' );
@@ -128,7 +129,7 @@ function chronus_customize_partial_blog_description() {
 }
 
 /**
- * Render the blog description for the selective refresh partial.
+ * Render the blog layout for the selective refresh partial.
  */
 function chronus_customize_partial_blog_layout() {
 	$theme_options = chronus_theme_options();
