@@ -67,32 +67,13 @@ if ( ! function_exists( 'chronus_header_image' ) ) :
 	 */
 	function chronus_header_image() {
 
-		// Get theme options from database.
-		$theme_options = chronus_theme_options();
-
-		// Display featured image as header image on static pages.
-		if ( get_header_image() ) :
-
-			// Hide header image on front page.
-			if ( true === $theme_options['custom_header_hide'] and is_front_page() ) {
-				return;
-			}
-			?>
+		if ( has_header_image() ) : ?>
 
 			<div id="headimg" class="header-image">
 
-			<?php // Check if custom header image is linked.
-			if ( '' !== $theme_options['custom_header_link'] ) : ?>
-
-				<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 				</a>
-
-			<?php else : ?>
-
-				<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id, 'full' ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-
-			<?php endif; ?>
 
 			</div>
 

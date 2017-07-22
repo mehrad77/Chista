@@ -59,72 +59,35 @@ function chronus_customize_register_options( $wp_customize ) {
 	// Add Display Site Title Setting.
 	$wp_customize->add_setting( 'chronus_theme_options[site_title]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_checkbox',
-		)
-	);
+	) );
+
 	$wp_customize->add_control( 'chronus_theme_options[site_title]', array(
 		'label'    => esc_html__( 'Display Site Title', 'chronus' ),
 		'section'  => 'title_tagline',
 		'settings' => 'chronus_theme_options[site_title]',
 		'type'     => 'checkbox',
 		'priority' => 10,
-		)
-	);
+	) );
 
 	// Add Display Tagline Setting.
 	$wp_customize->add_setting( 'chronus_theme_options[site_description]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_checkbox',
-		)
-	);
+	) );
+
 	$wp_customize->add_control( 'chronus_theme_options[site_description]', array(
 		'label'    => esc_html__( 'Display Tagline', 'chronus' ),
 		'section'  => 'title_tagline',
 		'settings' => 'chronus_theme_options[site_description]',
 		'type'     => 'checkbox',
 		'priority' => 11,
-		)
-	);
-
-	// Add Header Image Link.
-	$wp_customize->add_setting( 'chronus_theme_options[custom_header_link]', array(
-		'default'           => '',
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'esc_url',
-		)
-	);
-	$wp_customize->add_control( 'chronus_control_custom_header_link', array(
-		'label'    => esc_html__( 'Header Image Link', 'chronus' ),
-		'section'  => 'header_image',
-		'settings' => 'chronus_theme_options[custom_header_link]',
-		'type'     => 'url',
-		'priority' => 10,
-		)
-	);
-
-	// Add Custom Header Hide Checkbox.
-	$wp_customize->add_setting( 'chronus_theme_options[custom_header_hide]', array(
-		'default'           => false,
-		'type'           	=> 'option',
-		'transport'         => 'refresh',
-		'sanitize_callback' => 'chronus_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control( 'chronus_control_custom_header_hide', array(
-		'label'    => esc_html__( 'Hide header image on front page', 'chronus' ),
-		'section'  => 'header_image',
-		'settings' => 'chronus_theme_options[custom_header_hide]',
-		'type'     => 'checkbox',
-		'priority' => 15,
-		)
-	);
-
-} // chronus_customize_register_options()
+	) );
+}
 add_action( 'customize_register', 'chronus_customize_register_options' );
 
 

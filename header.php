@@ -25,6 +25,8 @@
 
 	<?php do_action( 'chronus_header_bar' ); ?>
 
+	<?php chronus_header_image(); ?>
+
 	<div id="page" class="hfeed site">
 
 		<header id="masthead" class="site-header clearfix" role="banner">
@@ -44,8 +46,6 @@
 			<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
 
 		</header><!-- #masthead -->
-
-		<?php chronus_header_image(); ?>
 
 		<?php chronus_featured_content(); ?>
 

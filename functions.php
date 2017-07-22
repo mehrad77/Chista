@@ -53,7 +53,9 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'chronus_custom_background_args', array( 'default-color' => 'ffffff' ) ) );
+		add_theme_support( 'custom-background', apply_filters( 'chronus_custom_background_args', array(
+			'default-color' => 'ffffff',
+		) ) );
 
 		// Set up the WordPress core custom logo feature.
 		add_theme_support( 'custom-logo', apply_filters( 'chronus_custom_logo_args', array(
@@ -66,8 +68,9 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		// Set up the WordPress core custom header feature.
 		add_theme_support( 'custom-header', apply_filters( 'chronus_custom_header_args', array(
 			'header-text' => false,
-			'width'	=> 1160,
-			'height' => 360,
+			'width'	      => 2560,
+			'height'      => 500,
+			'flex-width'  => true,
 			'flex-height' => true,
 		) ) );
 
@@ -76,7 +79,6 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 
 		// Add Theme Support for Selective Refresh in Customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
 	}
 endif;
 add_action( 'after_setup_theme', 'chronus_setup' );

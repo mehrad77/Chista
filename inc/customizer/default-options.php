@@ -51,8 +51,6 @@ function chronus_default_options() {
 	$default_options = array(
 		'site_title'          => true,
 		'site_description'    => true,
-		'custom_header_link'  => '',
-		'custom_header_hide'  => false,
 		'sidebar_position'    => 'right-sidebar',
 		'blog_layout'         => 'excerpt',
 		'blog_title'          => '',
