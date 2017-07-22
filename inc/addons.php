@@ -76,13 +76,10 @@ add_action( 'wp_enqueue_scripts', 'chronus_theme_addons_scripts' );
  * Custom render function for Infinite Scroll.
  */
 function chronus_infinite_scroll_render() {
-	$theme_options = chronus_theme_options();
-
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', esc_attr( $theme_options['blog_layout'] ) );
+		get_template_part( 'template-parts/content', esc_attr( chronus_get_option( 'blog_layout' ) ) );
 	}
-
 }
 
 

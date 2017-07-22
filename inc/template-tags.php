@@ -29,7 +29,7 @@ if ( ! function_exists( 'chronus_site_title' ) ) :
 	 */
 	function chronus_site_title() {
 
-		if ( is_home() or is_page_template( 'template-magazine.php' )  ) : ?>
+		if ( is_home() or is_page_template( 'template-magazine.php' ) ) : ?>
 
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
@@ -108,25 +108,26 @@ if ( ! function_exists( 'chronus_blog_title' ) ) :
 	 */
 	function chronus_blog_title() {
 
-		// Get theme options from database.
-		$theme_options = chronus_theme_options();
+		// Get blog title and descripton from database.
+		$blog_title = chronus_get_option( 'blog_title' );
+		$blog_description = chronus_get_option( 'blog_description' );
 
 		// Display Blog Title.
-		if ( '' !== $theme_options['blog_title'] || '' !== $theme_options['blog_description'] || is_customize_preview() ) : ?>
+		if ( '' !== $blog_title || '' !== $blog_description || is_customize_preview() ) : ?>
 
 			<header class="page-header blog-header clearfix">
 
-				<?php // Display Blog Description.
-				if ( '' !== $theme_options['blog_title'] || is_customize_preview() ) : ?>
+				<?php // Display Blog Title.
+				if ( '' !== $blog_title || is_customize_preview() ) : ?>
 
-					<h1 class="archive-title blog-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+					<h1 class="archive-title blog-title"><?php echo wp_kses_post( $blog_title ); ?></h1>
 
 				<?php endif;
 
 				// Display Blog Description.
-				if ( '' !== $theme_options['blog_description'] || is_customize_preview() ) : ?>
+				if ( '' !== $blog_description || is_customize_preview() ) : ?>
 
-					<p class="blog-description"><?php echo wp_kses_post( $theme_options['blog_description'] ); ?></p>
+					<p class="blog-description"><?php echo wp_kses_post( $blog_description ); ?></p>
 
 				<?php endif; ?>
 
@@ -165,11 +166,8 @@ if ( ! function_exists( 'chronus_post_image_archives' ) ) :
 	 */
 	function chronus_post_image_archives() {
 
-		// Get theme options from database.
-		$theme_options = chronus_theme_options();
-
 		// Display Post Thumbnail if activated.
-		if ( true === $theme_options['post_image_archives'] && has_post_thumbnail() ) : ?>
+		if ( true === chronus_get_option( 'post_image_archives' ) && has_post_thumbnail() ) : ?>
 
 			<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
@@ -187,11 +185,8 @@ if ( ! function_exists( 'chronus_post_image_single' ) ) :
 	 */
 	function chronus_post_image_single() {
 
-		// Get theme options from database.
-		$theme_options = chronus_theme_options();
-
 		// Display Post Thumbnail if activated.
-		if ( true === $theme_options['post_image_single'] ) :
+		if ( true === chronus_get_option( 'post_image_single' ) ) :
 
 			the_post_thumbnail();
 
@@ -331,10 +326,7 @@ if ( ! function_exists( 'chronus_post_navigation' ) ) :
 	 */
 	function chronus_post_navigation() {
 
-		// Get theme options from database.
-		$theme_options = chronus_theme_options();
-
-		if ( true === $theme_options['post_navigation'] || is_customize_preview() ) {
+		if ( true === chronus_get_option( 'post_navigation' ) || is_customize_preview() ) {
 
 			the_post_navigation( array(
 				'prev_text' => '<span class="nav-link-text">' . esc_html_x( 'Previous Post', 'post navigation', 'chronus' ) . '</span><h3 class="entry-title">%title</h3>',

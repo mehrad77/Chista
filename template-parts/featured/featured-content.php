@@ -7,11 +7,11 @@
  * @package Chronus
  */
 
-// Get Theme Options from Database.
-$theme_options = chronus_theme_options();
+// Get Featured Posts category from Database.
+$featured_category = chronus_get_option( 'featured_category' );
 
 // Get cached post ids.
-$post_ids = chronus_get_magazine_post_ids( 'featured-content', $theme_options['featured_category'], 5 );
+$post_ids = chronus_get_magazine_post_ids( 'featured-content', $featured_category, 5 );
 
 // Fetch posts from database.
 $query_arguments = array(

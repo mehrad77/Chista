@@ -8,6 +8,25 @@
  */
 
 /**
+* Get a single theme option
+*
+* @return mixed
+*/
+function chronus_get_option( $option_name = '' ) {
+
+	// Get all Theme Options from Database.
+	$theme_options = chronus_theme_options();
+
+	// Return single option.
+	if ( isset( $theme_options[ $option_name ] ) ) {
+		return $theme_options[ $option_name ];
+	}
+
+	return false;
+}
+
+
+/**
  * Get saved user settings from database or theme defaults
  *
  * @return array
@@ -19,7 +38,6 @@ function chronus_theme_options() {
 
 	// Return theme options.
 	return $theme_options;
-
 }
 
 

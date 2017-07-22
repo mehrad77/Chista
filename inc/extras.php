@@ -105,12 +105,12 @@ function chronus_excerpt_length( $length ) {
 		return $length;
 	}
 
-	// Get theme options from database.
-	$theme_options = chronus_theme_options();
+	// Get excerpt length from database.
+	$excerpt_length = chronus_get_option( 'excerpt_length' );
 
 	// Return excerpt text.
-	if ( isset( $theme_options['excerpt_length'] ) and $theme_options['excerpt_length'] >= 0 ) :
-		return absint( $theme_options['excerpt_length'] );
+	if ( $excerpt_length >= 0 ) :
+		return absint( $excerpt_length );
 	else :
 		return 40; // Number of words.
 	endif;

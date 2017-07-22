@@ -116,25 +116,22 @@ add_action( 'customize_register', 'chronus_customize_register_blog_settings' );
  * Render the blog title for the selective refresh partial.
  */
 function chronus_customize_partial_blog_title() {
-	$theme_options = chronus_theme_options();
-	echo wp_kses_post( $theme_options['blog_title'] );
+	echo wp_kses_post( chronus_get_option( 'blog_title' ) );
 }
 
 /**
  * Render the blog description for the selective refresh partial.
  */
 function chronus_customize_partial_blog_description() {
-	$theme_options = chronus_theme_options();
-	echo wp_kses_post( $theme_options['blog_description'] );
+	echo wp_kses_post( chronus_get_option( 'blog_description' ) );
 }
 
 /**
  * Render the blog layout for the selective refresh partial.
  */
 function chronus_customize_partial_blog_layout() {
-	$theme_options = chronus_theme_options();
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', esc_attr( $theme_options['blog_layout'] ) );
+		get_template_part( 'template-parts/content', esc_attr( chronus_get_option( 'blog_layout' ) ) );
 	}
 }
