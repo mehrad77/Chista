@@ -18,8 +18,12 @@ function chronus_featured_content() {
 	// Display post slider only if activated.
 	if ( true === chronus_get_option( 'featured_posts' ) && is_front_page() ) :
 
+		echo '<div id="featured-content" class="content">';
 		get_template_part( 'template-parts/featured/featured-content' );
+		echo '</div>';
 
+	elseif ( is_customize_preview() ) :
+		echo '<div id="featured-content" class="content"></div>';
 	endif;
 }
 

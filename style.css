@@ -2534,3 +2534,7 @@ object {
 .customize-partial-edit-shortcut-chronus_blog_layout_partial {
 	left: -9999px;
 }
+
+.customize-partial-edit-shortcut-chronus_featured_content_partial button {
+	top: -40px;
+}
