@@ -193,6 +193,17 @@ add_action( 'after_setup_theme', 'chronus_add_image_sizes' );
 
 
 /**
+ * Add pingback url on single posts
+ */
+function chronus_pingback_url() {
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
+	}
+}
+add_action( 'wp_head', 'chronus_pingback_url' );
+
+
+/**
  * Include Files
  */
 
