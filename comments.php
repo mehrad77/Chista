@@ -55,10 +55,6 @@ if ( post_password_required() ) {
 	<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'chronus' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form( array(
-		'title_reply' => '<span>' . esc_html__( 'Leave a Reply', 'chronus' ) . '</span>',
-		'comment_notes_after' => '',
-		)
-	); ?>
+	<?php comment_form(); ?>
 
 </div><!-- #comments -->

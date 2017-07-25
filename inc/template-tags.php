@@ -235,6 +235,11 @@ if ( ! function_exists( 'chronus_meta_category' ) ) :
 	 */
 	function chronus_meta_category() {
 
+		// Return early if post has no category.
+		if ( ! has_category() ) {
+			return;
+		}
+
 		$posted_in = sprintf( esc_html_x( 'In %s', 'post category', 'chronus' ), get_the_category_list( ', ' ) );
 
 		return '<span class="meta-category"> ' . $posted_in . '</span>';

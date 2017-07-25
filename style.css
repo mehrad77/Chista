@@ -299,6 +299,38 @@ h4,
 h5,
 h6 {
 	clear: both;
+	line-height: 1.4;
+	margin: 1em 0 0.75em;
+}
+
+h1 {
+	font-size: 32px;
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 26px;
+	font-size: 1.625rem;
+}
+
+h3 {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+
+h4 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 19px;
+	font-size: 1.1875re
+}
+
+h6 {
+	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 p {
@@ -325,8 +357,7 @@ pre {
 	margin-bottom: 1.6em;
 	padding: 1.6em;
 	max-width: 100%;
-	border: 1px solid #eee;
-	background: #fff;
+	border: 1px solid rgba(0,0,0,0.075);
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -379,7 +410,6 @@ blockquote {
 	padding-left: 1.25em;
 	border-left: 4px solid #303030;
 	color: #777;
-	font-style: italic;
 	font-size: 18px;
 	font-size: 1.125rem;
 }
@@ -459,7 +489,7 @@ table {
 th,
 td {
 	padding: 0.3em 0.6em;
-	border: 1px solid #eee;
+	border: 1px solid rgba(0,0,0,0.075);
 }
 
 a {
@@ -496,7 +526,7 @@ input[type="reset"],
 input[type="submit"] {
 	margin: 0;
 	padding: 0.6em 1em;
-	border: 1px solid #eee;
+	border: 1px solid rgba(0,0,0,0.075);
 	background: none;
 	color: #cc5555;
 	text-decoration: none;
@@ -528,8 +558,9 @@ input[type="search"],
 textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
-	border: 1px solid #eee;
+	border: 1px solid rgba(0,0,0,0.075);
 	color: #666;
+	background: none;
 }
 
 input[type="text"]:focus,
@@ -538,8 +569,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 1px solid #ccc;
-	color: #111;
+	border: 1px solid rgba(0,0,0,0.2);
+	color: #303030;
 }
 
 textarea {
@@ -681,8 +712,7 @@ textarea {
 --------------------------------------------------------------*/
 .site-header {
 	margin: 0 0 2.5em;
-	background: #fff;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 .header-main {
@@ -758,7 +788,7 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	border-top: 1px solid #eee;
+	border-top: 1px solid rgba(0,0,0,0.075);
 }
 
 .main-navigation-toggle {
@@ -789,17 +819,17 @@ textarea {
 	padding: 0;
 	list-style-position: outside;
 	list-style-type: none;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-family: 'Rambla', Tahoma, Arial;
+	color: #303030;
 }
 
 .main-navigation-menu a {
 	display: block;
 	margin: 0;
 	padding: 0.75em 1em;
-	color: #303030;
 	text-decoration: none;
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-family: 'Rambla', Tahoma, Arial;
 }
 
 .main-navigation-menu > .menu-item-has-children > a .icon {
@@ -836,6 +866,8 @@ textarea {
 	color: #fff;
 	list-style-position: outside;
 	list-style-type: none;
+	font-size: 16px;
+	font-size: 1rem;
 }
 
 .main-navigation-menu ul li {
@@ -848,8 +880,6 @@ textarea {
 	min-width: 250px;
 	min-width: 16rem;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
-	font-size: 16px;
-	font-size: 1rem;
 }
 
 .main-navigation-menu ul a:link,
@@ -930,13 +960,13 @@ textarea {
 
 .widget ul li,
 .widget ol li {
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+	border-top: 1px solid rgba(0,0,0,0.075);
 	padding: 0.4em 0;
 }
 
 .widget ul li + li {
-	margin-top: -1px;
+	border-top: none;
 }
 
 .widget ul .children,
@@ -1172,7 +1202,7 @@ article,
 
 .sticky {
 	padding-bottom: 2em;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 /* Read more Link */
@@ -1196,7 +1226,7 @@ article,
 /* Entry Meta */
 .entry-meta {
 	margin: 0.5em 0;
-	color: #999;
+	color: rgba(0,0,0,0.45);
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1205,7 +1235,7 @@ article,
 .entry-meta .meta-author:after {
 	display: inline-block;
 	margin: 0 1em 0 1em;
-	color: #ddd;
+	color: rgba(0,0,0,0.15);
 	content: "\007c";
 }
 
@@ -1313,7 +1343,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	display: inline-block;
 	margin: 0 0 2.5em;
 	padding: 0.6em 1em;
-	border: 1px solid #eee;
+	border: 1px solid rgba(0,0,0,0.075);
 	background: none;
 	color: #cc5555;
 	text-decoration: none;
@@ -1409,7 +1439,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 --------------------------------------------------------------*/
 .featured-posts-wrap {
 	margin-bottom: 2.5em;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 .featured-posts {
@@ -1497,13 +1527,12 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 --------------------------------------------------------------*/
 
 /* Comment Header */
-.comments-header,
-.comment-reply-title {
-	margin: 0 0 1em 0;
+.comments-header {
+	margin: 0 0 1rem;
 }
 
 .comments-header .comments-title,
-.comment-reply-title span {
+.comment-reply-title {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -1526,7 +1555,7 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 .comment {
 	margin: 0 0 1.5em;
 	padding: 1.5em 0 0;
-	border-top: 1px solid #eee;
+	border-top: 1px solid rgba(0,0,0,0.075);
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1635,8 +1664,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 }
 
 .site-footer {
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+	border-top: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 .site-footer .site-info {
@@ -1960,7 +1989,7 @@ object {
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		border-top: 1px solid #eee;
+		border-top: 1px solid rgba(0,0,0,0.075);
 	}
 
 	.main-navigation-menu li {
