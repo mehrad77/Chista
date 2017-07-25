@@ -139,7 +139,7 @@ function chronus_scripts() {
 	wp_enqueue_style( 'chronus-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20160719' );
+	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20170725' );
 
 	// Passing Parameters to navigation.js.
 	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', chronus_get_svg( 'menu' ) . esc_html__( 'Menu', 'chronus' ) );
