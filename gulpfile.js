@@ -13,17 +13,17 @@ var wprtl        = require( 'postcss-wprtl' );
 
 // Minify JS
 gulp.task( 'minifyjs', function() {
-	return gulp.src( ['js/navigation.js'] )
+	return gulp.src( ['assets/js/navigation.js'] )
 		.pipe( uglify() )
 		.pipe( rename( {
 			suffix: '.min'
 		} ) )
-		.pipe( gulp.dest('js') );
+		.pipe( gulp.dest('assets/js') );
 });
 
 // Clean up CSS
 gulp.task( 'cleancss', function() {
-	return gulp.src( ['style.css', 'css/*.css'], { base: './' } )
+	return gulp.src( ['style.css', 'assets/css/*.css'], { base: './' } )
 		.pipe( postcss( [ autoprefixer() ] ) )
 		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
 		.pipe( gulp.dest( './' ) );
@@ -31,7 +31,7 @@ gulp.task( 'cleancss', function() {
 
 // WP RTL
 gulp.task( 'wprtl', function () {
-	return gulp.src( ['style.css', 'css/themezee-related-posts.css', 'css/themezee-widget-bundle.css', 'css/flexslider.css'] )
+	return gulp.src( ['style.css', 'assets/css/themezee-related-posts.css', 'assets/css/themezee-widget-bundle.css'] )
 		.pipe( concat( 'rtl.css' ) )
 		.pipe( postcss( [ wprtl() ] ) )
 		.pipe( postcss( [ sorting( { 'preserve-empty-lines-between-children-rules': true } ) ] ) )
