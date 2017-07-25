@@ -736,7 +736,7 @@ textarea {
 
 .site-title {
 	display: block;
-	margin: 0;
+	margin: 0.15em 0;
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
@@ -744,6 +744,7 @@ textarea {
 	font-size: 48px;
 	font-size: 3rem;
 	font-family: 'Rambla', Tahoma, Arial;
+	line-height: 1.4;
 }
 
 .site-title a:link,
