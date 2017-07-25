@@ -299,8 +299,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-	line-height: 1.4;
 	margin: 1em 0 0.75em;
+	line-height: 1.4;
 }
 
 h1 {
@@ -530,9 +530,9 @@ input[type="submit"] {
 	background: none;
 	color: #cc5555;
 	text-decoration: none;
+	font-weight: bold;
 	font-size: 16px;
 	font-size: 1rem;
-	font-weight: bold;
 }
 
 button:hover,
@@ -559,8 +559,8 @@ textarea {
 	padding: 0.3em 0.6em;
 	max-width: 100%;
 	border: 1px solid rgba(0,0,0,0.075);
-	color: #666;
 	background: none;
+	color: #666;
 }
 
 input[type="text"]:focus,
@@ -674,15 +674,15 @@ textarea {
 }
 
 .content-area {
-	width: 70%;
-	padding-right: 2em;
 	box-sizing: border-box;
+	padding-right: 2em;
+	width: 70%;
 }
 
 .sidebar {
-	width: 30%;
-	padding-left: 2em;
 	box-sizing: border-box;
+	padding-left: 2em;
+	width: 30%;
 }
 
 /* No Sidebar & Centered Layout Template */
@@ -801,28 +801,30 @@ textarea {
 	display: flex;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
+	        justify-content: center;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
 }
 
 .main-navigation-menu {
+	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	position: relative;
 	margin: 0;
 	padding: 0;
+	color: #303030;
 	list-style-position: outside;
 	list-style-type: none;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
-	color: #303030;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
 }
 
 .main-navigation-menu a {
@@ -833,9 +835,9 @@ textarea {
 }
 
 .main-navigation-menu > .menu-item-has-children > a .icon {
-	height: 14px;
-	width: 14px;
 	margin: 0.6em 0 0 0.4em;
+	width: 14px;
+	height: 14px;
 	vertical-align: top;
 	fill: #303030;
 }
@@ -893,13 +895,13 @@ textarea {
 }
 
 .main-navigation-menu ul .menu-item-has-children > a .icon {
-	height: 12px;
-	width: 12px;
 	margin: 0.5em 0 0 0.4em;
+	width: 12px;
+	height: 12px;
 	vertical-align: top;
-	fill: #fff;
 	-webkit-transform: rotate(270deg);
 	transform: rotate(270deg);
+	fill: #fff;
 }
 
 .main-navigation-menu ul .menu-item-has-children > a:hover .icon,
@@ -946,23 +948,23 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #303030;
+	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
-	font-weight: normal;
 }
 
 .widget ul {
-	list-style: none;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 .widget ul li,
 .widget ol li {
-	border-bottom: 1px solid rgba(0,0,0,0.075);
-	border-top: 1px solid rgba(0,0,0,0.075);
 	padding: 0.4em 0;
+	border-top: 1px solid rgba(0,0,0,0.075);
+	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
 .widget ul li + li {
@@ -1019,19 +1021,19 @@ textarea {
 }
 
 .search-form .search-submit {
+	position: absolute;
+	top: 3px;
+	right: 3px;
 	bottom: 3px;
 	padding: 0.5em 0.75em;
-	position: absolute;
-	right: 3px;
-	top: 3px;
 	border: none;
 	background: none;
 }
 
 .search-form .search-submit .icon-search {
-	height: 20px;
-	width: 20px;
 	margin: 4px 0 0;
+	width: 20px;
+	height: 20px;
 	fill: #cc5555;
 }
 
@@ -1127,15 +1129,15 @@ textarea {
 }
 
 .widget-magazine-posts .magazine-grid-two-columns .post-column {
+	box-sizing: border-box;
 	padding-right: 2em;
 	width: 50%;
-	box-sizing: border-box;
 }
 
 .widget-magazine-posts .magazine-grid-three-columns .post-column {
+	box-sizing: border-box;
 	padding-right: 2em;
 	width: 33.33333333%;
-	box-sizing: border-box;
 }
 
 /* Magazine Columns Widget */
@@ -1148,15 +1150,15 @@ textarea {
 }
 
 .widget-magazine-posts-columns .magazine-posts-column-left {
+	box-sizing: border-box;
 	padding-right: 1em;
 	width: 50%;
-	box-sizing: border-box;
 }
 
 .widget-magazine-posts-columns .magazine-posts-column-right {
+	box-sizing: border-box;
 	padding-left: 1em;
 	width: 50%;
-	box-sizing: border-box;
 }
 
 /*--------------------------------------------------------------
@@ -1244,10 +1246,10 @@ body.date-hidden .entry-meta .meta-date,
 body.author-hidden .entry-meta .meta-author,
 body.categories-hidden .entry-meta .meta-category {
 	 position: absolute;
+	  overflow: hidden;
 	 clip: rect(1px, 1px, 1px, 1px);
 	  width: 1px;
-	  height: 1px;
-	  overflow: hidden
+	  height: 1px
 }
 
 body.categories-hidden .content-area .entry-meta .meta-author:after,
@@ -1347,9 +1349,9 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	background: none;
 	color: #cc5555;
 	text-decoration: none;
+	font-weight: bold;
 	font-size: 16px;
 	font-size: 1rem;
-	font-weight: bold;
 }
 
 .infinite-scroll #infinite-handle span:hover {
@@ -1368,10 +1370,10 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
-	font-weight: normal;
 }
 
 .blog-description,
@@ -1484,7 +1486,8 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	align-content: flex-start;
+	    align-content: flex-start;
+	-ms-flex-line-pack: start;
 }
 
 .featured-posts .featured-grid-posts .featured-small-post {
@@ -1539,10 +1542,10 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	color: #303030;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	font-weight: normal;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-family: 'Rambla', Tahoma, Arial;
-	font-weight: normal;
 }
 
 /* Comment List */
@@ -1886,13 +1889,13 @@ object {
 	}
 
 	.content-area {
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	.sidebar {
-		width: 100%;
 		padding: 2em 0 0;
+		width: 100%;
 	}
 
 	.header-main {
@@ -1929,8 +1932,8 @@ object {
 	}
 
 	.main-navigation-menu ul a {
-		width: auto;
 		min-width: auto;
+		width: auto;
 	}
 
 	.main-navigation-menu li ul ul {
@@ -1948,14 +1951,14 @@ object {
 		display: inline-block;
 		margin: 0;
 		padding: 0.75em 1em;
-		color: #303030;
-		background: none;
 		border: none;
+		background: none;
+		color: #303030;
 		text-decoration: none;
+		font-weight: normal;
 		font-size: 20px;
 		font-size: 1.25rem;
 		font-family: 'Rambla', Tahoma, Arial;
-		font-weight: normal;
 	}
 
 	.main-navigation-toggle:hover,
@@ -1971,9 +1974,9 @@ object {
 	}
 
 	.main-navigation-toggle .icon {
-		height: 25px;
-		width: 25px;
 		margin: 0.25em 0.6em 0 0;
+		width: 25px;
+		height: 25px;
 		vertical-align: top;
 		fill: #303030;
 	}
@@ -2029,9 +2032,9 @@ object {
 	}
 
 	.main-navigation-menu .submenu-dropdown-toggle .icon {
-		height: 19px;
-		width: 19px;
 		margin: 0.45em 0 0;
+		width: 19px;
+		height: 19px;
 		vertical-align: top;
 		fill: #303030;
 	}
@@ -2052,9 +2055,9 @@ object {
 	}
 
 	.main-navigation-menu ul .submenu-dropdown-toggle .icon {
-		height: 16px;
-		width: 16px;
 		margin: 0.55em 0 0;
+		width: 16px;
+		height: 16px;
 		fill: #fff;
 	}
 
@@ -2085,13 +2088,13 @@ object {
 
 	/* Featured Posts */
 	.featured-posts .featured-large-post {
-		width: 100%;
 		padding: 0 2em 0 0;
+		width: 100%;
 	}
 
 	.featured-posts .featured-grid-posts {
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 
 	.featured-posts .featured-large-post .type-post .entry-title {
@@ -2243,9 +2246,9 @@ object {
 	}
 
 	.widget-magazine-posts .magazine-grid .post-column {
+		box-sizing: border-box;
 		padding-right: 0;
 		width: 100%;
-		box-sizing: border-box;
 	}
 
 	/* Magazine Medium Posts */
@@ -2328,7 +2331,6 @@ object {
 ## 14.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
-
 	.entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
@@ -2435,18 +2437,18 @@ object {
 --------------------------------------------------------------*/
 .sidebar-left .content-area {
 	order: 2;
+	padding-right: 0;
+	padding-left: 2em;
 	-webkit-box-ordinal-group: 3;
 	-ms-flex-order: 2;
-	padding-left: 2em;
-	padding-right: 0;
 }
 
 .sidebar-left .sidebar {
 	order: 1;
+	padding-right: 2em;
+	padding-left: 0;
 	-webkit-box-ordinal-group: 2;
 	-ms-flex-order: 1;
-	padding-left: 0;
-	padding-right: 2em;
 }
 
 @media only screen and (max-width: 80em) {
@@ -2481,8 +2483,8 @@ object {
 .boxed-design .header-main,
 .boxed-design .site-content,
 .boxed-design .featured-posts-wrap {
-	padding-left: 2.5em;
 	padding-right: 2.5em;
+	padding-left: 2.5em;
 }
 
 .boxed-design .footer-wrap {
@@ -2500,6 +2502,8 @@ object {
 /* Ensure navigation is visible on desktop view */
 @media only screen and (min-width: 57.501em) {
 	.main-navigation-menu {
+		display: -webkit-box !important;
+		display: -ms-flexbox !important;
 		display: flex !important;
 	}
 }
@@ -2559,20 +2563,20 @@ object {
 
 .magazine-widgets-placeholder .magazine-widgets-placeholder-title {
 	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	text-transform: uppercase;
 	margin: 0;
 	padding: 1em 1em 1em 55px;
-	color: #0085ba;
 	border: 2px dashed #0085ba;
+	color: #0085ba;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 /* Add some styling for visual edit shortcut buttons. */
 .magazine-widgets-placeholder .customize-partial-edit-shortcut button {
-	left: 15px;
 	top: 14px;
+	left: 15px;
 }
 
 .customize-partial-edit-shortcut-chronus_theme_options-blog_description,
@@ -2589,7 +2593,6 @@ object {
 --------------------------------------------------------------*/
 
 @media print {
-
 	/* Hide elements */
 	form,
 	button,
@@ -2617,7 +2620,7 @@ object {
 	}
 
 	.content-area {
-		width: 100%;
 		padding: 0;
+		width: 100%;
 	}
 }

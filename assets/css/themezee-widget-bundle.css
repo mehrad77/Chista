@@ -33,9 +33,9 @@
 # Posts List
 ---------------------------------------------------------------- */
 .tzwb-posts-list li {
+	overflow: hidden;
 	margin: 0;
 	list-style: none;
-	overflow: hidden;
 }
 
 .tzwb-posts-list .tzwb-excerpt p {
@@ -120,8 +120,8 @@
 	float: left;
 	margin: 0 5px 5px 0;
 	padding: 0;
-	list-style: none;
 	border: none;
+	list-style: none;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a {
@@ -131,9 +131,9 @@
 	border: 1px solid rgba(0,0,0,0.075);
 	color: #cc5555;
 	text-decoration: none;
+	font-weight: bold;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: bold;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link,
@@ -166,16 +166,16 @@
 .tzwb-social-icons .social-icons-menu {
 	margin: 0;
 	padding: 0;
-	list-style: none;
 	border: none;
+	list-style: none;
 }
 
 .tzwb-social-icons .social-icons-menu li {
 	float: left;
 	margin: 0;
 	padding: 0;
-	list-style: none;
 	border: none;
+	list-style: none;
 }
 
 .tzwb-social-icons .social-icons-menu li a {
@@ -187,8 +187,8 @@
 
 .tzwb-social-icons .social-icons-menu li a .icon {
 	margin: 0;
-	height: 24px;
 	width: 24px;
+	height: 24px;
 	vertical-align: middle;
 	fill: #cc5555;
 }

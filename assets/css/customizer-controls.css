@@ -76,27 +76,28 @@
 
 body.adding-widget #magazine-widgets-buttons .add-new-magazine-widget::before,
 body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .button.add-new-widget::before {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
 }
 
 body.adding-widget #magazine-widgets-buttons .add-new-magazine-widget,
 body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .button.add-new-widget {
-	background: #f7f7f7;
 	border-color: #ccc;
+	background: #f7f7f7;
 	box-shadow: 0 1px 0 #ccc;
 	color: #555;
-	cursor: not-allowed;
 	opacity: 0.2;
+	cursor: not-allowed;
 	pointer-events: none;
 }
 
 body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-magazine-widget {
-	background: #eee;
 	border-color: #929793;
+	background: #eee;
 	box-shadow: 0 2px 5px -3px rgba(0, 0, 0, 0.5) inset;
 	color: #32373c;
-	cursor: pointer;
 	opacity: 1;
+	cursor: pointer;
 	pointer-events: auto;
 }
 
@@ -108,8 +109,8 @@ body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-mag
 }
 
 .adding-magazine-widget #available-widgets {
-	width: 400px;
 	left: -401px;
+	width: 400px;
 }
 
 .adding-magazine-widget #available-widgets #available-widgets-list {
@@ -125,9 +126,9 @@ body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-mag
 .adding-magazine-widget #available-widgets .widget-tpl {
 	float: left;
 	clear: left;
+	box-sizing: border-box;
 	padding-left: 15px;
 	width: 100%;
-	box-sizing: border-box;
 }
 
 .adding-magazine-widget #available-widgets .widget-tpl .widget-title::before {
@@ -137,19 +138,19 @@ body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-mag
 .adding-magazine-widget #available-widgets .widget-tpl .widget-top::before {
 	display: block;
 	float: left;
-	font-size: 1px;
-	content: " ";
+	margin: 0 15px 0 0;
 	width: 120px;
 	height: 75px;
 	border: 1px solid #ccc;
-	margin: 0 15px 0 0;
+	content: " ";
+	font-size: 1px;
 }
 
 .adding-magazine-widget #available-widgets [id*='widget-tpl-chronus-magazine-'] .widget-top::before {
+	background-color: #f2f2f2;
+	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: center;
-	background-color: #f2f2f2;
 }
 
 .adding-magazine-widget #available-widgets [id*='widget-tpl-chronus-magazine-posts-columns'] .widget-top::before {
