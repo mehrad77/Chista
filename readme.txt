@@ -26,6 +26,11 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.2 =
+* added selective refresh to all theme settings
+* added function to return single theme option
+* improved structure of theme options
+
 = 1.1 =
 * added SVG Icons instead of Genericons font
 * added custom Magazine Widget Control in Customizer

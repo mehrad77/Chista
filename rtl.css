@@ -48,13 +48,15 @@ li > ol {
 }
 
 .content-area {
-	padding-right: 0;
-	padding-left: 2em;
+	order: 2;
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
 }
 
 .sidebar {
-	padding-right: 2em;
-	padding-left: 0;
+	order: 1;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
 }
 
 .main-navigation-menu > .menu-item-has-children > a .icon {
@@ -210,16 +212,6 @@ li > ol {
 }
 
 @media only screen and (max-width: 80em) {
-	.content-area {
-		padding-right: 0;
-		padding-left: 1em;
-	}
-
-	.sidebar {
-		padding-right: 1em;
-		padding-left: 0;
-	}
-
 	.featured-posts {
 		margin-right: 0;
 		margin-left: -2em;
@@ -310,6 +302,18 @@ li > ol {
 		padding-right: 0;
 		padding-left: 1.5em;
 	}
+}
+
+.sidebar-left .content-area {
+	order: 1;
+	-webkit-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+}
+
+.sidebar-left .sidebar {
+	order: 2;
+	-webkit-box-ordinal-group: 3;
+	-ms-flex-order: 2;
 }
 
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
