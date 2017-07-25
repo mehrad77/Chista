@@ -25,7 +25,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 	function chronus_setup() {
 
 		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/chronus
-		load_theme_textdomain( 'chronus' );
+		load_theme_textdomain( 'chronus', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
