@@ -109,6 +109,32 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 		'render_callback' => 'chronus_customize_partial_blog_layout',
 		'fallback_refresh' => false,
 	) );
+
+	// Add Magazine Widgets Headline.
+	$wp_customize->add_control( new Chronus_Customize_Header_Control(
+		$wp_customize, 'chronus_theme_options[blog_magazine_widgets_title]', array(
+			'label' => esc_html__( 'Magazine Widgets', 'chronus' ),
+			'section' => 'chronus_section_blog',
+			'settings' => array(),
+			'priority' => 50,
+		)
+	) );
+
+	// Add Setting and Control for showing post date.
+	$wp_customize->add_setting( 'chronus_theme_options[blog_magazine_widgets]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chronus_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chronus_theme_options[blog_magazine_widgets]', array(
+		'label'    => esc_html__( 'Display Magazine widgets on blog index', 'chronus' ),
+		'section'  => 'chronus_section_blog',
+		'settings' => 'chronus_theme_options[blog_magazine_widgets]',
+		'type'     => 'checkbox',
+		'priority' => 60,
+	) );
 }
 add_action( 'customize_register', 'chronus_customize_register_blog_settings' );
 

@@ -13,6 +13,11 @@
 */
 function chronus_magazine_widgets() {
 
+	// Return early if Magazine widgets are deactivated on blog index.
+	if ( is_home() && false === chronus_get_option( 'blog_magazine_widgets' ) ) {
+		return;
+	}
+
 	// Only display on first page of blog.
 	if ( is_home() && is_paged() ) {
 		return;

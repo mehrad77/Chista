@@ -26,6 +26,10 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.2.1 =
+* added new setting to deactivate Magazine widgets on blog index
+* fixed styling of site title
+
 = 1.2 =
 * added selective refresh to all theme settings
 * added function to return single theme option
