@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', 'chronus_setup' );
  * @global int $content_width
  */
 function chronus_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'chronus_content_width', 810 );
+	$GLOBALS['content_width'] = apply_filters( 'chronus_content_width', 840 );
 }
 add_action( 'after_setup_theme', 'chronus_content_width', 0 );
 
