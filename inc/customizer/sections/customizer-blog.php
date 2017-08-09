@@ -18,13 +18,13 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 	$wp_customize->add_section( 'chronus_section_blog', array(
 		'title'    => esc_html__( 'Blog Settings', 'chronus' ),
 		'priority' => 20,
-		'panel' => 'chronus_options_panel',
+		'panel'    => 'chronus_options_panel',
 	) );
 
 	// Add Blog Title setting and control.
 	$wp_customize->add_setting( 'chronus_theme_options[blog_title]', array(
 		'default'           => '',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
@@ -38,14 +38,15 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[blog_title]', array(
-		'selector'        => '.blog-header .blog-title',
-		'render_callback' => 'chronus_customize_partial_blog_title',
+		'selector'         => '.blog-header .blog-title',
+		'render_callback'  => 'chronus_customize_partial_blog_title',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Blog Description setting and control.
 	$wp_customize->add_setting( 'chronus_theme_options[blog_description]', array(
 		'default'           => '',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
@@ -59,14 +60,15 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->selective_refresh->add_partial( 'chronus_theme_options[blog_description]', array(
-		'selector'        => '.blog-header .blog-description',
-		'render_callback' => 'chronus_customize_partial_blog_description',
+		'selector'         => '.blog-header .blog-description',
+		'render_callback'  => 'chronus_customize_partial_blog_description',
+		'fallback_refresh' => false,
 	) );
 
 	// Add Settings and Controls for blog layout.
 	$wp_customize->add_setting( 'chronus_theme_options[blog_layout]', array(
 		'default'           => 'excerpt',
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'chronus_sanitize_select',
 	) );
@@ -78,7 +80,7 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 		'type'     => 'radio',
 		'priority' => 30,
 		'choices'  => array(
-			'index' => esc_html__( 'Display full posts', 'chronus' ),
+			'index'   => esc_html__( 'Display full posts', 'chronus' ),
 			'excerpt' => esc_html__( 'Display post excerpts', 'chronus' ),
 		),
 	) );
@@ -86,27 +88,27 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 	// Add Setting and Control for Excerpt Length.
 	$wp_customize->add_setting( 'chronus_theme_options[excerpt_length]', array(
 		'default'           => 35,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'absint',
 	) );
 
 	$wp_customize->add_control( 'chronus_theme_options[excerpt_length]', array(
-		'label'           => esc_html__( 'Excerpt Length', 'chronus' ),
-		'section'         => 'chronus_section_blog',
-		'settings'        => 'chronus_theme_options[excerpt_length]',
-		'type'            => 'text',
-		'priority'        => 40,
+		'label'    => esc_html__( 'Excerpt Length', 'chronus' ),
+		'section'  => 'chronus_section_blog',
+		'settings' => 'chronus_theme_options[excerpt_length]',
+		'type'     => 'text',
+		'priority' => 40,
 	) );
 
 	// Add Partial for Blog Layout and Excerpt Length.
 	$wp_customize->selective_refresh->add_partial( 'chronus_blog_layout_partial', array(
-		'selector'        => '.site-main .post-wrapper',
-		'settings'        => array(
+		'selector'         => '.site-main .post-wrapper',
+		'settings'         => array(
 			'chronus_theme_options[blog_layout]',
 			'chronus_theme_options[excerpt_length]',
 		),
-		'render_callback' => 'chronus_customize_partial_blog_layout',
+		'render_callback'  => 'chronus_customize_partial_blog_layout',
 		'fallback_refresh' => false,
 	) );
 
@@ -123,7 +125,7 @@ function chronus_customize_register_blog_settings( $wp_customize ) {
 	// Add Setting and Control for showing post date.
 	$wp_customize->add_setting( 'chronus_theme_options[blog_magazine_widgets]', array(
 		'default'           => true,
-		'type'           	=> 'option',
+		'type'              => 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'chronus_sanitize_checkbox',
 	) );

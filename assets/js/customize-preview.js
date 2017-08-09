@@ -49,7 +49,6 @@
 		value.bind( function( newval ) {
 			if ( 'left-sidebar' === newval && false === $( 'body' ).hasClass( 'no-sidebar' ) ) {
 				$( 'body' ).addClass( 'sidebar-left' );
-				console.log('sidebar-left');
 			} else {
 				$( 'body' ).removeClass( 'sidebar-left' );
 			}
