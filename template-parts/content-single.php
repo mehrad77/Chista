@@ -33,7 +33,7 @@
 	<footer class="entry-footer">
 
 		<?php chronus_entry_tags(); ?>
-
+		<?php do_action( 'chronus_author_bio' ); ?>
 		<?php chronus_post_navigation(); ?>
 
 	</footer><!-- .entry-footer -->
