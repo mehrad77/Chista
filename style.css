@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/chronus/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: chronus
@@ -1702,6 +1702,8 @@ object {
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .wp-caption img[class*="wp-image-"] {
@@ -1714,18 +1716,21 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.75em 0;
 }
 
 /*--------------------------------------------------------------
 ## 13.2 - Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 .gallery-item {
 	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 1.5em 1em 0;
 	width: 100%;
 	vertical-align: top;
 	text-align: center;
@@ -1765,6 +1770,9 @@ object {
 
 .gallery-caption {
 	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	margin-bottom: 0.75em;
 }
 
 /*--------------------------------------------------------------
@@ -2118,6 +2126,18 @@ object {
 		font-size: 2rem;
 	}
 
+	/* Gallery */
+	.gallery-item {
+		padding: 0 1em 0.75em 0;
+	}
+
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 25%;
+	}
+
 	/* Magazine Widgets */
 	.widget-magazine-posts .large-post .entry-title {
 		font-size: 22px;
@@ -2340,6 +2360,16 @@ object {
 	.alignright, .alignleft {
 		float: none;
 		margin: 1em 0;
+	}
+
+	/* Gallery */
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		max-width: 50%;
 	}
 
 	/* Magazine Widgets */

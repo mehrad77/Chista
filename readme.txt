@@ -26,6 +26,10 @@ For more information about Chronus please go to https://themezee.com/themes/chro
 
 == Changelog ==
 
+= 1.2.3 =
+* improved styling of image captions
+* improved styling of galleries
+
 = 1.2.2 =
 * added action hook for author bio
 * set fallback refresh to false for blog title and description
