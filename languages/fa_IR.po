@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: Chronus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2017-10-14 21:05+0330\n"
-"PO-Revision-Date: 2017-10-14 21:33+0330\n"
+"PO-Revision-Date: 2018-05-05 01:25+0430\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -22,15 +22,15 @@ msgstr ""
 
 #: 404.php:17
 msgid "404: Page not found"
-msgstr "خطای 404: صفحه مورد نظر یافت نشد."
+msgstr "خطای ۴۰۴: صفحه مورد نظر یافت نشد"
 
 #: 404.php:22
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
 msgstr ""
-"به نظر می رسد در این مکان چیزی یافت نشد ،تلاش کنید و یا در یکی از لینک های "
-"زیر جستجو کنید؟"
+"اشتباه شده، باس ببخشید...\n"
+"آدم چطوری به بازدیدکننده حالی کنه اشتباهی شده؟"
 
 #: comments.php:30 inc/template-tags.php:284
 msgid "One comment"
@@ -39,7 +39,7 @@ msgstr "یک دیدگاه"
 #: comments.php:30 inc/template-tags.php:284
 #, php-format
 msgid "% comments"
-msgstr "% دیدگاه ها"
+msgstr "% دیدگاه"
 
 #: comments.php:55
 msgid "Comments are closed."
@@ -51,15 +51,15 @@ msgstr "ناوبری اصلی"
 
 #: functions.php:107
 msgid "Sidebar"
-msgstr ""
+msgstr "نوارکناری"
 
 #: functions.php:109
 msgid "Appears on posts and pages except the full width template."
-msgstr ""
+msgstr "در نوشته‌ها و صفحات نمایش داده شود. به جز قالب «عرض کامل»."
 
 #: functions.php:117
 msgid "Magazine Homepage"
-msgstr ""
+msgstr "صفحه مجله"
 
 #: functions.php:119
 msgid ""
@@ -81,18 +81,20 @@ msgid ""
 "%1$s requires at least WordPress version %2$s. You are running version %3$s. "
 "Please upgrade and try again."
 msgstr ""
+"%1$s حداقل نیازمند وردپرس نسخه %2$s می‌باشد. شما از نسخه %3$s استفاده می‌کنید. "
+"لطفا پس از بروزرسانی، دوباره امتحان کنید."
 
 #: inc/customizer/controls/category-dropdown-control.php:31
 #: inc/widgets/widget-magazine-posts-columns.php:257
 #: inc/widgets/widget-magazine-posts-columns.php:278
 #: inc/widgets/widget-magazine-posts-grid.php:208
 msgid "All Categories"
-msgstr "همه دسته بندی ها"
+msgstr "همه دسته بندی‌ها"
 
 #: inc/customizer/controls/magazine-widget-area-control.php:33
 #: inc/customizer/sections/customizer-magazine.php:51
 msgid "Add Magazine Widget"
-msgstr ""
+msgstr "افزودن ابزارک مجله"
 
 #: inc/customizer/controls/upgrade-control.php:25 inc/theme-info.php:110
 msgid "Pro Version Add-on"
@@ -107,16 +109,16 @@ msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:32 inc/theme-info.php:116
 msgid "https://themezee.com/addons/chronus-pro/"
-msgstr ""
+msgstr "https://mehrad.js.org/Nimanus"
 
 #: inc/customizer/controls/upgrade-control.php:33 inc/theme-info.php:117
 #, php-format
 msgid "Learn more about %s Pro"
-msgstr ""
+msgstr "درباره نسخه ویژه %s بیشتر بدانید."
 
 #: inc/customizer/controls/upgrade-control.php:41 inc/theme-info.php:127
 msgid "Recommended Plugins"
-msgstr "پلاگین توصیه شده"
+msgstr "پلاگین توصیه‌شده"
 
 #: inc/customizer/controls/upgrade-control.php:44 inc/theme-info.php:130
 msgid ""
@@ -126,7 +128,7 @@ msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:49 inc/theme-info.php:134
 msgid "Install Plugins"
-msgstr "نصب افزونه ها"
+msgstr "نصب افزونه‌ها"
 
 #: inc/customizer/customizer.php:37 inc/theme-info.php:77
 msgid "Theme Options"
@@ -134,7 +136,7 @@ msgstr "تنظیمات قالب"
 
 #: inc/customizer/customizer.php:43
 msgid "Background"
-msgstr "پس زمینه"
+msgstr "پس‌زمینه"
 
 #: inc/customizer/customizer.php:68
 msgid "Display Site Title"
@@ -142,15 +144,15 @@ msgstr "نمایش عنوان سایت"
 
 #: inc/customizer/customizer.php:84
 msgid "Display Tagline"
-msgstr ""
+msgstr "نمایش تگ‌لاین"
 
 #: inc/customizer/customizer.php:146 inc/theme-info.php:46
 msgid "Theme Links"
-msgstr ""
+msgstr "پیوندهای قالب"
 
 #: inc/customizer/customizer.php:149 inc/theme-info.php:47
 msgid "https://themezee.com/themes/chronus/"
-msgstr ""
+msgstr "https://mehrad.js.org/Nimanus"
 
 #: inc/customizer/customizer.php:150 inc/theme-info.php:47
 msgid "Theme Page"
@@ -163,21 +165,21 @@ msgstr "دمو قالب"
 #: inc/customizer/customizer.php:161 inc/theme-info.php:49
 #: inc/theme-info.php:70
 msgid "https://themezee.com/docs/chronus-documentation/"
-msgstr ""
+msgstr "https://mehrad.js.org/Nimanus#doc"
 
 #: inc/customizer/customizer.php:162 inc/theme-info.php:49
 #: inc/theme-info.php:64
 msgid "Theme Documentation"
-msgstr ""
+msgstr "مستندات قالب"
 
 #: inc/customizer/customizer.php:167 inc/theme-info.php:50
 #: inc/theme-info.php:152
 msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
-msgstr ""
+msgstr "https://wordpress.org/support/theme/nimanus/reviews/"
 
 #: inc/customizer/customizer.php:168 inc/theme-info.php:50
 msgid "Rate this theme"
-msgstr ""
+msgstr "به این قالب امتیاز دهید"
 
 #: inc/customizer/sections/customizer-blog.php:19
 msgid "Blog Settings"
@@ -189,43 +191,43 @@ msgstr "عنوان وبلاگ"
 
 #: inc/customizer/sections/customizer-blog.php:54
 msgid "Blog Description"
-msgstr ""
+msgstr "شرح وبلاگ"
 
 #: inc/customizer/sections/customizer-blog.php:75
 msgid "Blog Layout"
-msgstr ""
+msgstr "چیدمان وبلاگ"
 
 #: inc/customizer/sections/customizer-blog.php:81
 msgid "Display full posts"
-msgstr ""
+msgstr "نمایش تمام نوشته‌ها"
 
 #: inc/customizer/sections/customizer-blog.php:82
 msgid "Display post excerpts"
-msgstr ""
+msgstr "نمایش خلاصه نوشته‌ها"
 
 #: inc/customizer/sections/customizer-blog.php:95
 msgid "Excerpt Length"
-msgstr ""
+msgstr "طول خلاصه"
 
 #: inc/customizer/sections/customizer-featured.php:19
 msgid "Featured Posts"
-msgstr ""
+msgstr "تصویر شاخص"
 
 #: inc/customizer/sections/customizer-featured.php:27
 msgid "Activate Featured Posts"
-msgstr ""
+msgstr "فعال کردن نوشته‌های ویژه"
 
 #: inc/customizer/sections/customizer-featured.php:42
 msgid "Show Featured Posts on home page"
-msgstr ""
+msgstr "نمایش نوشته‌های ویژه در صفحه اصلی"
 
 #: inc/customizer/sections/customizer-featured.php:59
 msgid "Featured Posts Category"
-msgstr ""
+msgstr "دسته‌بندی نوشته‌های ویژه"
 
 #: inc/customizer/sections/customizer-layout.php:19
 msgid "Layout Settings"
-msgstr ""
+msgstr "تنظیمات چیدمان"
 
 #: inc/customizer/sections/customizer-layout.php:33
 msgid "Sidebar Position"
@@ -257,7 +259,7 @@ msgstr "نمایش نویسنده"
 
 #: inc/customizer/sections/customizer-post.php:75
 msgid "Display categories"
-msgstr "نمایش دسته ها"
+msgstr "نمایش دسته‌ها"
 
 #: inc/customizer/sections/customizer-post.php:85
 msgid "Single Post"
@@ -265,11 +267,11 @@ msgstr "نوشته تکی"
 
 #: inc/customizer/sections/customizer-post.php:101
 msgid "Display tags"
-msgstr ""
+msgstr "نمایش برچسب‌ها"
 
 #: inc/customizer/sections/customizer-post.php:117
 msgid "Display previous/next post navigation"
-msgstr ""
+msgstr "نمایش پیوند به پست پیشین/پسین"
 
 #: inc/customizer/sections/customizer-post.php:127
 msgid "Featured Images"
@@ -277,15 +279,15 @@ msgstr "تصویر شاخص"
 
 #: inc/customizer/sections/customizer-post.php:143
 msgid "Display images on blog and archives"
-msgstr ""
+msgstr "نمایش تصاویر در وبلاگ و بایگانی"
 
 #: inc/customizer/sections/customizer-post.php:165
 msgid "Display image on single posts"
-msgstr ""
+msgstr "نمایش تصویر در نوشته‌های تکی"
 
 #: inc/customizer/sections/customizer-upgrade.php:19
 msgid "More Features"
-msgstr "ویژگی های بیشتر"
+msgstr "ویژگی‌های بیشتر"
 
 #: inc/magazine.php:39
 msgid ""
@@ -296,7 +298,7 @@ msgstr ""
 #: inc/magazine.php:60
 #, php-format
 msgid "View all posts from category %s"
-msgstr "نمایش همه پست ها از دسته  %s"
+msgstr "نمایش همه نوشته‌ها از دسته  %s"
 
 #: inc/template-tags.php:207
 #, php-format
@@ -307,7 +309,7 @@ msgstr "در %s"
 #: inc/template-tags.php:222
 #, php-format
 msgid "View all posts by %s"
-msgstr "نمایش همه پست ها توسط   %s"
+msgstr "نمایش همه نوشته‌ها توسط   %s"
 
 #: inc/template-tags.php:226
 #, php-format
@@ -323,7 +325,7 @@ msgstr "در ‪%s"
 
 #: inc/template-tags.php:257
 msgid "Tagged with "
-msgstr "تگ شده با"
+msgstr "برچسب‌گذاری شده با"
 
 #: inc/template-tags.php:284
 msgid "Leave a comment"
@@ -341,26 +343,26 @@ msgstr "نوشته قبلی"
 #: inc/template-tags.php:319
 msgctxt "post navigation"
 msgid "Next Post"
-msgstr "نوشته بعدی "
+msgstr "نوشته بعدی"
 
 #: inc/template-tags.php:372
 msgctxt "pagination"
 msgid "Previous Posts"
-msgstr "نوشته های قبلی"
+msgstr "نوشته‌های قبلی"
 
 #: inc/template-tags.php:373
 msgctxt "pagination"
 msgid "Next Posts"
-msgstr "نوشته های بعدی"
+msgstr "نوشته‌های بعدی"
 
 #: inc/template-tags.php:387
 #, php-format
 msgid "Powered by %1$s and %2$s."
-msgstr ""
+msgstr "با استفاده از قالب %1$s | توسعه با ❤ توسط %2$s"
 
 #: inc/template-tags.php:388
 msgid "http://wordpress.org"
-msgstr ""
+msgstr "https://mehrad.js.org/Nimanus"
 
 #: inc/theme-info.php:19 inc/theme-info.php:40
 #, php-format
@@ -369,23 +371,25 @@ msgstr "خوش آمدید به %1$s  %2$s"
 
 #: inc/theme-info.php:20
 msgid "Theme Info"
-msgstr "اطلاعات قالب"
+msgstr "تنظیمات قالب"
 
 #: inc/theme-info.php:57
 #, php-format
 msgid "Getting Started with %s"
-msgstr ""
+msgstr "شروع به کار با %s"
 
 #: inc/theme-info.php:67
 msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
+"برای راه‌اندازی و پیکربندی این قالب به کمک نیاز دارید؟ من مستنداتی رو این "
+"مورد آماده کردم که می‌توانید از آن‌ها استفاده کنید."
 
 #: inc/theme-info.php:71
 #, php-format
 msgid "View %s Documentation"
-msgstr "مشاهده%s مستندات "
+msgstr "مشاهده%s مستندات"
 
 #: inc/theme-info.php:80
 #, php-format
@@ -396,7 +400,7 @@ msgstr ""
 
 #: inc/theme-info.php:83
 msgid "Customize Theme"
-msgstr ""
+msgstr "شخصی‌سازی قالب"
 
 #: inc/theme-info.php:103
 msgid "Get more features"
@@ -406,68 +410,70 @@ msgstr "ویژگی های بیشتر"
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
+"قالب %1$s با تلاش‌های  %2$s برای شما به ارمغان آورده شده :) اگر از این تلاش "
+"خوشتون میاد، به قالب %3$s  :)"
 
 #: inc/theme-info.php:151
 msgid "https://themezee.com/"
-msgstr ""
+msgstr "https://mehrad.js.org/"
 
 #: inc/theme-info.php:152
 msgid "Review Chronus"
-msgstr ""
+msgstr "بررسی کردن Nimanus"
 
 #: inc/theme-info.php:152
 msgid "rate it"
-msgstr "امتیازدهی"
+msgstr "امتیاز دهید"
 
 #: inc/widgets/widget-magazine-posts-columns.php:24
 msgid "Magazine (Columns)"
-msgstr ""
+msgstr "محله (ستونی)"
 
 #: inc/widgets/widget-magazine-posts-columns.php:27
 msgid "Displays your posts from two selected categories."
-msgstr ""
+msgstr "نوشته‌هایتان را از دو دسته‌بندی انتخاب‌شده، نمایش می‌دهد."
 
 #: inc/widgets/widget-magazine-posts-columns.php:41
 msgid "Left Category"
-msgstr ""
+msgstr "دسته‌بندی سمت چپ"
 
 #: inc/widgets/widget-magazine-posts-columns.php:42
 msgid "Right Category"
-msgstr ""
+msgstr "دسته‌بندی سمت راست"
 
 #: inc/widgets/widget-magazine-posts-columns.php:248
 msgid "Left Category Title:"
-msgstr ""
+msgstr "عنوان دسته‌بندی چپ:"
 
 #: inc/widgets/widget-magazine-posts-columns.php:254
 msgid "Left Category:"
-msgstr ""
+msgstr "دسته‌بندی سمت چپ"
 
 #: inc/widgets/widget-magazine-posts-columns.php:269
 msgid "Right Category Title:"
-msgstr ""
+msgstr "عنوان دسته‌بندی راست:"
 
 #: inc/widgets/widget-magazine-posts-columns.php:275
 msgid "Right Category:"
-msgstr ""
+msgstr "دسته‌بندی سمت راست"
 
 #: inc/widgets/widget-magazine-posts-columns.php:290
 #: inc/widgets/widget-magazine-posts-grid.php:228
 msgid "Number of posts:"
-msgstr "تعداد نوشته ها:"
+msgstr "تعداد نوشته‌ها:"
 
 #: inc/widgets/widget-magazine-posts-columns.php:298
 msgid "Highlight first post (big image + excerpt)"
-msgstr ""
+msgstr "بزرگ کردن نخستین نوشته (تصویر بزرگ + خلاصه مطلب)"
 
 #: inc/widgets/widget-magazine-posts-grid.php:24
 #: inc/widgets/widget-magazine-posts-grid.php:39
 msgid "Magazine (Grid)"
-msgstr ""
+msgstr "مجله (شبکه‌ای)"
 
 #: inc/widgets/widget-magazine-posts-grid.php:27
 msgid "Displays your posts from a selected category in a grid layout."
-msgstr ""
+msgstr "پست‌های‌تان را از یک دسته‌بندی انتخاب‌شده در چیدمان شبکه‌‌ای نمایش می‌دهد."
 
 #: inc/widgets/widget-magazine-posts-grid.php:199
 msgid "Title:"
@@ -479,15 +485,15 @@ msgstr "دسته بندی:"
 
 #: inc/widgets/widget-magazine-posts-grid.php:220
 msgid "Grid Layout:"
-msgstr ""
+msgstr "چیدمان شبکه:"
 
 #: inc/widgets/widget-magazine-posts-grid.php:222
 msgid "Two Columns Grid"
-msgstr ""
+msgstr "شبکه دو ستونه"
 
 #: inc/widgets/widget-magazine-posts-grid.php:223
 msgid "Three Columns Grid"
-msgstr ""
+msgstr "شبکه سه ستونه"
 
 #: search.php:20
 #, php-format
@@ -511,30 +517,31 @@ msgstr "جستجو"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr "چیزی پیدا نشد"
+msgstr "چیزی پیدا نشد."
 
 #: template-parts/content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+" آماده منتشر کرد اولین نوشته‌تون هستید؟  <a href=\"%1$s\">پس بزن بریم</a>."
 
 #: template-parts/content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"متاسفانه، هیچ مطلبی با کلمات جستجویی شما پیدا نشد. لطفا دوباره با کلمات "
-"کلیدی دیگری بررسی کنید"
+"متاسفانه، هیچ نوشته‌ای با واژگان مورد جستجوی شما پیدا نشد. لطفا  کلمات دیگری "
+"بررسی کنید."
 
 #: template-parts/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"به نظر می رسد صفحه ای با این آدرس وجود ندارد. می توانید از بخش جستجو کمک "
+"به نظر می رسد صفحه ای با این آدرس وجود ندارد. می‌توانید از کادر جستجو کمک "
 "بگیرید."
 
 #: template-parts/content-page.php:25 template-parts/content-single.php:27
 msgid "Pages:"
-msgstr "برگه ها:"
+msgstr "برگه‌ها:"
