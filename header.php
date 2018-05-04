@@ -14,6 +14,9 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<!-- Colors -->
+<meta name="theme-color" content="#81007f">
+<meta name="apple-mobile-web-app-status-bar-style" content="#81007f">
 
 <?php wp_head();
 //Meta tags start
@@ -24,11 +27,6 @@ if (is_singular()) :
 <meta name="twitter:description" content="<?php echo  wp_trim_words(get_the_content(''),50,'... ') ?>" />
 <meta property="og:description" content="<?php echo  wp_trim_words(get_the_content(''),50,'... ') ?>" />
 <meta name="description" content="<?php echo  wp_trim_words(get_the_content(''),50,'... ') ?>"/>
-<!-- Colors -->
-<meta name="theme-color" content="#81007f">
-<meta name="apple-mobile-web-app-status-bar-style" content="#81007f">
-<meta name="application-name" content="نیما شفیع‌زاده"/>
-<meta name="msapplication-TileColor" content="#d90073" />
 
 <?php 
 global $post;
@@ -42,10 +40,10 @@ echo '<meta name="twitter:image" content="' . esc_attr( $thumbnail_src[0] ) . '"
 <meta property="og:image:width" content="840" />
 <meta property="og:image:height" content="400" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="اولین تجربه‌های من از دنیای دیجیتال مارکتینگ، با حضورم در «فرندفید» و بعد «گودر» شکل گرفت و نهایتا در «توییتر» به شکل حرفه‌ای و جدی‌تری ادامه پیدا کرد. من علاقۀ زیادی به بلندپروازی دارم و به نظرم تو هیچ کاری مثل دیجیتال مارکتینگ نمی‌شه بلندپرواز بود." />
-<meta property="og:description" content="اولین تجربه‌های من از دنیای دیجیتال مارکتینگ، با حضورم در «فرندفید» و بعد «گودر» شکل گرفت و نهایتا در «توییتر» به شکل حرفه‌ای و جدی‌تری ادامه پیدا کرد. من علاقۀ زیادی به بلندپروازی دارم و به نظرم تو هیچ کاری مثل دیجیتال مارکتینگ نمی‌شه بلندپرواز بود." />
-<meta name="description" content="گیک بازاریابی دیجیتال"/>
-<meta name="twitter:title" content="گیک بازاریابی دیجیتال | نیما شفیع‌زاده" />
+<meta name="twitter:description" content=<?php get_bloginfo( 'description' ); ?>" />
+<meta property="og:description" content="<?php get_bloginfo( 'description' ); ?>" />
+<meta name="description" content="<?php get_bloginfo( 'description' ); ?>"/>
+<meta name="twitter:title" content="<?php the_title() ?>" />
 <meta name="twitter:site" content="@Retooeter" />
 <meta name="twitter:image" content="https://www.nima.today/wp-content/uploads/2018/02/LogoType-NimaShafiezadeh-768x388.jpg" />
 	<?
@@ -85,8 +83,7 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 
 				<div id="logo" class="site-branding clearfix">
 					<div class="desktop-right " style="float:right;">
-						<?php if (is_singular()) : ?><h1 class="site-title"><a href="https://www.nima.today/" rel="home">نیما شفیع&zwnj;زاده</a></h1>
-						<?php else:  chronus_site_title(); endif; ?>
+						<?php chronus_site_title(); ?>
 						<?php chronus_site_description(); ?>
 					</div>
 					<div class="desktop-left" style="float:left;">
