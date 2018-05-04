@@ -192,6 +192,16 @@ function chronus_pingback_url() {
 }
 add_action( 'wp_head', 'chronus_pingback_url' );
 
+/* must remove this block /*/
+// add badge class to catageroy widgets
+function bs_categories_list_group_filter ($variable) {
+   $variable = str_replace('<li class="cat-item cat-item-', '<li class="list-group-item cat-item cat-item-', $variable);
+   $variable = str_replace('(', '<span class="badge"> ', $variable);
+   $variable = str_replace(')', ' </span>', $variable);
+   return $variable;
+}
+add_filter('wp_list_categories','bs_categories_list_group_filter');
+/* must remove this block /*/
 
 /**
  * Include Files
