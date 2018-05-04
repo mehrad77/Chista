@@ -85,7 +85,6 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 
 				<div id="logo" class="site-branding clearfix">
 					<div class="desktop-right " style="float:right;">
-						<?php chronus_site_logo(); ?>
 						<?php if (is_singular()) : ?><h1 class="site-title"><a href="https://www.nima.today/" rel="home">نیما شفیع&zwnj;زاده</a></h1>
 						<?php else:  chronus_site_title(); endif; ?>
 						<?php chronus_site_description(); ?>
@@ -105,5 +104,4 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 		<?php chronus_featured_content(); ?>
 
 		<?php chronus_breadcrumbs(); ?>
-
 		<div id="content" class="site-content container clearfix">
