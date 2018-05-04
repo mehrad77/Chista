@@ -2818,3 +2818,19 @@ ol {
 }
 
 /* end of must remove this block */
+
+ .badge{
+    display: inline-block;
+    padding: 0.25em .2em;
+    width: 20px;
+    font-size: 73%;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    background-color: #636c72;
+    margin: 0px 4px 0px 0px;
+  }
