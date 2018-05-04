@@ -1,0 +1,540 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Chronus\n"
+"Report-Msgid-Bugs-To: https://themezee.com/\n"
+"POT-Creation-Date: 2017-10-14 21:05+0330\n"
+"PO-Revision-Date: 2017-10-14 21:33+0330\n"
+"Last-Translator: \n"
+"Language-Team: ThemeZee <support@themezee.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Language: fa_IR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "404: Page not found"
+msgstr "خطای 404: صفحه مورد نظر یافت نشد."
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
+msgstr ""
+"به نظر می رسد در این مکان چیزی یافت نشد ،تلاش کنید و یا در یکی از لینک های "
+"زیر جستجو کنید؟"
+
+#: comments.php:30 inc/template-tags.php:284
+msgid "One comment"
+msgstr "یک دیدگاه"
+
+#: comments.php:30 inc/template-tags.php:284
+#, php-format
+msgid "% comments"
+msgstr "% دیدگاه ها"
+
+#: comments.php:55
+msgid "Comments are closed."
+msgstr "دیدگاه‌ها بسته شده‌اند."
+
+#: functions.php:44
+msgid "Main Navigation"
+msgstr "ناوبری اصلی"
+
+#: functions.php:107
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:109
+msgid "Appears on posts and pages except the full width template."
+msgstr ""
+
+#: functions.php:117
+msgid "Magazine Homepage"
+msgstr ""
+
+#: functions.php:119
+msgid ""
+"Appears on blog index and Magazine Homepage template. You can use the "
+"Magazine widgets here."
+msgstr ""
+
+#: functions.php:145
+msgid "Menu"
+msgstr "منو"
+
+#: header.php:23
+msgid "Skip to content"
+msgstr "رفتن به محتوا"
+
+#: inc/back-compat.php:42 inc/back-compat.php:52 inc/back-compat.php:65
+#, php-format
+msgid ""
+"%1$s requires at least WordPress version %2$s. You are running version %3$s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer/controls/category-dropdown-control.php:31
+#: inc/widgets/widget-magazine-posts-columns.php:257
+#: inc/widgets/widget-magazine-posts-columns.php:278
+#: inc/widgets/widget-magazine-posts-grid.php:208
+msgid "All Categories"
+msgstr "همه دسته بندی ها"
+
+#: inc/customizer/controls/magazine-widget-area-control.php:33
+#: inc/customizer/sections/customizer-magazine.php:51
+msgid "Add Magazine Widget"
+msgstr ""
+
+#: inc/customizer/controls/upgrade-control.php:25 inc/theme-info.php:110
+msgid "Pro Version Add-on"
+msgstr ""
+
+#: inc/customizer/controls/upgrade-control.php:28 inc/theme-info.php:113
+#, php-format
+msgid ""
+"Purchase the %s Pro Add-on and get additional features and advanced "
+"customization options."
+msgstr ""
+
+#: inc/customizer/controls/upgrade-control.php:32 inc/theme-info.php:116
+msgid "https://themezee.com/addons/chronus-pro/"
+msgstr ""
+
+#: inc/customizer/controls/upgrade-control.php:33 inc/theme-info.php:117
+#, php-format
+msgid "Learn more about %s Pro"
+msgstr ""
+
+#: inc/customizer/controls/upgrade-control.php:41 inc/theme-info.php:127
+msgid "Recommended Plugins"
+msgstr "پلاگین توصیه شده"
+
+#: inc/customizer/controls/upgrade-control.php:44 inc/theme-info.php:130
+msgid ""
+"Extend the functionality of your WordPress website with our free and easy to "
+"use plugins."
+msgstr ""
+
+#: inc/customizer/controls/upgrade-control.php:49 inc/theme-info.php:134
+msgid "Install Plugins"
+msgstr "نصب افزونه ها"
+
+#: inc/customizer/customizer.php:37 inc/theme-info.php:77
+msgid "Theme Options"
+msgstr "تنظیمات قالب"
+
+#: inc/customizer/customizer.php:43
+msgid "Background"
+msgstr "پس زمینه"
+
+#: inc/customizer/customizer.php:68
+msgid "Display Site Title"
+msgstr "نمایش عنوان سایت"
+
+#: inc/customizer/customizer.php:84
+msgid "Display Tagline"
+msgstr ""
+
+#: inc/customizer/customizer.php:146 inc/theme-info.php:46
+msgid "Theme Links"
+msgstr ""
+
+#: inc/customizer/customizer.php:149 inc/theme-info.php:47
+msgid "https://themezee.com/themes/chronus/"
+msgstr ""
+
+#: inc/customizer/customizer.php:150 inc/theme-info.php:47
+msgid "Theme Page"
+msgstr "صفحه قالب"
+
+#: inc/customizer/customizer.php:156 inc/theme-info.php:48
+msgid "Theme Demo"
+msgstr "دمو قالب"
+
+#: inc/customizer/customizer.php:161 inc/theme-info.php:49
+#: inc/theme-info.php:70
+msgid "https://themezee.com/docs/chronus-documentation/"
+msgstr ""
+
+#: inc/customizer/customizer.php:162 inc/theme-info.php:49
+#: inc/theme-info.php:64
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/customizer/customizer.php:167 inc/theme-info.php:50
+#: inc/theme-info.php:152
+msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
+msgstr ""
+
+#: inc/customizer/customizer.php:168 inc/theme-info.php:50
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:19
+msgid "Blog Settings"
+msgstr "تنظیمات وبلاگ"
+
+#: inc/customizer/sections/customizer-blog.php:33
+msgid "Blog Title"
+msgstr "عنوان وبلاگ"
+
+#: inc/customizer/sections/customizer-blog.php:54
+msgid "Blog Description"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:75
+msgid "Blog Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:81
+msgid "Display full posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:82
+msgid "Display post excerpts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-blog.php:95
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/customizer-featured.php:19
+msgid "Featured Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-featured.php:27
+msgid "Activate Featured Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-featured.php:42
+msgid "Show Featured Posts on home page"
+msgstr ""
+
+#: inc/customizer/sections/customizer-featured.php:59
+msgid "Featured Posts Category"
+msgstr ""
+
+#: inc/customizer/sections/customizer-layout.php:19
+msgid "Layout Settings"
+msgstr ""
+
+#: inc/customizer/sections/customizer-layout.php:33
+msgid "Sidebar Position"
+msgstr "موقعیت نوار کناری"
+
+#: inc/customizer/sections/customizer-layout.php:39
+msgid "Left Sidebar"
+msgstr "نوار کناری چپ"
+
+#: inc/customizer/sections/customizer-layout.php:40
+msgid "Right Sidebar"
+msgstr "نوار کناری راست"
+
+#: inc/customizer/sections/customizer-post.php:19
+msgid "Post Settings"
+msgstr "تنظیمات مطلب"
+
+#: inc/customizer/sections/customizer-post.php:27
+msgid "Post Details"
+msgstr "نمایش جزئیات"
+
+#: inc/customizer/sections/customizer-post.php:43
+msgid "Display date"
+msgstr "نمایش تاریخ"
+
+#: inc/customizer/sections/customizer-post.php:59
+msgid "Display author"
+msgstr "نمایش نویسنده"
+
+#: inc/customizer/sections/customizer-post.php:75
+msgid "Display categories"
+msgstr "نمایش دسته ها"
+
+#: inc/customizer/sections/customizer-post.php:85
+msgid "Single Post"
+msgstr "نوشته تکی"
+
+#: inc/customizer/sections/customizer-post.php:101
+msgid "Display tags"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:117
+msgid "Display previous/next post navigation"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:127
+msgid "Featured Images"
+msgstr "تصویر شاخص"
+
+#: inc/customizer/sections/customizer-post.php:143
+msgid "Display images on blog and archives"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:165
+msgid "Display image on single posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:19
+msgid "More Features"
+msgstr "ویژگی های بیشتر"
+
+#: inc/magazine.php:39
+msgid ""
+"Please go to Customize &#8594; Widgets and add at least one widget to the "
+"Magazine Homepage widget area."
+msgstr ""
+
+#: inc/magazine.php:60
+#, php-format
+msgid "View all posts from category %s"
+msgstr "نمایش همه پست ها از دسته  %s"
+
+#: inc/template-tags.php:207
+#, php-format
+msgctxt "post date"
+msgid "On %s"
+msgstr "در %s"
+
+#: inc/template-tags.php:222
+#, php-format
+msgid "View all posts by %s"
+msgstr "نمایش همه پست ها توسط   %s"
+
+#: inc/template-tags.php:226
+#, php-format
+msgctxt "post author"
+msgid "By %s"
+msgstr "توسط  %s"
+
+#: inc/template-tags.php:243
+#, php-format
+msgctxt "post category"
+msgid "In %s"
+msgstr "در ‪%s"
+
+#: inc/template-tags.php:257
+msgid "Tagged with "
+msgstr "تگ شده با"
+
+#: inc/template-tags.php:284
+msgid "Leave a comment"
+msgstr "ارسال یک دیدگاه"
+
+#: inc/template-tags.php:302 template-parts/content.php:23
+msgid "Continue reading &raquo;"
+msgstr "ادامه مطلب &raquo;"
+
+#: inc/template-tags.php:318
+msgctxt "post navigation"
+msgid "Previous Post"
+msgstr "نوشته قبلی"
+
+#: inc/template-tags.php:319
+msgctxt "post navigation"
+msgid "Next Post"
+msgstr "نوشته بعدی "
+
+#: inc/template-tags.php:372
+msgctxt "pagination"
+msgid "Previous Posts"
+msgstr "نوشته های قبلی"
+
+#: inc/template-tags.php:373
+msgctxt "pagination"
+msgid "Next Posts"
+msgstr "نوشته های بعدی"
+
+#: inc/template-tags.php:387
+#, php-format
+msgid "Powered by %1$s and %2$s."
+msgstr ""
+
+#: inc/template-tags.php:388
+msgid "http://wordpress.org"
+msgstr ""
+
+#: inc/theme-info.php:19 inc/theme-info.php:40
+#, php-format
+msgid "Welcome to %1$s %2$s"
+msgstr "خوش آمدید به %1$s  %2$s"
+
+#: inc/theme-info.php:20
+msgid "Theme Info"
+msgstr "اطلاعات قالب"
+
+#: inc/theme-info.php:57
+#, php-format
+msgid "Getting Started with %s"
+msgstr ""
+
+#: inc/theme-info.php:67
+msgid ""
+"You need help to setup and configure this theme? We got you covered with an "
+"extensive theme documentation on our website."
+msgstr ""
+
+#: inc/theme-info.php:71
+#, php-format
+msgid "View %s Documentation"
+msgstr "مشاهده%s مستندات "
+
+#: inc/theme-info.php:80
+#, php-format
+msgid ""
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
+msgstr ""
+
+#: inc/theme-info.php:83
+msgid "Customize Theme"
+msgstr ""
+
+#: inc/theme-info.php:103
+msgid "Get more features"
+msgstr "ویژگی های بیشتر"
+
+#: inc/theme-info.php:149
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
+msgstr ""
+
+#: inc/theme-info.php:151
+msgid "https://themezee.com/"
+msgstr ""
+
+#: inc/theme-info.php:152
+msgid "Review Chronus"
+msgstr ""
+
+#: inc/theme-info.php:152
+msgid "rate it"
+msgstr "امتیازدهی"
+
+#: inc/widgets/widget-magazine-posts-columns.php:24
+msgid "Magazine (Columns)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:27
+msgid "Displays your posts from two selected categories."
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:41
+msgid "Left Category"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:42
+msgid "Right Category"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:248
+msgid "Left Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:254
+msgid "Left Category:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:269
+msgid "Right Category Title:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:275
+msgid "Right Category:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-columns.php:290
+#: inc/widgets/widget-magazine-posts-grid.php:228
+msgid "Number of posts:"
+msgstr "تعداد نوشته ها:"
+
+#: inc/widgets/widget-magazine-posts-columns.php:298
+msgid "Highlight first post (big image + excerpt)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:24
+#: inc/widgets/widget-magazine-posts-grid.php:39
+msgid "Magazine (Grid)"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:27
+msgid "Displays your posts from a selected category in a grid layout."
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:199
+msgid "Title:"
+msgstr "عنوان:"
+
+#: inc/widgets/widget-magazine-posts-grid.php:205
+msgid "Category:"
+msgstr "دسته بندی:"
+
+#: inc/widgets/widget-magazine-posts-grid.php:220
+msgid "Grid Layout:"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:222
+msgid "Two Columns Grid"
+msgstr ""
+
+#: inc/widgets/widget-magazine-posts-grid.php:223
+msgid "Three Columns Grid"
+msgstr ""
+
+#: search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr "نتایج جستجو برای:  %s"
+
+#: searchform.php:12 searchform.php:16
+msgctxt "label"
+msgid "Search for:"
+msgstr "جستجو برای:"
+
+#: searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "جستجو &hellip;"
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr "جستجو"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "چیزی پیدا نشد"
+
+#: template-parts/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"متاسفانه، هیچ مطلبی با کلمات جستجویی شما پیدا نشد. لطفا دوباره با کلمات "
+"کلیدی دیگری بررسی کنید"
+
+#: template-parts/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"به نظر می رسد صفحه ای با این آدرس وجود ندارد. می توانید از بخش جستجو کمک "
+"بگیرید."
+
+#: template-parts/content-page.php:25 template-parts/content-single.php:27
+msgid "Pages:"
+msgstr "برگه ها:"

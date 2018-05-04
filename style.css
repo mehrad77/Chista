@@ -1,8 +1,8 @@
 /*
-Theme Name: Chronus
+Theme Name: Nimanus
 Theme URI: https://themezee.com/themes/chronus/
-Author: ThemeZee
-Author URI: https://themezee.com
+Author: Mehrad Rousta
+Author URI: https://mehrad.js.org
 Description: Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
 Version: 1.3
 License: GNU General Public License v2 or later
@@ -61,8 +61,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # 1.0 - Normalize
 --------------------------------------------------------------*/
+ 
 html {
-	font-family: sans-serif;
+	font-family: IRANSans;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -641,14 +642,14 @@ textarea {
 .post-navigation .nav-links:before,
 .post-navigation .nav-links:after,
 .comment-navigation:before,
-.comment-navigation:after {
+.comment-navigation:after {font-family: IRANSans;
 	display: table;
 	content: "";
 }
 
 .clearfix:after,
 .post-navigation .nav-links:after,
-.comment-navigation:after {
+.comment-navigation:after {font-family: IRANSans;
 	clear: both;
 }
 
@@ -711,7 +712,8 @@ textarea {
 # 9.0 - Header
 --------------------------------------------------------------*/
 .site-header {
-	margin: 0 0 2.5em;
+	margin: 0 0 0.8em;
+	/*margin: 0 0 2.5em;*/
 	border-bottom: 1px solid rgba(0,0,0,0.075);
 }
 
@@ -736,7 +738,8 @@ textarea {
 
 .site-title {
 	display: block;
-	margin: 0.15em 0;
+	margin: 0;
+	/*margin: 0.15em 0;*/
 	padding: 0;
 	color: #303030;
 	text-decoration: none;
@@ -1199,7 +1202,8 @@ article,
 }
 
 .wp-post-image {
-	margin: 0 0 1.25em;
+	margin:  0.75em 0 0;
+	/*margin: 0 0 1.25em*/
 	vertical-align: top;
 }
 
@@ -1229,7 +1233,8 @@ article,
 /* Entry Meta */
 .entry-meta {
 	margin: 0.5em 0;
-	color: rgba(0,0,0,0.45);
+	color: rgba(0, 0, 0, 0.81);
+	/*color: rgba(0,0,0,0.45);*/
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -1237,7 +1242,8 @@ article,
 .entry-meta .meta-date:after,
 .entry-meta .meta-author:after {
 	display: inline-block;
-	margin: 0 1em 0 1em;
+	margin: 0 0.2em 0 0.2em;
+	/*margin: 0 1em 0 1em;*/
 	color: rgba(0,0,0,0.15);
 	content: "\007c";
 }
@@ -1275,36 +1281,36 @@ body.date-hidden.author-hidden.categories-hidden .content-area .entry-meta {
 	font-size: 1rem;
 }
 
-.post-navigation .nav-links .nav-previous {
+.post-navigation .nav-links .nav-previous {font-family: IRANSans;
 	float: left;
 	box-sizing: border-box;
 	padding-right: 0.5em;
 	max-width: 50%;
 }
 
-.post-navigation .nav-links .nav-next {
+.post-navigation .nav-links .nav-next {font-family: IRANSans;
 	float: right;
 	box-sizing: border-box;
 	padding-left: 0.5em;
 	max-width: 50%;
 }
 
-.post-navigation .nav-links .nav-link-text {
+.post-navigation .nav-links .nav-link-text {font-family: IRANSans;
 	display: block;
 	font-weight: bold;
 }
 
-.post-navigation .nav-links .nav-previous .nav-link-text:before {
+.post-navigation .nav-links .nav-previous .nav-link-text:before {font-family: IRANSans;
 	margin-right: 3px;
 	content: "\00AB";
 }
 
-.post-navigation .nav-links .nav-next .nav-link-text:after {
+.post-navigation .nav-links .nav-next .nav-link-text:after {font-family: IRANSans;
 	margin-left: 4px;
 	content: "\00BB";
 }
 
-.post-navigation .nav-links .entry-title {
+.post-navigation .nav-links .entry-title {font-family: IRANSans;
 	font-size: 18px;
 	font-size: 1.125rem;
 }
@@ -1716,14 +1722,16 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.75em 0;
+	margin: 0.8075em 0;
+	/*margin: 0.75em 0;*/
 }
 
 /*--------------------------------------------------------------
 ## 13.2 - Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
+	/*margin-bottom: 1em;*/
 }
 
 .gallery-item {
@@ -1842,6 +1850,16 @@ object {
 /*--------------------------------------------------------------
 ## 14.2 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
+/* must remove this block */
+@media only screen and (min-width: 70em) {
+.header-main {
+		text-align: right !important;
+	}
+	.primary-navigation {
+		justify-content: right !important;
+	}
+}
+/* end of must remove this block */
 @media only screen and (max-width: 70em) {
 	.content-area {
 		width: 68%;
@@ -1893,6 +1911,16 @@ object {
 ## 14.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 57.5em) {
+/* must remove this block */
+	.desktop-left{
+		float:left;
+		display:block;
+	}
+	.desktop-left{
+		float:right;
+		display:block;
+	}
+/* end of must remove this block */
 	.site-content {
 		display: block;
 	}
@@ -2194,6 +2222,15 @@ object {
 		font-size: 16px;
 		font-size: 1rem;
 	}
+	/* must remove this block */
+	.desktop-left{
+		display:none;
+		float:none !important;
+	}
+	.desktop-right{
+		float:none !important;
+	}
+	/* must remove this block */
 
 	.site {
 		padding: 0 1.5em;
@@ -2398,6 +2435,17 @@ object {
 		font-size: 1.5rem;
 	}
 }
+
+/* must remove this block */
+@media only screen and (max-width: 600px) {
+
+	.entry-meta .meta-date:after,
+	.entry-meta .meta-author:after {
+		display: none;
+	}
+
+}
+/* must remove this block */
 
 @media only screen and (max-width: 25em) {
 	.entry-meta .meta-date,
@@ -2655,3 +2703,118 @@ object {
 		width: 100%;
 	}
 }
+
+
+/* must remove this blocks */
+@media screen and (min-width: 600px) {
+
+/* mehrad added */
+.txt-over .entry-title,.txt-over .entry-meta{
+	margin:0px !important;
+	border-bottom: 0px !important;
+    padding-bottom: 0px !important;
+	background-color: #ffffff94;
+	display: inline-block;
+    padding: 8px;
+	transition: all 0.4s;
+}
+.txt-over .entry-meta{
+	display: table-cell;
+	cursor:default;
+}
+.txt-over .entry-meta:hover,.txt-over .entry-title:hover{
+	transform: translate(-5px, 0%);
+}
+.txt-over{
+	z-index: 20; position: relative; ;padding: 5px 20px;
+}
+.img-behin{
+	z-index:0; position: relative;
+	    top: -110px;
+	    margin-bottom: -110px;
+}
+.meta-date {
+    padding-left: 0 !important;
+}
+}
+.meta-date {
+    padding-left: 15px;
+}
+
+/*------*/
+#ml-webforms-popup-753742{
+    left: 0px !important;
+    right: auto !important;
+}
+
+article, .type-post, .type-page, .type-attachment, .comments-area {
+    margin: 0 0 -0.5em 0 !important;
+}
+.comment-content {
+    padding: 0.1em 0 0 !important;
+}
+.comment ol.children {
+    margin: 1.5em 0 0;
+    list-style: none;
+    background: beige;
+	margin-right: 1rem;
+}
+.comment {
+    padding: 0.5em 0 0 !important;
+}
+.comment-content p{
+		margin-top: 5px  !important;
+}
+.header-main {
+    padding-bottom: 0em !important;
+}
+/* Comment load more css es */
+.comment-list{
+	height: 90rem;
+	max-height: fit-content;
+    overflow-y: hidden;
+	position: relative;
+	-webkit-transition: 2s height ease;
+	transition: 2s height ease;
+}
+.extend{
+	height: fit-content !important;
+	-webkit-transition: 2s height ease;
+	transition: 2s height ease;
+}
+.extend:after {
+	content: '' !important;
+	position: none !important;
+	pointer-events: none !important;
+	background-image: none !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+.comment-list:after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255, 1) 90%);
+	width: 100%;
+	height: 8em;
+}
+#lodamore-toggle{
+	display:block;
+	text-align:center;
+}
+/* ------------- */
+.shorten_url {
+    margin-bottom: 0px !important;
+}
+article, .type-post, .type-page, .type-attachment, .comments-area {
+    margin: 0 0 1.5em 0 !important;
+}
+
+ol {
+   list-style-type: arabic-indic
+}
+
+/* end of must remove this block */

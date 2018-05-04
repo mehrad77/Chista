@@ -1,3 +1,118 @@
+/* must remove this block /*/
+@import url(https://www.nima.today/wp-content/themes/chronus-yekan/css/fontiran.css);
+ 
+ /*
+@font-face {
+  font-family: mitra;
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/BMitraBold.woff') format('woff');
+}
+@font-face {
+  font-family: mitra;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/BMitra.woff') format('woff');
+}
+ */
+ 
+
+
+.widget{
+	padding: 20px;
+	background: #f5f5f5 none !important;
+	box-sizing: border-box !important;
+}
+.widget_mailerlite_widget{
+		background: none !important;
+	    padding: 0px !important;
+	}
+.social {
+    text-align: center;
+}
+.social ul {
+    display: inline-block;
+	  text-align:center;
+	margin:0 0px 5px 0px
+}
+.social ul li {
+    display: inline-block;
+    margin-left: 5px;
+}
+.social ul li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 32px;
+    color: #cc5555;
+    border-radius: 100%;
+    font-size: 35px;
+	transition: all 0.3s;
+}
+.social ul li a:hover {
+	color: #d07070;
+	transform:scale(1.1);
+	transition: all 0.3s;
+}
+.comments-header .comments-title, .comment-reply-title {
+    /*font-family: tahoma !important;*/
+}
+.entry-title {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+	font-size: 1.8rem;
+}
+.notifyjs-container {
+    right: 20px !important;
+}
+.notifyjs-arrow {
+    right: 15px !important;
+}
+.main-navigation-menu li.current-menu-item > a {
+    text-decoration: none;
+    color: #cc5555;
+}
+.site-title{
+	font-size:2rem;
+}
+.site-footer .social {
+    padding: 1em 0;
+}
+.site-footer .social ul {
+    margin: 0;
+        padding: 0;
+}
+.site-footer .social ul li{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.site-footer .social ul li:first-child {
+    margin-right: 0;
+}
+.site-footer span {
+    text-align: center;
+    display: block;
+}
+p.comment-notes {
+    visibility: hidden;
+}
+p.comment-notes span#email-notes {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 25em){
+.entry-meta .meta-date, .entry-meta .meta-category {
+    display: inline-block;
+}
+.notifyjs-wrapper{
+        right: -6px;
+        display: none !important;
+}
+
+}
+/* end of must remove this blocks /*/
 body {
 	unicode-bidi: embed;
 	direction: rtl;
@@ -455,3 +570,56 @@ li > ol {
 .tzwb-social-icons .social-icons-menu li a {
 	margin: 0 0 5px 5px;
 }
+
+
+/* must remove this blocks /*/
+body, button, input, select, textarea {
+    font-family: IRANSans;
+}
+.entry-title {
+    font-family: IRANSans;
+}
+.widget-title {
+    font-family: IRANSans;
+}
+.archive-title {
+    font-family: IRANSans;
+}
+.main-navigation-menu {
+    font-family: IRANSans;
+}
+.comments-header .comments-title, .comment-reply-title {
+    font-family: IRANSans;
+}
+.sidebar {
+    box-sizing: border-box;
+    padding-right: 2em;
+}
+.site-title {
+    font-family: IRANSans;
+}
+.main-navigation-toggle,.subscribe-form *, .subscribe-form,#mlb2-7928420.ml-subscribe-form button,#mlb2-7928420 .subscribe-form .form-section h4{
+    font-family: IRANSans !important;
+}
+.subscribe-form .form-section p, #mlb2-7928420 .subscribe-form .form-section li{
+	font-family: IRANSans !important;
+	direction:rtl !important;
+	text-align:right !important;
+}
+.ml-subscribe-form .form-group .form-control{
+	 font-family: IRANSans !important;
+	direction:rtl !important;
+	text-align:right !important;
+}
+.pagination a, .pagination .current {
+    font-family: IRANSans;
+}
+.mailerlite-form-slidebox {
+    width: 400px !important;
+}
+
+.mailerlite-slidebox h3,.mailerlite-slidebox .description,.mailerlite-slidebox .input-group .form-control, .mailerlite-slidebox .form-group .form-control,.mailerlite-slidebox .btn {
+    font-family: IRANSans !important;
+	direction:rtl;
+}
+/* end of must remove this block /*/

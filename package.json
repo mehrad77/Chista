@@ -1,21 +1,21 @@
 {
-  "name": "chronus",
-  "version": "1.0.0",
-  "description": "WordPress Theme",
+  "name": "nimanus",
+  "version": "1.3.0",
+  "description": "Nimanus is a fast and lightweight WordPress Theme created for Persian blogs and magazines.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThemeZee/chronus.git"
+    "url": "git+https://github.com/mehrad77/Nimanus.git"
   },
-  "author": "Thomas Weichselbaumer <contact@themezee.com> (https://themezee.com)",
-  "license": "GPL-2.0",
+  "author": "Mehrad Rousta <mehrad77@gmail.com> (https://mehrad.js.org)",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ThemeZee/chronus/issues"
+    "url": "https://github.com/mehrad77/Nimanus/issues"
   },
-  "homepage": "https://github.com/ThemeZee/chronus#readme",
+  "homepage": "https://github.com/mehrad77/Nimanus#readme",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "gulp": "^3.9.1",
