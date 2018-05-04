@@ -260,4 +260,11 @@ function exclude_protected_action($query) {
 // Action to queue the filter at the right time
 add_action('pre_get_posts', 'exclude_protected_action');
 
+
+function word_count() {
+    $content = get_post_field( 'post_content', $post->ID );
+    //$word_count = str_word_count( strip_tags( $content ) );
+    $word_count = substr_count( $content, ' ' );
+    return $word_count / 250.0;
+}
 ?>
