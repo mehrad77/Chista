@@ -53,7 +53,7 @@ endif;
 //Meta tags end
 ?>
 
-
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
 <script src='https://cdn.taxus.ir/script/search-wp.js' data-taxus-api-key='eyJhbGciOiJIUzUxMiJ9.eyJjIjoiM2FmN2NhYjctYmFiMS00ZDJhLTk1YmItYjRhMzNkMWMwNmY3IiwidSI6IjNhZGZmNjNkLTdmNzUtNDRjZC04ZmE1LTgyNmY2MWU5OWRiZCJ9.1v0_3Hjy-gpr-gwzxYYYJjQG-55PuBe3S8jGuoC-B5fb2mtvqji5e7tV0ck-oP8LvfMa8Jsu5G49SIiwB3QbXQ'></script>
 <!— MailerLite Universal —>
 <script>
