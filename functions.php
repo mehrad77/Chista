@@ -267,4 +267,47 @@ function word_count() {
     $word_count = substr_count( $content, ' ' );
     return $word_count / 250.0;
 }
+
+
+// Login page css's
+function my_login_logo() { ?>
+    <style type="text/css">
+    body {
+        background-image: linear-gradient(to left bottom, #c50048, #bc368b, #9561bd, #5781d3, #0097d0);
+    }
+    .login #backtoblog, .login #nav {
+      display: none;
+    }
+    .login form {
+      margin-right: 0 !important;
+      padding: 0px !important;
+      background: #fff0 !important;
+      box-shadow: inset -20px -19px 20px 0px rgba(0,0,0,.13) !important;
+    }
+    .login h1 a {
+      background-image: none,url(https://www.nima.today/wp-content/uploads/2018/02/NimaShafiezadeh-300x300.jpg) !important;
+      background-size: 90px !important;
+      height: 100px !important;
+      width: 100px !important;
+    }
+    .login label {
+      color: #ffffff !important;
+    }
+    @media (min-width: 600px) {
+      #login {
+        display: inline-flex;
+        width: 370px !important;
+        padding: 2% 0 0 !important;
+        margin: auto !important;
+        margin-right: 110px !important;
+      }
+      .login h1{
+        margin-top: 22px;
+        margin-left: 10px;
+      }
+    }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
 ?>
