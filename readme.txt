@@ -1,6 +1,6 @@
 === Chronus ===
 Author URI: https://mehrad.js.org
-Theme URI: https://mehrad.js.org/Nimanus
+Theme URI: https://mehrad.js.org/Chista
 Contributors: Mehrad Rousta
 Tags: two-columns, blog, news, rtl, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.7
@@ -56,8 +56,8 @@ Initial Release
 
 == Copyright ==
 
-Nimanus WordPress Theme, Copyleft 2018 Mehrad.js.org
-Nimanus is distributed under the terms of the GNU GPL
+Chista WordPress Theme, Copyleft 2018 Mehrad.js.org
+Chista is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -71,9 +71,9 @@ GNU General Public License for more details.
 
 == Ressources ==
 
-Nimanus bundles the following third-party resources:
+Chista bundles the following third-party resources:
 
-0. Nimanus is based on version 1.3 of chronus theme.
+0. Chista is based on version 1.3 of chronus theme.
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright:  Copyright 2017 ThemeZee.com, Inc., https://automattic.com/
 

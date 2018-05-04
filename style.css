@@ -1,9 +1,9 @@
 /*
-Theme Name: Nimanus
-Theme URI: https://themezee.com/themes/chronus/
+Theme Name: Chista
+Theme URI: https://mehrad.js.org/Chista
 Author: Mehrad Rousta
 Author URI: https://mehrad.js.org
-Description: Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
+Description: Chista is a fast and lightweight WordPress Theme created for Persian blogs and Magazines.
 Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -2672,40 +2672,40 @@ object {
 
 /* Fix Flexbox issues for Safari 6.1-10.0 */
 @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-    .content-area,
-    .sidebar,
-    .featured-posts .featured-large-post,
-    .featured-posts .featured-grid-posts,
-    .featured-posts .featured-grid-posts .featured-small-post,
-    .widget-magazine-posts .magazine-grid-two-columns .post-column,
-    .widget-magazine-posts .magazine-grid-three-columns .post-column,
-    .widget-magazine-posts .small-post .wp-post-image,
-    .widget-magazine-posts .small-post .post-content,
-    .widget-magazine-posts-columns .magazine-posts-column-left,
-    .widget-magazine-posts-columns .magazine-posts-column-right,
-    .widget-magazine-posts .medium-post .wp-post-image-link,
-    .widget-magazine-posts .medium-post .post-content {
-      margin-right: -1px;
-    }
+  .content-area,
+  .sidebar,
+  .featured-posts .featured-large-post,
+  .featured-posts .featured-grid-posts,
+  .featured-posts .featured-grid-posts .featured-small-post,
+  .widget-magazine-posts .magazine-grid-two-columns .post-column,
+  .widget-magazine-posts .magazine-grid-three-columns .post-column,
+  .widget-magazine-posts .small-post .wp-post-image,
+  .widget-magazine-posts .small-post .post-content,
+  .widget-magazine-posts-columns .magazine-posts-column-left,
+  .widget-magazine-posts-columns .magazine-posts-column-right,
+  .widget-magazine-posts .medium-post .wp-post-image-link,
+  .widget-magazine-posts .medium-post .post-content {
+    margin-right: -1px;
+  }
 }
 
 /* Fix Flexbox issues for Safari 10.1+ */
 @media not all and (min-resolution: 0.001dpcm) {
-    .content-area,
-    .sidebar,
-    .featured-posts .featured-large-post,
-    .featured-posts .featured-grid-posts,
-    .featured-posts .featured-grid-posts .featured-small-post,
-    .widget-magazine-posts .magazine-grid-two-columns .post-column,
-    .widget-magazine-posts .magazine-grid-three-columns .post-column,
-    .widget-magazine-posts .small-post .wp-post-image,
-    .widget-magazine-posts .small-post .post-content,
-    .widget-magazine-posts-columns .magazine-posts-column-left,
-    .widget-magazine-posts-columns .magazine-posts-column-right,
-    .widget-magazine-posts .medium-post .wp-post-image-link,
-    .widget-magazine-posts .medium-post .post-content {
-      margin-right: -1px;
-    }
+  .content-area,
+  .sidebar,
+  .featured-posts .featured-large-post,
+  .featured-posts .featured-grid-posts,
+  .featured-posts .featured-grid-posts .featured-small-post,
+  .widget-magazine-posts .magazine-grid-two-columns .post-column,
+  .widget-magazine-posts .magazine-grid-three-columns .post-column,
+  .widget-magazine-posts .small-post .wp-post-image,
+  .widget-magazine-posts .small-post .post-content,
+  .widget-magazine-posts-columns .magazine-posts-column-left,
+  .widget-magazine-posts-columns .magazine-posts-column-right,
+  .widget-magazine-posts .medium-post .wp-post-image-link,
+  .widget-magazine-posts .medium-post .post-content {
+    margin-right: -1px;
+  }
 }
 
 /*--------------------------------------------------------------

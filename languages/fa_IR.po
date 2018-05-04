@@ -109,7 +109,7 @@ msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:32 inc/theme-info.php:116
 msgid "https://themezee.com/addons/chronus-pro/"
-msgstr "https://mehrad.js.org/Nimanus"
+msgstr "https://mehrad.js.org/Chista"
 
 #: inc/customizer/controls/upgrade-control.php:33 inc/theme-info.php:117
 #, php-format
@@ -152,7 +152,7 @@ msgstr "پیوندهای قالب"
 
 #: inc/customizer/customizer.php:149 inc/theme-info.php:47
 msgid "https://themezee.com/themes/chronus/"
-msgstr "https://mehrad.js.org/Nimanus"
+msgstr "https://mehrad.js.org/Chista"
 
 #: inc/customizer/customizer.php:150 inc/theme-info.php:47
 msgid "Theme Page"
@@ -164,7 +164,7 @@ msgstr "دمو قالب"
 
 #: inc/customizer/customizer.php:161 inc/theme-info.php:49 inc/theme-info.php:70
 msgid "https://themezee.com/docs/chronus-documentation/"
-msgstr "https://mehrad.js.org/Nimanus#doc"
+msgstr "https://mehrad.js.org/Chista#doc"
 
 #: inc/customizer/customizer.php:162 inc/theme-info.php:49 inc/theme-info.php:64
 msgid "Theme Documentation"
@@ -172,7 +172,7 @@ msgstr "مستندات قالب"
 
 #: inc/customizer/customizer.php:167 inc/theme-info.php:50 inc/theme-info.php:152
 msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
-msgstr "https://wordpress.org/support/theme/nimanus/reviews/"
+msgstr "https://wordpress.org/support/theme/chista/reviews/"
 
 #: inc/customizer/customizer.php:168 inc/theme-info.php:50
 msgid "Rate this theme"
@@ -359,7 +359,7 @@ msgstr "با استفاده از قالب %1$s | توسعه با ❤ توسط %2
 
 #: inc/template-tags.php:388
 msgid "http://wordpress.org"
-msgstr "https://mehrad.js.org/Nimanus"
+msgstr "https://mehrad.js.org/Chista"
 
 #: inc/theme-info.php:19 inc/theme-info.php:40
 #, php-format
@@ -416,7 +416,7 @@ msgstr "https://mehrad.js.org/"
 
 #: inc/theme-info.php:152
 msgid "Review Chronus"
-msgstr "بررسی کردن Nimanus"
+msgstr "بررسی کردن چیستا"
 
 #: inc/theme-info.php:152
 msgid "rate it"
