@@ -2819,7 +2819,7 @@ ol {
 
 /* end of must remove this block */
 
- .badge{
+.badge{
     display: inline-block;
     padding: 0.25em .2em;
     width: 20px;
@@ -2833,4 +2833,8 @@ ol {
     border-radius: .25rem;
     background-color: #636c72;
     margin: 0px 4px 0px 0px;
-  }
+}
+
+.footnote_plugin_tooltip_text,.footnote_plugin_link{
+	display:none;
+}
