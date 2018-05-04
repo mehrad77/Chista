@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chronus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2017-10-14 21:05+0330\n"
-"PO-Revision-Date: 2018-05-05 01:25+0430\n"
+"PO-Revision-Date: 2018-05-05 01:30+0430\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -26,8 +26,8 @@ msgstr "خطای ۴۰۴: صفحه مورد نظر یافت نشد"
 
 #: 404.php:22
 msgid ""
-"It looks like nothing was found at this location. Maybe try a search or one "
-"of the links below?"
+"It looks like nothing was found at this location. Maybe try a search or one of "
+"the links below?"
 msgstr ""
 "اشتباه شده، باس ببخشید...\n"
 "آدم چطوری به بازدیدکننده حالی کنه اشتباهی شده؟"
@@ -63,13 +63,13 @@ msgstr "صفحه مجله"
 
 #: functions.php:119
 msgid ""
-"Appears on blog index and Magazine Homepage template. You can use the "
-"Magazine widgets here."
+"Appears on blog index and Magazine Homepage template. You can use the Magazine "
+"widgets here."
 msgstr ""
 
 #: functions.php:145
 msgid "Menu"
-msgstr "منو"
+msgstr "فهرست"
 
 #: header.php:23
 msgid "Skip to content"
@@ -122,8 +122,8 @@ msgstr "پلاگین توصیه‌شده"
 
 #: inc/customizer/controls/upgrade-control.php:44 inc/theme-info.php:130
 msgid ""
-"Extend the functionality of your WordPress website with our free and easy to "
-"use plugins."
+"Extend the functionality of your WordPress website with our free and easy to use "
+"plugins."
 msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:49 inc/theme-info.php:134
@@ -162,18 +162,15 @@ msgstr "صفحه قالب"
 msgid "Theme Demo"
 msgstr "دمو قالب"
 
-#: inc/customizer/customizer.php:161 inc/theme-info.php:49
-#: inc/theme-info.php:70
+#: inc/customizer/customizer.php:161 inc/theme-info.php:49 inc/theme-info.php:70
 msgid "https://themezee.com/docs/chronus-documentation/"
 msgstr "https://mehrad.js.org/Nimanus#doc"
 
-#: inc/customizer/customizer.php:162 inc/theme-info.php:49
-#: inc/theme-info.php:64
+#: inc/customizer/customizer.php:162 inc/theme-info.php:49 inc/theme-info.php:64
 msgid "Theme Documentation"
 msgstr "مستندات قالب"
 
-#: inc/customizer/customizer.php:167 inc/theme-info.php:50
-#: inc/theme-info.php:152
+#: inc/customizer/customizer.php:167 inc/theme-info.php:50 inc/theme-info.php:152
 msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
 msgstr "https://wordpress.org/support/theme/nimanus/reviews/"
 
@@ -383,8 +380,8 @@ msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
-"برای راه‌اندازی و پیکربندی این قالب به کمک نیاز دارید؟ من مستنداتی رو این "
-"مورد آماده کردم که می‌توانید از آن‌ها استفاده کنید."
+"برای راه‌اندازی و پیکربندی این قالب به کمک نیاز دارید؟ من مستنداتی رو این مورد "
+"آماده کردم که می‌توانید از آن‌ها استفاده کنید."
 
 #: inc/theme-info.php:71
 #, php-format
@@ -394,8 +391,8 @@ msgstr "مشاهده%s مستندات"
 #: inc/theme-info.php:80
 #, php-format
 msgid ""
-"%s makes use of the Customizer for all theme settings. Click on \"Customize "
-"Theme\" to open the Customizer now."
+"%s makes use of the Customizer for all theme settings. Click on \"Customize Theme"
+"\" to open the Customizer now."
 msgstr ""
 
 #: inc/theme-info.php:83
@@ -521,10 +518,8 @@ msgstr "چیزی پیدا نشد."
 
 #: template-parts/content-none.php:23
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-" آماده منتشر کرد اولین نوشته‌تون هستید؟  <a href=\"%1$s\">پس بزن بریم</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr " آماده منتشر کرد اولین نوشته‌تون هستید؟  <a href=\"%1$s\">پس بزن بریم</a>."
 
 #: template-parts/content-none.php:27
 msgid ""
@@ -536,11 +531,10 @@ msgstr ""
 
 #: template-parts/content-none.php:33
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr ""
-"به نظر می رسد صفحه ای با این آدرس وجود ندارد. می‌توانید از کادر جستجو کمک "
-"بگیرید."
+"به نظر می رسد صفحه ای با این آدرس وجود ندارد. می‌توانید از کادر جستجو کمک بگیرید."
 
 #: template-parts/content-page.php:25 template-parts/content-single.php:27
 msgid "Pages:"
