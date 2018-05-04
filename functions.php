@@ -201,7 +201,7 @@ function bs_categories_list_group_filter ($variable) {
    return $variable;
 }
 add_filter('wp_list_categories','bs_categories_list_group_filter');
-/* must remove this block /*/
+/* end of must remove this block /*/
 
 /**
  * Include Files
@@ -235,3 +235,29 @@ require get_template_directory() . '/inc/magazine.php';
 // Include Widget Files.
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php';
+
+// Add custom scripts here
+function child_hook_for_wp_head() {?>
+
+<?php
+}
+
+add_action('wp_head', 'child_hook_for_wp_head');
+
+// Hide protected posts
+function exclude_protected($where) {
+    global $wpdb;
+    return $where .= " AND {$wpdb->posts}.post_password = '' ";
+}
+ 
+// Where to display protected posts
+function exclude_protected_action($query) {
+    if( !is_single() && !is_page() && !is_admin() ) {
+        add_filter( 'posts_where', 'exclude_protected' );
+    }
+}
+
+// Action to queue the filter at the right time
+add_action('pre_get_posts', 'exclude_protected_action');
+
+?>
