@@ -25,7 +25,7 @@
 			</div>
               
             
-             
+             		<span>از حقوق مادی و معنوی سایتم گذشتم :)</span>
 			<div id="footer-text" class="site-info">
 				<?php do_action( 'chronus_footer_text' ); ?>
 				<?php chronus_credit_link(); ?>
