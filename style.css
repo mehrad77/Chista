@@ -2933,3 +2933,52 @@ ol {
 .footnote_plugin_link {
   display: none;
 }
+
+img.custom-logo {
+  height: 90px;
+  width: auto;
+}
+
+/* Mailer Lite form styles */
+.main-navigation-toggle,
+.subscribe-form *,
+.subscribe-form,
+.ml-subscribe-form button,
+.subscribe-form .form-section h4 {
+  font-family: IRANSans !important;
+}
+.subscribe-form .form-section p,
+.subscribe-form .form-section li {
+  font-family: IRANSans !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+.ml-subscribe-form .form-group .form-control {
+  font-family: IRANSans !important;
+  direction: rtl !important;
+  text-align: right !important;
+}
+.mailerlite-slidebox h3,
+.mailerlite-slidebox .description,
+.mailerlite-slidebox .input-group .form-control,
+.mailerlite-slidebox .form-group .form-control,
+.mailerlite-slidebox .btn {
+  font-family: IRANSans !important;
+}
+.subscribe-form {
+  padding: 20px;
+  width: auto !important;
+  border: 0 !important;
+  background: #f5f5f5 none !important;
+  border-radius: 0px !important;
+  box-sizing: border-box !important;
+}
+.widget {
+  padding: 20px;
+  background: #f5f5f5 none !important;
+  box-sizing: border-box !important;
+}
+.widget_mailerlite_widget {
+  background: none !important;
+}
+/* end of Mailer Lite form styles */
