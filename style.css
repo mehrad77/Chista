@@ -2672,7 +2672,6 @@ object {
 
 /* Fix Flexbox issues for Safari 6.1-10.0 */
 @media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
-  @media {
     .content-area,
     .sidebar,
     .featured-posts .featured-large-post,
@@ -2688,12 +2687,10 @@ object {
     .widget-magazine-posts .medium-post .post-content {
       margin-right: -1px;
     }
-  }
 }
 
 /* Fix Flexbox issues for Safari 10.1+ */
 @media not all and (min-resolution: 0.001dpcm) {
-  @media {
     .content-area,
     .sidebar,
     .featured-posts .featured-large-post,
@@ -2709,7 +2706,6 @@ object {
     .widget-magazine-posts .medium-post .post-content {
       margin-right: -1px;
     }
-  }
 }
 
 /*--------------------------------------------------------------
