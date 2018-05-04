@@ -24,6 +24,11 @@ if (is_singular()) :
 <meta name="twitter:description" content="<?php echo  wp_trim_words(get_the_content(''),50,'... ') ?>" />
 <meta property="og:description" content="<?php echo  wp_trim_words(get_the_content(''),50,'... ') ?>" />
 <meta name="description" content="<?php echo  wp_trim_words(get_the_content(''),50,'... ') ?>"/>
+<!-- Colors -->
+<meta name="theme-color" content="#81007f">
+<meta name="apple-mobile-web-app-status-bar-style" content="#81007f">
+<meta name="application-name" content="نیما شفیع‌زاده"/>
+<meta name="msapplication-TileColor" content="#d90073" />
 
 <?php 
 global $post;
@@ -48,7 +53,20 @@ endif;
 //Meta tags end
 ?>
 
- ?>
+
+<script src='https://cdn.taxus.ir/script/search-wp.js' data-taxus-api-key='eyJhbGciOiJIUzUxMiJ9.eyJjIjoiM2FmN2NhYjctYmFiMS00ZDJhLTk1YmItYjRhMzNkMWMwNmY3IiwidSI6IjNhZGZmNjNkLTdmNzUtNDRjZC04ZmE1LTgyNmY2MWU5OWRiZCJ9.1v0_3Hjy-gpr-gwzxYYYJjQG-55PuBe3S8jGuoC-B5fb2mtvqji5e7tV0ck-oP8LvfMa8Jsu5G49SIiwB3QbXQ'></script>
+<!— MailerLite Universal —>
+<script>
+(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
+</script>
+<!— End MailerLite Universal —>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
 </head>
 
 <body <?php body_class(); ?>>
