@@ -184,9 +184,28 @@ if ( ! function_exists( 'chronus_entry_meta' ) ) :
 
 		$postmeta = chronus_meta_date();
 		$postmeta .= chronus_meta_author();
+		$postmeta .= chronus_meta_time();
 		$postmeta .= chronus_meta_category();
-
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
+	}
+endif;
+
+
+
+if ( ! function_exists( 'chronus_meta_category' ) ) :
+	/**
+	 * Displays the post category
+	 */
+	function chronus_meta_category() {
+
+		// Return early if post has no category.
+		if ( ! has_category() ) {
+			return;
+		}
+
+		$posted_in = sprintf( esc_html_x( '%s', 'post category', 'chronus' ), get_the_category_list( ', ' ) );
+
+		return '<span class=" meta-category"> ' . $posted_in . '</span>';
 	}
 endif;
 
@@ -229,6 +248,16 @@ if ( ! function_exists( 'chronus_meta_author' ) ) :
 	}
 endif;
 
+
+if ( ! function_exists( 'chronus_meta_time' ) ) :
+	/**
+	 * Displays the post time
+	 */
+	function chronus_meta_time() {
+		return '<span class="meta-date meta-reading-time">' . ' مدت زمان مطالعه ' . round(word_count($get_world )) . ' دقیقه ' . '</span>';
+	}
+endif;
+
 if ( ! function_exists( 'chronus_meta_category' ) ) :
 	/**
 	 * Displays the post category
@@ -236,7 +265,23 @@ if ( ! function_exists( 'chronus_meta_category' ) ) :
 	function chronus_meta_category() {
 
 		// Return early if post has no category.
-		if ( ! has_category() ) {
+		if ( ! has_cif ( ! function_exists( 'chronus_meta_author' ) ) :
+	/**
+	 * Displays the post author
+	 */
+	function chronus_meta_author() {
+
+		$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'chronus' ), get_the_author() ) ),
+			esc_html( get_the_author() )
+		);
+
+		$posted_by = sprintf( esc_html_x( 'By %s', 'post author', 'chronus' ), $author_string );
+
+		return '<span class="meta-author"> ' . $posted_by . '</span>';
+	}
+endif;ategory() ) {
 			return;
 		}
 
@@ -299,7 +344,7 @@ if ( ! function_exists( 'chronus_more_link' ) ) :
 	function chronus_more_link() {
 		?>
 
-		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'chronus' ); ?></a>
+		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link" target="_blank"><?php esc_html_e( 'Continue reading &raquo;', 'chronus' ); ?></a>
 
 		<?php
 	}
