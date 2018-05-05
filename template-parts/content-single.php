@@ -35,7 +35,7 @@
 
 	<footer class="entry-footer">
 
-	<?php the_tags( 'برچسب‎ها: ',' , ' ); ?>
+	<?php the_tags( 'برچسب‎ها: ','، ' ); ?>
 	<hr>
 	<div class="social-share-single social">
      <span style="display:block;">به اشتراک بگذارید!</span>
