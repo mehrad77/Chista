@@ -1,60 +1,67 @@
-=== Chronus ===
+# Chista
 Author URI: https://mehrad.js.org
+
 Theme URI: https://mehrad.js.org/Chista
+
 Contributors: Mehrad Rousta
+
 Tags: two-columns, blog, news, rtl, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+
 Requires at least: 4.7
+
 Tested up to: 5.0
+
 License: GPLv3 or later
+
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Chronus is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
+Chista is a clean and simple Magazine WordPress theme with beautiful typography and subtle colors.
 
-== Description ==
+## Description
 
-Chronus is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
+Chista is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
 
-For more information about Chronus please go to https://themezee.com/themes/chronus/
+For more information about Chronus please go to https://mehrad.js.org
 
-== Installation ==
+## Installation
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Chronus in the search form and press the 'Enter' key on your keyboard.
+2. Type in Chista in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://themezee.com/docs/chronus-documentation/ for a guide on how to customize this theme.
+4. Go to https://mehrad.js.org/Chista#doc for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
-== Changelog ==
+## Changelog
 
-= 1.3 =
+### 1.3
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance
 
-= 1.2.3 =
+### 1.2.3
 * improved styling of image captions
 * improved styling of galleries
 
-= 1.2.2 =
+### 1.2.2
 * added action hook for author bio
 * set fallback refresh to false for blog title and description
 
-= 1.2.1 =
+### 1.2.1
 * added new setting to deactivate Magazine widgets on blog index
 * fixed styling of site title
 
-= 1.2 =
+### 1.2
 * added selective refresh to all theme settings
 * added function to return single theme option
 * improved structure of theme options
 
-= 1.1 =
+### 1.1
 * added SVG Icons instead of Genericons font
 * added custom Magazine Widget Control in Customizer
 
-= 1.0 =
+### 1.0
 Initial Release
 
-== Copyright ==
+## Copyright
 
 Chista WordPress Theme, Copyleft 2018 Mehrad.js.org
 Chista is distributed under the terms of the GNU GPL
@@ -69,7 +76,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-== Ressources ==
+## Ressources
 
 Chista bundles the following third-party resources:
 
