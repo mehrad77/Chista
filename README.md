@@ -1,4 +1,5 @@
 # Chista
+
 Author URI: https://mehrad.js.org
 
 Theme URI: https://mehrad.js.org/Chista
@@ -25,40 +26,64 @@ For more information about chista please go to https://mehrad.js.org
 
 ## Installation
 
-1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Chista in the search form and press the 'Enter' key on your keyboard.
-3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://mehrad.js.org/Chista#doc for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+1.  In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2.  Type in Chista in the search form and press the 'Enter' key on your keyboard.
+3.  Click on the 'Activate' button to use your new theme right away.
+4.  Go to https://mehrad.js.org/Chista#doc for a guide on how to customize this theme.
+5.  Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 ## Changelog
 
+### 1.4.1
+
+* fix IRANSans font issues
+
+### 1.4
+
+* added IRANSans v5
+* added font-awesome
+* improve metatags
+* added badge class to catageroy widgets
+* added legacy 404 page
+* changed post style to overly mode (reverting to classic mode will be available in next versions)
+* translating to persian
+* added footnote_plugin css's
+* added time to read to metas
+* added login page css
+
 ### 1.3
+
 * added default theme fonts as local fonts
 * use local fonts instead of Google fonts for GDPR compliance
 
 ### 1.2.3
+
 * improved styling of image captions
 * improved styling of galleries
 
 ### 1.2.2
+
 * added action hook for author bio
 * set fallback refresh to false for blog title and description
 
 ### 1.2.1
+
 * added new setting to deactivate Magazine widgets on blog index
 * fixed styling of site title
 
 ### 1.2
+
 * added selective refresh to all theme settings
 * added function to return single theme option
 * improved structure of theme options
 
 ### 1.1
+
 * added SVG Icons instead of Genericons font
 * added custom Magazine Widget Control in Customizer
 
 ### 1.0
+
 Initial Release
 
 ## Copyright
@@ -80,35 +105,35 @@ GNU General Public License for more details.
 
 Chista bundles the following third-party resources:
 
-0. Chista is based on version 1.3 of chista theme.
-License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
-Copyright:  Copyright 2017 ThemeZee.com, Inc., https://automattic.com/
+0.  Chista is based on version 1.3 of chista theme.
+    License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+    Copyright: Copyright 2017 ThemeZee.com, Inc., https://automattic.com/
 
-1. Genericons Neue - https://github.com/Automattic/genericons-neue
-License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
-Copyright: 2017 Automattic, Inc., https://automattic.com/
+1.  Genericons Neue - https://github.com/Automattic/genericons-neue
+    License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+    Copyright: 2017 Automattic, Inc., https://automattic.com/
 
-2. Underscores - http://underscores.me/
-License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
-Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
+1.  Underscores - http://underscores.me/
+    License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
+    Copyright: 2012-2015 Automattic, Inc., https://automattic.com/
 
-3. normalize.css - http://necolas.github.io/normalize.css/
-License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
-Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
+1.  normalize.css - http://necolas.github.io/normalize.css/
+    License: Distributed under the terms of the MIT License (http://opensource.org/licenses/MIT)
+    Copyright: 2012-2015 Nicolas Gallagher and Jonathan Neal
 
-4. svgxuse - https://github.com/Keyamoon/svgxuse
-License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
-Copyright: 2017 IcoMoon.io
+1.  svgxuse - https://github.com/Keyamoon/svgxuse
+    License: Licensed under MIT license (https://github.com/Keyamoon/svgxuse/blob/master/license)
+    Copyright: 2017 IcoMoon.io
 
-5. Raleway Font - https://www.google.com/fonts/specimen/Raleway
-License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: Pablo Impallari and Rodrigo Fuenzalida
+1.  Raleway Font - https://www.google.com/fonts/specimen/Raleway
+    License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
+    Copyright: Pablo Impallari and Rodrigo Fuenzalida
 
-6. Rambla Font - https://www.google.com/fonts/specimen/Rambla
-License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
-Copyright: Martin Sommaruga
+1.  Rambla Font - https://www.google.com/fonts/specimen/Rambla
+    License: Distributed under the terms of the SIL Open Font License (http://scripts.sil.org/OFL)
+    Copyright: Martin Sommaruga
 
-7. Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
+1.  Images used in screenshot.jpg are all from Pixabay - http://pixabay.com
 
 Image 1: https://pixabay.com/en/office-home-glasses-workspace-820390/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
