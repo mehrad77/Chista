@@ -40,9 +40,9 @@ echo '<meta name="twitter:image" content="' . esc_attr( $thumbnail_src[0] ) . '"
 <meta property="og:image:width" content="840" />
 <meta property="og:image:height" content="400" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content=<?php get_bloginfo( 'description' ); ?>" />
-<meta property="og:description" content="<?php get_bloginfo( 'description' ); ?>" />
-<meta name="description" content="<?php get_bloginfo( 'description' ); ?>"/>
+<meta name="twitter:description" content=<?php echo get_bloginfo( 'description' ); ?>" />
+<meta property="og:description" content="<?php echo get_bloginfo( 'description' ); ?>" />
+<meta name="description" content="<?php echo get_bloginfo( 'description' ); ?>"/>
 <meta name="twitter:title" content="<?php the_title() ?>" />
 <meta name="twitter:site" content="@Retooeter" />
 <meta name="twitter:image" content="https://www.nima.today/wp-content/uploads/2018/02/LogoType-NimaShafiezadeh-768x388.jpg" />
