@@ -4,14 +4,14 @@
  *
  * Queries posts by selected featured category and displays featured posts
  *
- * @package Chronus
+ * @package chista
  */
 
 // Get Featured Posts category from Database.
-$featured_category = chronus_get_option( 'featured_category' );
+$featured_category = chista_get_option( 'featured_category' );
 
 // Get cached post ids.
-$post_ids = chronus_get_magazine_post_ids( 'featured-content', $featured_category, 5 );
+$post_ids = chista_get_magazine_post_ids( 'featured-content', $featured_category, 5 );
 
 // Fetch posts from database.
 $query_arguments = array(
@@ -26,7 +26,7 @@ $featured_query = new WP_Query( $query_arguments );
 if ( $featured_query->have_posts() ) :
 
 	// Limit the number of words in slideshow post excerpts.
-	add_filter( 'excerpt_length', 'chronus_featured_excerpt_length' );
+	add_filter( 'excerpt_length', 'chista_featured_excerpt_length' );
 	?>
 
 	<div id="featured-posts-wrap" class="featured-posts-wrap">
@@ -63,7 +63,7 @@ if ( $featured_query->have_posts() ) :
 
 	<?php
 	// Remove excerpt filter.
-	remove_filter( 'excerpt_length', 'chronus_featured_excerpt_length' );
+	remove_filter( 'excerpt_length', 'chista_featured_excerpt_length' );
 
 endif;
 

@@ -2,14 +2,14 @@
 /**
  * Custom functions that are not template related
  *
- * @package Chronus
+ * @package chista
  */
 
-if ( ! function_exists( 'chronus_default_menu' ) ) :
+if ( ! function_exists( 'chista_default_menu' ) ) :
 	/**
 	 * Display default page as navigation if no custom menu was set
 	 */
-	function chronus_default_menu() {
+	function chista_default_menu() {
 		echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">' . wp_list_pages( 'title_li=&echo=0' ) . '</ul>';
 	}
 endif;
@@ -20,10 +20,10 @@ endif;
  * @param array $classes Classes for the body element.
  * @return array
  */
-function chronus_body_classes( $classes ) {
+function chista_body_classes( $classes ) {
 
 	// Get theme options from database.
-	$theme_options = chronus_theme_options();
+	$theme_options = chista_theme_options();
 
 	// Check if sidebar widget area is empty or switch sidebar layout to left.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -49,7 +49,7 @@ function chronus_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'chronus_body_classes' );
+add_filter( 'body_class', 'chista_body_classes' );
 
 
 /**
@@ -57,10 +57,10 @@ add_filter( 'body_class', 'chronus_body_classes' );
  *
  * @return void
  */
-function chronus_hide_elements() {
+function chista_hide_elements() {
 
 	// Get theme options from database.
-	$theme_options = chronus_theme_options();
+	$theme_options = chista_theme_options();
 
 	$elements = array();
 
@@ -85,7 +85,7 @@ function chronus_hide_elements() {
 	}
 
 	// Allow plugins to add own elements.
-	$elements = apply_filters( 'chronus_hide_elements', $elements );
+	$elements = apply_filters( 'chista_hide_elements', $elements );
 
 	// Return early if no elements are hidden.
 	if ( empty( $elements ) ) {
@@ -97,9 +97,9 @@ function chronus_hide_elements() {
 	$custom_css = $classes . ' { position: absolute; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; overflow: hidden; }';
 
 	// Add Custom CSS.
-	wp_add_inline_style( 'chronus-stylesheet', $custom_css );
+	wp_add_inline_style( 'chista-stylesheet', $custom_css );
 }
-add_filter( 'wp_enqueue_scripts', 'chronus_hide_elements', 11 );
+add_filter( 'wp_enqueue_scripts', 'chista_hide_elements', 11 );
 
 
 /**
@@ -108,14 +108,14 @@ add_filter( 'wp_enqueue_scripts', 'chronus_hide_elements', 11 );
  * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function chronus_excerpt_length( $length ) {
+function chista_excerpt_length( $length ) {
 
 	if ( is_admin() ) {
 		return $length;
 	}
 
 	// Get excerpt length from database.
-	$excerpt_length = chronus_get_option( 'excerpt_length' );
+	$excerpt_length = chista_get_option( 'excerpt_length' );
 
 	// Return excerpt text.
 	if ( $excerpt_length >= 0 ) :
@@ -124,7 +124,7 @@ function chronus_excerpt_length( $length ) {
 		return 40; // Number of words.
 	endif;
 }
-add_filter( 'excerpt_length', 'chronus_excerpt_length' );
+add_filter( 'excerpt_length', 'chista_excerpt_length' );
 
 
 /**
@@ -133,7 +133,7 @@ add_filter( 'excerpt_length', 'chronus_excerpt_length' );
  * @param String $more_text Excerpt More Text.
  * @return string
  */
-function chronus_excerpt_more( $more_text ) {
+function chista_excerpt_more( $more_text ) {
 
 	if ( is_admin() ) {
 		return $more_text;
@@ -141,4 +141,4 @@ function chronus_excerpt_more( $more_text ) {
 
 	return ' &hellip;';
 }
-add_filter( 'excerpt_more', 'chronus_excerpt_more' );
+add_filter( 'excerpt_more', 'chista_excerpt_more' );

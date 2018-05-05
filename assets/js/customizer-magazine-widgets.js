@@ -3,7 +3,7 @@
  *
  * Adds extra class if Magazine widgets are added to widget area.
  *
- * @package Chronus
+ * @package chista
  */
 
 ( function( wp, $ ) {

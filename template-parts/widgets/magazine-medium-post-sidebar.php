@@ -2,22 +2,22 @@
 /**
  * The template for displaying posts in the Magazine Sidebar widget
  *
- * @package Chronus
+ * @package chista
  */
 
 // Get widget settings.
-$post_excerpt = get_query_var( 'chronus_post_excerpt', false );
+$post_excerpt = get_query_var( 'chista_post_excerpt', false );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post' ); ?>>
 
-	<?php chronus_post_image( 'chronus-thumbnail-large' ); ?>
+	<?php chista_post_image( 'chista-thumbnail-large' ); ?>
 
 	<header class="entry-header">
 
 		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
-		<?php chronus_magazine_entry_date(); ?>
+		<?php chista_magazine_entry_date(); ?>
 
 	</header><!-- .entry-header -->
 
@@ -27,7 +27,7 @@ $post_excerpt = get_query_var( 'chronus_post_excerpt', false );
 		<div class="entry-content clearfix">
 
 			<?php the_excerpt(); ?>
-			<?php chronus_more_link(); ?>
+			<?php chista_more_link(); ?>
 
 		</div><!-- .entry-content -->
 

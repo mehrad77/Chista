@@ -4,7 +4,7 @@
  *
  * Registers Upgrade Section for the Pro Version of the theme
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
@@ -12,31 +12,31 @@
  *
  * @param object $wp_customize / Customizer Object.
  */
-function chronus_customize_register_upgrade_settings( $wp_customize ) {
+function chista_customize_register_upgrade_settings( $wp_customize ) {
 
 	// Add Upgrade / More Features Section.
-	$wp_customize->add_section( 'chronus_section_upgrade', array(
-		'title'    => esc_html__( 'More Features', 'chronus' ),
+	$wp_customize->add_section( 'chista_section_upgrade', array(
+		'title'    => esc_html__( 'More Features', 'chista' ),
 		'priority' => 70,
-		'panel' => 'chronus_options_panel',
+		'panel' => 'chista_options_panel',
 		)
 	);
 
 	// Add custom Upgrade Content control.
-	$wp_customize->add_setting( 'chronus_theme_options[upgrade]', array(
+	$wp_customize->add_setting( 'chista_theme_options[upgrade]', array(
 		'default'           => '',
 		'type'           	=> 'option',
 		'transport'         => 'refresh',
 		'sanitize_callback' => 'esc_attr',
 		)
 	);
-	$wp_customize->add_control( new Chronus_Customize_Upgrade_Control(
-		$wp_customize, 'chronus_theme_options[upgrade]', array(
-		'section' => 'chronus_section_upgrade',
-		'settings' => 'chronus_theme_options[upgrade]',
+	$wp_customize->add_control( new chista_Customize_Upgrade_Control(
+		$wp_customize, 'chista_theme_options[upgrade]', array(
+		'section' => 'chista_section_upgrade',
+		'settings' => 'chista_theme_options[upgrade]',
 		'priority' => 1,
 		)
 	) );
 
 }
-add_action( 'customize_register', 'chronus_customize_register_upgrade_settings' );
+add_action( 'customize_register', 'chista_customize_register_upgrade_settings' );

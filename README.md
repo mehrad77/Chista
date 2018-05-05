@@ -21,7 +21,7 @@ Chista is a clean and simple Magazine WordPress theme with beautiful typography 
 
 Chista is a fast and lightweight WordPress Theme created for magazines, news websites and personal blogs. The Featured Content section and flexible Magazine Widgets give you the ability to highlight your most important posts on the home page. The minimalistic and responsive design focuses on your content and looks great on any screen size.
 
-For more information about Chronus please go to https://mehrad.js.org
+For more information about chista please go to https://mehrad.js.org
 
 ## Installation
 
@@ -80,7 +80,7 @@ GNU General Public License for more details.
 
 Chista bundles the following third-party resources:
 
-0. Chista is based on version 1.3 of chronus theme.
+0. Chista is based on version 1.3 of chista theme.
 License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 Copyright:  Copyright 2017 ThemeZee.com, Inc., https://automattic.com/
 

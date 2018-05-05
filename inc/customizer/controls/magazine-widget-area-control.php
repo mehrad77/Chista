@@ -2,7 +2,7 @@
 /**
  * Magazine Widget Area Control for the Customizer
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
@@ -15,12 +15,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 *
 	 * @see WP_Customize_Control
 	 */
-	class Chronus_Magazine_Widget_Area_Customize_Control extends WP_Widget_Area_Customize_Control {
+	class chista_Magazine_Widget_Area_Customize_Control extends WP_Widget_Area_Customize_Control {
 		/**
 		 * Enqueue Magazine Widgets Control Scripts.
 		 */
 		function enqueue() {
-			wp_enqueue_script( 'chronus-customizer-magazine-widgets', get_template_directory_uri() . '/assets/js/customizer-magazine-widgets.js', array( 'jquery' ), '20170627', true );
+			wp_enqueue_script( 'chista-customizer-magazine-widgets', get_template_directory_uri() . '/assets/js/customizer-magazine-widgets.js', array( 'jquery' ), '20170627', true );
 		}
 
 		/**
@@ -30,7 +30,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 			?>
 			<div id="magazine-widgets-buttons">
 				<button type="button" class="button-secondary add-new-magazine-widget add-new-widget" aria-expanded="false" aria-controls="available-widgets">
-					<?php esc_html_e( 'Add Magazine Widget', 'chronus' ); ?>
+					<?php esc_html_e( 'Add Magazine Widget', 'chista' ); ?>
 				</button>
 				<?php parent::render_content(); ?>
 			</div>

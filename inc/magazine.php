@@ -4,17 +4,17 @@
  *
  * Custom Functions and Template tags used in the Magazine widgets and Magazine templates
  *
- * @package Chronus
+ * @package chista
  */
 
 
 /**
 * Displays Magazine widget area
 */
-function chronus_magazine_widgets() {
+function chista_magazine_widgets() {
 
 	// Return early if Magazine widgets are deactivated on blog index.
-	if ( is_home() && false === chronus_get_option( 'blog_magazine_widgets' ) ) {
+	if ( is_home() && false === chista_get_option( 'blog_magazine_widgets' ) ) {
 		return;
 	}
 
@@ -36,19 +36,19 @@ function chronus_magazine_widgets() {
 	elseif ( is_customize_preview() ) :
 
 		// Display Magazine Widget Placeholder in Customizer.
-		chronus_customize_magazine_placeholder();
+		chista_customize_magazine_placeholder();
 
 	elseif ( is_page_template( 'template-magazine.php' ) && current_user_can( 'edit_theme_options' ) ) :
 
 		echo '<p class="empty-widget-area">';
-		esc_html_e( 'Please go to Customize &#8594; Widgets and add at least one widget to the Magazine Homepage widget area.', 'chronus' );
+		esc_html_e( 'Please go to Customize &#8594; Widgets and add at least one widget to the Magazine Homepage widget area.', 'chista' );
 		echo '</p>';
 
 	endif;
 }
 
 
-if ( ! function_exists( 'chronus_magazine_widget_title' ) ) :
+if ( ! function_exists( 'chista_magazine_widget_title' ) ) :
 	/**
 	 * Displays the widget title with link to the category archive
 	 *
@@ -56,13 +56,13 @@ if ( ! function_exists( 'chronus_magazine_widget_title' ) ) :
 	 * @param int    $category_id  Category ID.
 	 * @return String Widget Title
 	 */
-	function chronus_magazine_widget_title( $widget_title, $category_id ) {
+	function chista_magazine_widget_title( $widget_title, $category_id ) {
 
 		// Check if widget shows a specific category.
 		if ( $category_id > 0 ) {
 
 			// Set URL and Title for Category.
-			$category_title = sprintf( esc_html__( 'View all posts from category %s', 'chronus' ), get_cat_name( $category_id ) );
+			$category_title = sprintf( esc_html__( 'View all posts from category %s', 'chista' ), get_cat_name( $category_id ) );
 			$category_url = get_category_link( $category_id );
 
 			// Set Widget Title with link to category archive.
@@ -74,26 +74,26 @@ if ( ! function_exists( 'chronus_magazine_widget_title' ) ) :
 endif;
 
 
-if ( ! function_exists( 'chronus_magazine_entry_meta' ) ) :
+if ( ! function_exists( 'chista_magazine_entry_meta' ) ) :
 	/**
 	 * Displays the date and author of magazine posts
 	 */
-	function chronus_magazine_entry_meta() {
+	function chista_magazine_entry_meta() {
 
-		$postmeta = chronus_meta_date();
-		$postmeta .= chronus_meta_author();
+		$postmeta = chista_meta_date();
+		$postmeta .= chista_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
 
-if ( ! function_exists( 'chronus_magazine_entry_date' ) ) :
+if ( ! function_exists( 'chista_magazine_entry_date' ) ) :
 	/**
 	 * Displays the date of magazine posts
 	 */
-	function chronus_magazine_entry_date() {
-		echo '<div class="entry-meta">' . chronus_meta_date() . '</div>';
+	function chista_magazine_entry_date() {
+		echo '<div class="entry-meta">' . chista_meta_date() . '</div>';
 	}
 endif;
 
@@ -104,7 +104,7 @@ endif;
  * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function chronus_magazine_posts_excerpt_length( $length ) {
+function chista_magazine_posts_excerpt_length( $length ) {
 	return 12;
 }
 
@@ -117,10 +117,10 @@ function chronus_magazine_posts_excerpt_length( $length ) {
  * @param int    $number_of_posts Number of posts.
  * @return array Post IDs
  */
-function chronus_get_magazine_post_ids( $cache_id, $category, $number_of_posts ) {
+function chista_get_magazine_post_ids( $cache_id, $category, $number_of_posts ) {
 
 	$cache_id = sanitize_key( $cache_id );
-	$post_ids = get_transient( 'chronus_magazine_post_ids' );
+	$post_ids = get_transient( 'chista_magazine_post_ids' );
 
 	if ( ! isset( $post_ids[ $cache_id ] ) || is_customize_preview() ) {
 
@@ -138,10 +138,10 @@ function chronus_get_magazine_post_ids( $cache_id, $category, $number_of_posts )
 		$post_ids[ $cache_id ] = $query->posts;
 
 		// Set Transient.
-		set_transient( 'chronus_magazine_post_ids', $post_ids );
+		set_transient( 'chista_magazine_post_ids', $post_ids );
 	}
 
-	return apply_filters( 'chronus_magazine_post_ids', $post_ids[ $cache_id ], $cache_id );
+	return apply_filters( 'chista_magazine_post_ids', $post_ids[ $cache_id ], $cache_id );
 }
 
 
@@ -150,10 +150,10 @@ function chronus_get_magazine_post_ids( $cache_id, $category, $number_of_posts )
  *
  * @return void
  */
-function chronus_flush_magazine_post_ids() {
-	delete_transient( 'chronus_magazine_post_ids' );
+function chista_flush_magazine_post_ids() {
+	delete_transient( 'chista_magazine_post_ids' );
 }
-add_action( 'save_post', 'chronus_flush_magazine_post_ids' );
-add_action( 'deleted_post', 'chronus_flush_magazine_post_ids' );
-add_action( 'customize_save_after', 'chronus_flush_magazine_post_ids' );
-add_action( 'switch_theme', 'chronus_flush_magazine_post_ids' );
+add_action( 'save_post', 'chista_flush_magazine_post_ids' );
+add_action( 'deleted_post', 'chista_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'chista_flush_magazine_post_ids' );
+add_action( 'switch_theme', 'chista_flush_magazine_post_ids' );

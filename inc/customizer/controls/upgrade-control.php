@@ -2,7 +2,7 @@
 /**
  * Upgrade Control for the Customizer
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
@@ -13,7 +13,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
 	 */
-	class Chronus_Customize_Upgrade_Control extends WP_Customize_Control {
+	class chista_Customize_Upgrade_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
@@ -22,15 +22,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-pro-version">
 
-				<span class="customize-control-title"><?php esc_html_e( 'Pro Version Add-on', 'chronus' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version Add-on', 'chista' ); ?></span>
 
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'chronus' ), 'Chronus' ); ?>
+					<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'chista' ), 'chista' ); ?>
 				</span>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/chronus-pro/', 'chronus' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=chronus&utm_content=pro-version" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'Learn more about %s Pro', 'chronus' ), 'Chronus' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/chista-pro/', 'chista' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=chista&utm_content=pro-version" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'Learn more about %s Pro', 'chista' ), 'chista' ); ?>
 					</a>
 				</p>
 
@@ -38,15 +38,15 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			<div class="upgrade-plugins">
 
-				<span class="customize-control-title"><?php esc_html_e( 'Recommended Plugins', 'chronus' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Recommended Plugins', 'chista' ); ?></span>
 
 				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'chronus' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'chista' ); ?>
 				</span>
 
 				<p>
 					<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
-						<?php esc_html_e( 'Install Plugins', 'chronus' ); ?>
+						<?php esc_html_e( 'Install Plugins', 'chista' ); ?>
 					</a>
 				</p>
 

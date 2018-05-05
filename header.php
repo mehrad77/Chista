@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Chronus
+ * @package chista
  */
 
 ?><!DOCTYPE html>
@@ -56,11 +56,11 @@ wp_head();
 
 <body <?php body_class(); ?>>
 
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chronus' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chista' ); ?></a>
 
-	<?php do_action( 'chronus_header_bar' ); ?>
+	<?php do_action( 'chista_header_bar' ); ?>
 
-	<?php chronus_header_image(); ?>
+	<?php chista_header_image(); ?>
 
 	<div id="page" class="hfeed site">
 
@@ -70,11 +70,11 @@ wp_head();
 
 				<div id="logo" class="site-branding clearfix">
 					<div class="desktop-right " style="float:right;">
-						<?php chronus_site_title(); ?>
-						<?php chronus_site_description(); ?>
+						<?php chista_site_title(); ?>
+						<?php chista_site_description(); ?>
 					</div>
 					<div class="desktop-left" style="float:left;">
-						<?php chronus_site_logo(); ?>
+						<?php chista_site_logo(); ?>
 					</div>
 
 				</div><!-- .site-branding -->
@@ -85,7 +85,7 @@ wp_head();
 
 		</header><!-- #masthead -->
 
-		<?php chronus_featured_content(); ?>
+		<?php chista_featured_content(); ?>
 
-		<?php chronus_breadcrumbs(); ?>
+		<?php chista_breadcrumbs(); ?>
 		<div id="content" class="site-content container clearfix">

@@ -2,7 +2,7 @@
 /**
  * Category Dropdown Control for the Customizer
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
@@ -13,7 +13,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Creates a category dropdown control for the Customizer
 	 */
-	class Chronus_Customize_Category_Dropdown_Control extends WP_Customize_Control {
+	class chista_Customize_Category_Dropdown_Control extends WP_Customize_Control {
 		/**
 		 * Render Control
 		 */
@@ -28,7 +28,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 						<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 						<select <?php $this->link(); ?>>
-							<option value="0"><?php esc_html_e( 'All Categories', 'chronus' ); ?></option>
+							<option value="0"><?php esc_html_e( 'All Categories', 'chista' ); ?></option>
 						<?php
 						foreach ( $categories as $category ) :
 

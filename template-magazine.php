@@ -4,7 +4,7 @@
  *
  * Description: A custom page template for displaying the magazine homepage widgets.
  *
- * @package Chronus
+ * @package chista
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php
 		// Display Magazine Homepage Widgets.
-		chronus_magazine_widgets();
+		chista_magazine_widgets();
 		?>
 
 		</main><!-- #main -->

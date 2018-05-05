@@ -6,17 +6,17 @@
  *
  * The template for displaying the featured posts can be found under /template-parts/featured/
  *
- * @package Chronus
+ * @package chista
  */
 
 
 /**
 * Display Featured Content Area
 */
-function chronus_featured_content() {
+function chista_featured_content() {
 
 	// Display post slider only if activated.
-	if ( true === chronus_get_option( 'featured_posts' ) && is_front_page() ) :
+	if ( true === chista_get_option( 'featured_posts' ) && is_front_page() ) :
 
 		echo '<div id="featured-content" class="content">';
 		get_template_part( 'template-parts/featured/featured-content' );
@@ -33,19 +33,19 @@ function chronus_featured_content() {
  * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function chronus_featured_excerpt_length( $length ) {
+function chista_featured_excerpt_length( $length ) {
 	return 15;
 }
 
 
-if ( ! function_exists( 'chronus_featured_post_image' ) ) :
+if ( ! function_exists( 'chista_featured_post_image' ) ) :
 	/**
 	 * Displays the featured image of the post as slider image
 	 *
 	 * @param string $size Post thumbnail size.
 	 * @param array  $attr Post thumbnail attributes.
 	 */
-	function chronus_featured_post_image( $size = 'post-thumbnail', $attr = array() ) {
+	function chista_featured_post_image( $size = 'post-thumbnail', $attr = array() ) {
 
 		// Display Post Thumbnail.
 		if ( has_post_thumbnail() ) : ?>
@@ -65,14 +65,14 @@ if ( ! function_exists( 'chronus_featured_post_image' ) ) :
 endif;
 
 
-if ( ! function_exists( 'chronus_featured_entry_meta' ) ) :
+if ( ! function_exists( 'chista_featured_entry_meta' ) ) :
 	/**
 	 * Displays the date and author on featured posts
 	 */
-	function chronus_featured_entry_meta() {
+	function chista_featured_entry_meta() {
 
-		$postmeta = chronus_meta_date();
-		$postmeta .= chronus_meta_author();
+		$postmeta = chista_meta_date();
+		$postmeta .= chista_meta_author();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 

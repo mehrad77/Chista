@@ -8,7 +8,7 @@
  *
  * Author: Thomas Weichselbaumer (themezee.com)
  *
- * @package Chronus
+ * @package chista
  */
 
 (function($) {
@@ -150,7 +150,7 @@
 		$( '#main-navigation' ).responsiveMenu( {
 			menuClass: 'main-navigation-menu',
 			toggleClass: 'main-navigation-toggle',
-			toggleText: chronus_menu_title,
+			toggleText: chista_menu_title,
 			maxWidth: '57.5em'
 		} );
 
@@ -158,7 +158,7 @@
 		$( '#top-navigation' ).responsiveMenu( {
 			menuClass: 'top-navigation-menu',
 			toggleClass: 'top-navigation-toggle',
-			toggleText: chronus_menu_title,
+			toggleText: chista_menu_title,
 			maxWidth: '57.5em'
 		} );
 

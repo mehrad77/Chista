@@ -5,7 +5,7 @@
  *
  * Description: A custom template for displaying a centered layout with no sidebar.
  *
- * @package Chronus
+ * @package chista
  */
 
 get_header(); ?>

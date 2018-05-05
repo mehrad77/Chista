@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
@@ -12,10 +12,10 @@
 *
 * @return mixed
 */
-function chronus_get_option( $option_name = '' ) {
+function chista_get_option( $option_name = '' ) {
 
 	// Get all Theme Options from Database.
-	$theme_options = chronus_theme_options();
+	$theme_options = chista_theme_options();
 
 	// Return single option.
 	if ( isset( $theme_options[ $option_name ] ) ) {
@@ -31,10 +31,10 @@ function chronus_get_option( $option_name = '' ) {
  *
  * @return array
  */
-function chronus_theme_options() {
+function chista_theme_options() {
 
 	// Merge theme options array from database with default options array.
-	$theme_options = wp_parse_args( get_option( 'chronus_theme_options', array() ), chronus_default_options() );
+	$theme_options = wp_parse_args( get_option( 'chista_theme_options', array() ), chista_default_options() );
 
 	// Return theme options.
 	return $theme_options;
@@ -46,7 +46,7 @@ function chronus_theme_options() {
  *
  * @return array
  */
-function chronus_default_options() {
+function chista_default_options() {
 
 	$default_options = array(
 		'site_title'            => true,

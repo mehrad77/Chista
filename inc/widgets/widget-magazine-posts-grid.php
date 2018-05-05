@@ -5,13 +5,13 @@
  * Display the latest posts from a selected category in a grid layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
  * Magazine Widget Class
  */
-class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
+class chista_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -20,11 +20,11 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 		// Setup Widget.
 		parent::__construct(
-			'chronus-magazine-posts-grid', // ID.
-			esc_html__( 'Magazine (Grid)', 'chronus' ), // Name.
+			'chista-magazine-posts-grid', // ID.
+			esc_html__( 'Magazine (Grid)', 'chista' ), // Name.
 			array(
-				'classname' => 'chronus-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'chronus' ),
+				'classname' => 'chista-magazine-grid-widget',
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'chista' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,7 +36,7 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'    => esc_html__( 'Magazine (Grid)', 'chronus' ),
+			'title'    => esc_html__( 'Magazine (Grid)', 'chista' ),
 			'category' => 0,
 			'layout'   => 'three-columns',
 			'number'   => 6,
@@ -101,7 +101,7 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 	function render( $settings ) {
 
 		// Get cached post ids.
-		$post_ids = chronus_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
+		$post_ids = chista_get_magazine_post_ids( $this->id, $settings['category'], $settings['number'] );
 
 		// Fetch posts from database.
 		$query_arguments = array(
@@ -119,7 +119,7 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 		if ( $posts_query->have_posts() ) :
 
 			// Limit the number of words for the excerpt.
-			add_filter( 'excerpt_length', 'chronus_magazine_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'chista_magazine_posts_excerpt_length' );
 
 			// Display Posts.
 			while ( $posts_query->have_posts() ) : $posts_query->the_post(); ?>
@@ -134,7 +134,7 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 			endwhile;
 
 			// Remove excerpt filter.
-			remove_filter( 'excerpt_length', 'chronus_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'chista_magazine_posts_excerpt_length' );
 
 		endif;
 
@@ -156,7 +156,7 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 		if ( ! empty( $widget_title ) ) :
 
 			// Link Widget Title to category archive when possible.
-			$widget_title = chronus_magazine_widget_title( $widget_title, $settings['category'] );
+			$widget_title = chista_magazine_widget_title( $widget_title, $settings['category'] );
 
 			// Display Widget Title.
 			echo $args['before_title'] . $widget_title . $args['after_title'];
@@ -179,7 +179,7 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance['layout'] = esc_attr( $new_instance['layout'] );
 		$instance['number'] = (int) $new_instance['number'];
 
-		chronus_flush_magazine_post_ids();
+		chista_flush_magazine_post_ids();
 
 		return $instance;
 	}
@@ -196,16 +196,16 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'chronus' ); ?>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'chista' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $settings['title'] ); ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'chronus' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Category:', 'chista' ); ?></label><br/>
 			<?php // Display Category Select.
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'chronus' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'chista' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category'],
@@ -217,15 +217,15 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'chronus' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'layout' ); ?>"><?php esc_html_e( 'Grid Layout:', 'chista' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>">
-				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'chronus' ); ?></option>
-				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'chronus' ); ?></option>
+				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'chista' ); ?></option>
+				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'chista' ); ?></option>
 			</select>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'chronus' ); ?>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts:', 'chista' ); ?>
 				<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo absint( $settings['number'] ); ?>" size="3" />
 			</label>
 		</p>
@@ -237,9 +237,9 @@ class Chronus_Magazine_Posts_Grid_Widget extends WP_Widget {
 /**
  * Register Widget
  */
-function chronus_register_magazine_posts_grid_widget() {
+function chista_register_magazine_posts_grid_widget() {
 
-	register_widget( 'Chronus_Magazine_Posts_Grid_Widget' );
+	register_widget( 'chista_Magazine_Posts_Grid_Widget' );
 
 }
-add_action( 'widgets_init', 'chronus_register_magazine_posts_grid_widget' );
+add_action( 'widgets_init', 'chista_register_magazine_posts_grid_widget' );

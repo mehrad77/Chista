@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Chronus
+ * @package chista
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'chronus' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'chista' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				<?php get_search_form(); ?>
 
 			</header><!-- .page-header -->
@@ -28,7 +28,7 @@ get_header(); ?>
 
 				if ( 'post' === get_post_type() ) :
 
-					get_template_part( 'template-parts/content', esc_attr( chronus_get_option( 'blog_layout' ) ) );
+					get_template_part( 'template-parts/content', esc_attr( chista_get_option( 'blog_layout' ) ) );
 
 				else :
 
@@ -41,7 +41,7 @@ get_header(); ?>
 			</div>
 
 			<?php
-			chronus_pagination();
+			chista_pagination();
 
 		else :
 

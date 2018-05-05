@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package Chronus
+ * @package chista
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -57,7 +57,7 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 			
 				<header class="entry-header">
 		
-					<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'chronus' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'chista' ); ?></h1>
 					
 				</header><!-- .entry-header -->
 				
@@ -67,7 +67,7 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 									<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
 								</header><!-- #masthead -->
 					        <div class="card-content white-text">
-								<span class="card-title"><h1 class="page-title"><?php esc_html_e( '404: Page not found', 'chronus' ); ?></h1></span>						
+								<span class="card-title"><h1 class="page-title"><?php esc_html_e( '404: Page not found', 'chista' ); ?></h1></span>						
 <div>
 حتی چیزهایی که ما دوست داریم، گاهی اوقات می‌شکنند. دیگه یه لینک که این حرف‌ها رو نداره :)
 <br/>				
@@ -80,7 +80,7 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 		<li>&nbsp;با استفاده از کادر جست&zwnj;وجوی زیر، در بلاگم جست&zwnj;وجو کنید یا به صفحۀ اصلی بروید.</li>
 	</ul>
 </div>
-<img src="https://www.nima.today/wp-content/themes/chronus-yekan/assets/images/404.gif" class="gif404" style="width: 128px; left: 0; position: absolute; bottom: 77px;">
+<img src="https://www.nima.today/wp-content/themes/chista-yekan/assets/images/404.gif" class="gif404" style="width: 128px; left: 0; position: absolute; bottom: 77px;">
 
 								
 							</div>
@@ -104,7 +104,7 @@ var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
 
 body {
   background:
-     url('https://www.nima.today/wp-content/themes/chronus-yekan/assets/images/404.jpg') top center no-repeat fixed  padding-box content-box #f9f9f9;
+     url('https://www.nima.today/wp-content/themes/chista-yekan/assets/images/404.jpg') top center no-repeat fixed  padding-box content-box #f9f9f9;
 	background-image: linear-gradient(to left bottom, #c50048, #bc368b, #9561bd, #5781d3, #0097d0);
 }
 .site {

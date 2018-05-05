@@ -3,49 +3,49 @@
  *
  * Adjusts styling for theme option controls in the Customizer
  *
- * @package Chronus
+ * @package chista
  */
 
 .customize-control-checkbox {
 	margin-bottom: 4px;
 }
 
-#customize-control-chronus_theme_options-site_description {
+#customize-control-chista_theme_options-site_description {
 	margin-bottom: 16px;
 }
 
-#customize-control-chronus_theme_options-blog_description,
-#customize-control-chronus_theme_options-blog_layout,
-#customize-control-chronus_theme_options-blog_magazine_widgets_title,
-#customize-control-chronus_theme_options-post_details,
-#customize-control-chronus_theme_options-single_post,
-#customize-control-chronus_theme_options-featured_images,
-#customize-control-chronus_theme_options-featured_category {
+#customize-control-chista_theme_options-blog_description,
+#customize-control-chista_theme_options-blog_layout,
+#customize-control-chista_theme_options-blog_magazine_widgets_title,
+#customize-control-chista_theme_options-post_details,
+#customize-control-chista_theme_options-single_post,
+#customize-control-chista_theme_options-featured_images,
+#customize-control-chista_theme_options-featured_category {
 	margin-top: 16px;
 }
 
-#customize-control-chronus_theme_options-blog_magazine_widgets_title,
-#customize-control-chronus_theme_options-post_details,
-#customize-control-chronus_theme_options-single_post,
-#customize-control-chronus_theme_options-featured_images,
-#customize-control-chronus_theme_options-activate_featured_posts {
+#customize-control-chista_theme_options-blog_magazine_widgets_title,
+#customize-control-chista_theme_options-post_details,
+#customize-control-chista_theme_options-single_post,
+#customize-control-chista_theme_options-featured_images,
+#customize-control-chista_theme_options-activate_featured_posts {
 	margin-bottom: 0;
 }
 
-#customize-control-chronus_theme_options-blog_description textarea {
+#customize-control-chista_theme_options-blog_description textarea {
 	height: 4em;
 }
 
-#customize-control-chronus_theme_options-pro_version div {
+#customize-control-chista_theme_options-pro_version div {
 	margin: 4px 0 16px;
 }
 
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle {
+#customize-theme-controls [id$=accordion-panel-chista_options_panel] .customize-info .customize-help-toggle {
 	top: 24px;
 	right: 4px;
 }
 
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle::before {
+#customize-theme-controls [id$=accordion-panel-chista_options_panel] .customize-info .customize-help-toggle::before {
 	top: 0;
 	left: 0;
 	padding: 0;
@@ -54,15 +54,15 @@
 	font-size: 28px;
 }
 
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
+#customize-theme-controls [id$=accordion-panel-chista_options_panel] .customize-info .customize-help-toggle[aria-expanded="true"]::before {
 	content: "\f335";
 }
 
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle:hover::before {
+#customize-theme-controls [id$=accordion-panel-chista_options_panel] .customize-info .customize-help-toggle:hover::before {
 	color: #72777c;
 }
 
-#customize-theme-controls [id$=accordion-panel-chronus_options_panel] .customize-info .customize-help-toggle:focus::before {
+#customize-theme-controls [id$=accordion-panel-chista_options_panel] .customize-info .customize-help-toggle:focus::before {
 	box-shadow: none;
 }
 
@@ -72,7 +72,7 @@
 }
 
 #customize-theme-controls #magazine-widgets-buttons .add-new-magazine-widget::before,
-#available-widgets [id*='widget-tpl-chronus-magazine-'] .widget-title::before {
+#available-widgets [id*='widget-tpl-chista-magazine-'] .widget-title::before {
 	content: "\f116";
 }
 
@@ -120,7 +120,7 @@ body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-mag
 	border-top: none;
 }
 
-.adding-magazine-widget #available-widgets #available-widgets-list [id*='widget-tpl-chronus-magazine-'] {
+.adding-magazine-widget #available-widgets #available-widgets-list [id*='widget-tpl-chista-magazine-'] {
 	display: block !important;
 	visibility: visible;
 }
@@ -148,17 +148,17 @@ body.adding-widget.adding-magazine-widget #magazine-widgets-buttons .add-new-mag
 	font-size: 1px;
 }
 
-.adding-magazine-widget #available-widgets [id*='widget-tpl-chronus-magazine-'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-chista-magazine-'] .widget-top::before {
 	background-color: #f2f2f2;
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
 
-.adding-magazine-widget #available-widgets [id*='widget-tpl-chronus-magazine-posts-columns'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-chista-magazine-posts-columns'] .widget-top::before {
 	background-image: url( '../images/magazine-columns.png' );
 }
 
-.adding-magazine-widget #available-widgets [id*='widget-tpl-chronus-magazine-posts-grid'] .widget-top::before {
+.adding-magazine-widget #available-widgets [id*='widget-tpl-chista-magazine-posts-grid'] .widget-top::before {
 	background-image: url( '../images/magazine-grid.png' );
 }

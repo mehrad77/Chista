@@ -108,7 +108,7 @@ msgid ""
 msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:32 inc/theme-info.php:116
-msgid "https://themezee.com/addons/chronus-pro/"
+msgid "https://themezee.com/addons/chista-pro/"
 msgstr "https://mehrad.js.org/Chista"
 
 #: inc/customizer/controls/upgrade-control.php:33 inc/theme-info.php:117
@@ -151,7 +151,7 @@ msgid "Theme Links"
 msgstr "پیوندهای قالب"
 
 #: inc/customizer/customizer.php:149 inc/theme-info.php:47
-msgid "https://themezee.com/themes/chronus/"
+msgid "https://themezee.com/themes/chista/"
 msgstr "https://mehrad.js.org/Chista"
 
 #: inc/customizer/customizer.php:150 inc/theme-info.php:47
@@ -163,7 +163,7 @@ msgid "Theme Demo"
 msgstr "دمو قالب"
 
 #: inc/customizer/customizer.php:161 inc/theme-info.php:49 inc/theme-info.php:70
-msgid "https://themezee.com/docs/chronus-documentation/"
+msgid "https://themezee.com/docs/chista-documentation/"
 msgstr "https://mehrad.js.org/Chista#doc"
 
 #: inc/customizer/customizer.php:162 inc/theme-info.php:49 inc/theme-info.php:64
@@ -171,7 +171,7 @@ msgid "Theme Documentation"
 msgstr "مستندات قالب"
 
 #: inc/customizer/customizer.php:167 inc/theme-info.php:50 inc/theme-info.php:152
-msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
+msgid "https://wordpress.org/support/theme/chista/reviews/?filter=5"
 msgstr "https://wordpress.org/support/theme/chista/reviews/"
 
 #: inc/customizer/customizer.php:168 inc/theme-info.php:50
@@ -415,7 +415,7 @@ msgid "https://themezee.com/"
 msgstr "https://mehrad.js.org/"
 
 #: inc/theme-info.php:152
-msgid "Review Chronus"
+msgid "Review chista"
 msgstr "بررسی کردن چیستا"
 
 #: inc/theme-info.php:152

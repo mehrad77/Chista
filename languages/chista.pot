@@ -105,7 +105,7 @@ msgid ""
 msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:32 inc/theme-info.php:116
-msgid "https://themezee.com/addons/chronus-pro/"
+msgid "https://themezee.com/addons/chista-pro/"
 msgstr ""
 
 #: inc/customizer/controls/upgrade-control.php:33 inc/theme-info.php:117
@@ -148,7 +148,7 @@ msgid "Theme Links"
 msgstr ""
 
 #: inc/customizer/customizer.php:149 inc/theme-info.php:47
-msgid "https://themezee.com/themes/chronus/"
+msgid "https://themezee.com/themes/chista/"
 msgstr ""
 
 #: inc/customizer/customizer.php:150 inc/theme-info.php:47
@@ -161,7 +161,7 @@ msgstr ""
 
 #: inc/customizer/customizer.php:161 inc/theme-info.php:49
 #: inc/theme-info.php:70
-msgid "https://themezee.com/docs/chronus-documentation/"
+msgid "https://themezee.com/docs/chista-documentation/"
 msgstr ""
 
 #: inc/customizer/customizer.php:162 inc/theme-info.php:49
@@ -171,7 +171,7 @@ msgstr ""
 
 #: inc/customizer/customizer.php:167 inc/theme-info.php:50
 #: inc/theme-info.php:152
-msgid "https://wordpress.org/support/theme/chronus/reviews/?filter=5"
+msgid "https://wordpress.org/support/theme/chista/reviews/?filter=5"
 msgstr ""
 
 #: inc/customizer/customizer.php:168 inc/theme-info.php:50
@@ -411,7 +411,7 @@ msgid "https://themezee.com/"
 msgstr ""
 
 #: inc/theme-info.php:152
-msgid "Review Chronus"
+msgid "Review chista"
 msgstr ""
 
 #: inc/theme-info.php:152

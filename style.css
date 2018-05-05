@@ -8,12 +8,12 @@ Version: 1.4
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: Chista
-Tags: persian, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Tags: blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Chista is based on chronus http://ThemeZee.com/, (C) 2017 ThemeZee
+Chista is based on chista http://ThemeZee.com/, (C) 2017 ThemeZee
 
 */
 
@@ -2713,7 +2713,7 @@ object {
   position: relative;
 }
 
-.magazine-widgets-placeholder .magazine-widgets-placeholder-title {
+.magazine-widgets-placeholder .magazine-widgets-placeholder-title  {
   display: block;
   margin: 0;
   padding: 1em 1em 1em 55px;
@@ -2731,12 +2731,12 @@ object {
   left: 15px;
 }
 
-.customize-partial-edit-shortcut-chronus_theme_options-blog_description,
-.customize-partial-edit-shortcut-chronus_blog_layout_partial {
+.customize-partial-edit-shortcut-chista_theme_options-blog_description,
+.customize-partial-edit-shortcut-chista_blog_layout_partial {
   left: -9999px;
 }
 
-.customize-partial-edit-shortcut-chronus_featured_content_partial button {
+.customize-partial-edit-shortcut-chista_featured_content_partial button {
   top: -40px;
 }
 

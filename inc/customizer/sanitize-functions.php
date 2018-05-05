@@ -5,7 +5,7 @@
  * Used to validate the user input of the theme settings
  * Based on https://github.com/WPTRT/code-examples/blob/master/customizer/sanitization-callbacks.php
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
@@ -14,7 +14,7 @@
  * @param bool $checked Whether the checkbox is checked.
  * @return bool Whether the checkbox is checked.
  */
-function chronus_sanitize_checkbox( $checked ) {
+function chista_sanitize_checkbox( $checked ) {
 
 	// Boolean check.
 	return ( ( isset( $checked ) && true === $checked ) ? true : false );
@@ -32,7 +32,7 @@ function chronus_sanitize_checkbox( $checked ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
  */
-function chronus_sanitize_select( $input, $setting ) {
+function chista_sanitize_select( $input, $setting ) {
 
 	// Ensure input is a slug.
 	$input = sanitize_key( $input );

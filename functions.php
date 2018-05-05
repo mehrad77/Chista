@@ -1,12 +1,12 @@
 <?php
 /**
- * Chronus functions and definitions
+ * chista functions and definitions
  *
- * @package Chronus
+ * @package chista
  */
 
 /**
- * Chronus only works in WordPress 4.7 or later.
+ * chista only works in WordPress 4.7 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -14,7 +14,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 }
 
 
-if ( ! function_exists( 'chronus_setup' ) ) :
+if ( ! function_exists( 'chista_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -22,10 +22,10 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function chronus_setup() {
+	function chista_setup() {
 
-		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/chronus
-		load_theme_textdomain( 'chronus', get_template_directory() . '/languages' );
+		// Make theme available for translation. Translations can be filed at https://translate.wordpress.org/projects/wp-themes/chista
+		load_theme_textdomain( 'chista', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -41,7 +41,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 
 		// Register Navigation Menus.
 		register_nav_menus( array(
-			'primary'   => esc_html__( 'Main Navigation', 'chronus' ),
+			'primary'   => esc_html__( 'Main Navigation', 'chista' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -53,12 +53,12 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'chronus_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'chista_custom_background_args', array(
 			'default-color' => 'ffffff',
 		) ) );
 
 		// Set up the WordPress core custom logo feature.
-		add_theme_support( 'custom-logo', apply_filters( 'chronus_custom_logo_args', array(
+		add_theme_support( 'custom-logo', apply_filters( 'chista_custom_logo_args', array(
 			'height' => 60,
 			'width' => 300,
 			'flex-height' => true,
@@ -66,7 +66,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		) ) );
 
 		// Set up the WordPress core custom header feature.
-		add_theme_support( 'custom-header', apply_filters( 'chronus_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'chista_custom_header_args', array(
 			'header-text' => false,
 			'width'	      => 2560,
 			'height'      => 500,
@@ -81,7 +81,7 @@ if ( ! function_exists( 'chronus_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
 endif;
-add_action( 'after_setup_theme', 'chronus_setup' );
+add_action( 'after_setup_theme', 'chista_setup' );
 
 
 /**
@@ -90,10 +90,10 @@ add_action( 'after_setup_theme', 'chronus_setup' );
  *
  * @global int $content_width
  */
-function chronus_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'chronus_content_width', 840 );
+function chista_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'chista_content_width', 840 );
 }
-add_action( 'after_setup_theme', 'chronus_content_width', 0 );
+add_action( 'after_setup_theme', 'chista_content_width', 0 );
 
 
 /**
@@ -101,12 +101,12 @@ add_action( 'after_setup_theme', 'chronus_content_width', 0 );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function chronus_widgets_init() {
+function chista_widgets_init() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar', 'chronus' ),
+		'name' => esc_html__( 'Sidebar', 'chista' ),
 		'id' => 'sidebar-1',
-		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'chronus' ),
+		'description' => esc_html__( 'Appears on posts and pages except the full width template.', 'chista' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -114,9 +114,9 @@ function chronus_widgets_init() {
 	));
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Magazine Homepage', 'chronus' ),
+		'name' => esc_html__( 'Magazine Homepage', 'chista' ),
 		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'chronus' ),
+		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'chista' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -124,25 +124,25 @@ function chronus_widgets_init() {
 	));
 
 }
-add_action( 'widgets_init', 'chronus_widgets_init' );
+add_action( 'widgets_init', 'chista_widgets_init' );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function chronus_scripts() {
+function chista_scripts() {
 
 	// Get Theme Version.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	// Register and Enqueue Stylesheet.
-	wp_enqueue_style( 'chronus-stylesheet', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'chista-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
-	wp_enqueue_script( 'chronus-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20170725' );
+	wp_enqueue_script( 'chista-jquery-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20170725' );
 
 	// Passing Parameters to navigation.js.
-	wp_localize_script( 'chronus-jquery-navigation', 'chronus_menu_title', chronus_get_svg( 'menu' ) . esc_html__( 'Menu', 'chronus' ) );
+	wp_localize_script( 'chista-jquery-navigation', 'chista_menu_title', chista_get_svg( 'menu' ) . esc_html__( 'Menu', 'chista' ) );
 
 	// Enqueue svgxuse to support external SVG Sprites in Internet Explorer.
 	wp_enqueue_script( 'svgxuse', get_theme_file_uri( '/assets/js/svgxuse.min.js' ), array(), '1.2.4' );
@@ -153,44 +153,44 @@ function chronus_scripts() {
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'chronus_scripts' );
+add_action( 'wp_enqueue_scripts', 'chista_scripts' );
 
 
 /**
  * Enqueue custom fonts.
  */
-function chronus_custom_fonts() {
+function chista_custom_fonts() {
 
 	// Register and Enqueue Theme Fonts.
-	wp_enqueue_style( 'chronus-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
+	wp_enqueue_style( 'chista-custom-fonts', get_template_directory_uri() . '/assets/css/custom-fonts.css', array(), '20180413' );
 
 }
-add_action( 'wp_enqueue_scripts', 'chronus_custom_fonts', 1 );
+add_action( 'wp_enqueue_scripts', 'chista_custom_fonts', 1 );
 
 
 /**
  * Add custom sizes for featured images
  */
-function chronus_add_image_sizes() {
+function chista_add_image_sizes() {
 
 	// Add different thumbnail sizes for Magazine Posts widgets.
-	add_image_size( 'chronus-thumbnail-small', 120, 80, true );
-	add_image_size( 'chronus-thumbnail-medium', 280, 175, true );
-	add_image_size( 'chronus-thumbnail-large', 600, 375, true );
+	add_image_size( 'chista-thumbnail-small', 120, 80, true );
+	add_image_size( 'chista-thumbnail-medium', 280, 175, true );
+	add_image_size( 'chista-thumbnail-large', 600, 375, true );
 
 }
-add_action( 'after_setup_theme', 'chronus_add_image_sizes' );
+add_action( 'after_setup_theme', 'chista_add_image_sizes' );
 
 
 /**
  * Add pingback url on single posts
  */
-function chronus_pingback_url() {
+function chista_pingback_url() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
 	}
 }
-add_action( 'wp_head', 'chronus_pingback_url' );
+add_action( 'wp_head', 'chista_pingback_url' );
 
 /* must remove this block /*/
 // add badge class to catageroy widgets

@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Chronus
+ * @package chista
  */
 
 // Check if Sidebar has widgets.

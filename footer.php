@@ -4,14 +4,14 @@
  *
  * Contains all content after the main content area and sidebar
  *
- * @package Chronus
+ * @package chista
  */
 
 ?>
 
 	</div><!-- #content -->
 
-	<?php do_action( 'chronus_before_footer' ); ?>
+	<?php do_action( 'chista_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
 
@@ -27,8 +27,8 @@
             
             <span>از حقوق مادی و معنوی سایتم گذشتم :)</span>
 			<div id="footer-text" class="site-info">
-				<?php do_action( 'chronus_footer_text' ); ?>
-				<?php //chronus_credit_link(); ?>
+				<?php do_action( 'chista_footer_text' ); ?>
+				<?php //chista_credit_link(); ?>
 				<small class="credit-link">
 		قدرت گرفته از  <a href="https://mehrad.js.org/Chista" title="قالب وردپرس چیستا">چیستا</a> | طراحی با <i class="fa fa-heart" aria-hidden="true"></i> توسط <a href="https://mehrad.js.org" title="مهراد روستا">مهراد روستا</a>
 				</span>

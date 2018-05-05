@@ -3,7 +3,7 @@
  *
  * Reloads changes on Theme Customizer Preview asynchronously for better usability
  *
- * @package Chronus
+ * @package chista
  */
 
 ( function( $ ) {
@@ -23,7 +23,7 @@
 	} );
 
 	// Site Title checkbox.
-	wp.customize( 'chronus_theme_options[site_title]', function( value ) {
+	wp.customize( 'chista_theme_options[site_title]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-title' );
@@ -34,7 +34,7 @@
 	} );
 
 	// Site Description checkbox.
-	wp.customize( 'chronus_theme_options[site_description]', function( value ) {
+	wp.customize( 'chista_theme_options[site_description]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-description' );
@@ -45,7 +45,7 @@
 	} );
 
 	// Sidebar Position.
-	wp.customize( 'chronus_theme_options[sidebar_position]', function( value ) {
+	wp.customize( 'chista_theme_options[sidebar_position]', function( value ) {
 		value.bind( function( newval ) {
 			if ( 'left-sidebar' === newval && false === $( 'body' ).hasClass( 'no-sidebar' ) ) {
 				$( 'body' ).addClass( 'sidebar-left' );
@@ -56,21 +56,21 @@
 	} );
 
 	// Blog Title textfield.
-	wp.customize( 'chronus_theme_options[blog_title]', function( value ) {
+	wp.customize( 'chista_theme_options[blog_title]', function( value ) {
 		value.bind( function( to ) {
 			$( '.blog-header .blog-title' ).text( to );
 		} );
 	} );
 
 	// Blog Description textfield.
-	wp.customize( 'chronus_theme_options[blog_description]', function( value ) {
+	wp.customize( 'chista_theme_options[blog_description]', function( value ) {
 		value.bind( function( to ) {
 			$( '.blog-header .blog-description' ).text( to );
 		} );
 	} );
 
 	// Post Date checkbox.
-	wp.customize( 'chronus_theme_options[meta_date]', function( value ) {
+	wp.customize( 'chista_theme_options[meta_date]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'date-hidden' );
@@ -81,7 +81,7 @@
 	} );
 
 	// Post Author checkbox.
-	wp.customize( 'chronus_theme_options[meta_author]', function( value ) {
+	wp.customize( 'chista_theme_options[meta_author]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'author-hidden' );
@@ -92,7 +92,7 @@
 	} );
 
 	// Post Category checkbox.
-	wp.customize( 'chronus_theme_options[meta_category]', function( value ) {
+	wp.customize( 'chista_theme_options[meta_category]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				$( 'body' ).addClass( 'categories-hidden' );
@@ -103,7 +103,7 @@
 	} );
 
 	// Post Tags checkbox.
-	wp.customize( 'chronus_theme_options[meta_tags]', function( value ) {
+	wp.customize( 'chista_theme_options[meta_tags]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.type-post .entry-footer .entry-tags' );
@@ -114,7 +114,7 @@
 	} );
 
 	// Post Navigation checkbox.
-	wp.customize( 'chronus_theme_options[post_navigation]', function( value ) {
+	wp.customize( 'chista_theme_options[post_navigation]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.type-post .entry-footer .post-navigation' );
@@ -125,7 +125,7 @@
 	} );
 
 	// Site Description checkbox.
-	wp.customize( 'chronus_theme_options[credit_link]', function( value ) {
+	wp.customize( 'chista_theme_options[credit_link]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.site-info .credit-link' );

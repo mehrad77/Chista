@@ -2,7 +2,7 @@
 /**
  * Main Navigation
  *
- * @package Chronus
+ * @package chista
  */
 ?>
 
@@ -16,7 +16,7 @@
 				'container' => false,
 				'menu_class' => 'main-navigation-menu',
 				'echo' => true,
-				'fallback_cb' => 'chronus_default_menu',
+				'fallback_cb' => 'chista_default_menu',
 				)
 			);
 		?>

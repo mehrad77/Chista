@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Chronus
+ * @package chista
  */
 
 ?>
@@ -22,7 +22,7 @@
 		<?php the_content(); ?>
 
 		<?php wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chronus' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chista' ),
 			'after'  => '</div>',
 		) ); ?>
 
