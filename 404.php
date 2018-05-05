@@ -33,7 +33,7 @@
 <meta name="msapplication-TileColor" content="#d90073" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
 <script src='https://cdn.taxus.ir/script/search-wp.js' data-taxus-api-key='eyJhbGciOiJIUzUxMiJ9.eyJjIjoiM2FmN2NhYjctYmFiMS00ZDJhLTk1YmItYjRhMzNkMWMwNmY3IiwidSI6IjNhZGZmNjNkLTdmNzUtNDRjZC04ZmE1LTgyNmY2MWU5OWRiZCJ9.1v0_3Hjy-gpr-gwzxYYYJjQG-55PuBe3S8jGuoC-B5fb2mtvqji5e7tV0ck-oP8LvfMa8Jsu5G49SIiwB3QbXQ'></script>
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri())  ?>/css/font-awesome.min.css">
 <!— MailerLite Universal —>
 <script>
 (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){

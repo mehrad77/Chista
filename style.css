@@ -4,19 +4,17 @@ Theme URI: https://mehrad.js.org/Chista
 Author: Mehrad Rousta
 Author URI: https://mehrad.js.org
 Description: Chista is a fast and lightweight WordPress Theme created for Persian blogs and Magazines.
-Version: 1.3
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: chronus
-Tags: two-columns, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
+Version: 1.4
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: Chista
+Tags: persian, blog, news, custom-background, custom-logo, custom-header, custom-menu, grid-layout, entertainment, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Chronus is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Chista is based on chronus http://ThemeZee.com/, (C) 2017 ThemeZee
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -763,14 +761,14 @@ textarea {
   color: #cc5555;
 }
 
-.site-branding .custom-logo {
+/* .site-branding .custom-logo {
   margin: 0 0 0.5em;
   padding: 0;
   max-width: 100%;
   height: auto;
   border: none;
   vertical-align: top;
-}
+} */
 
 .site-description {
   margin: 0;
