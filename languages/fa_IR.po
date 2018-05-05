@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Chronus\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2017-10-14 21:05+0330\n"
-"PO-Revision-Date: 2018-05-05 01:30+0430\n"
+"PO-Revision-Date: 2018-05-05 14:17+0430\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "MIME-Version: 1.0\n"
@@ -355,7 +355,7 @@ msgstr "نوشته‌های بعدی"
 #: inc/template-tags.php:387
 #, php-format
 msgid "Powered by %1$s and %2$s."
-msgstr "با استفاده از قالب %1$s | توسعه با ❤ توسط %2$s"
+msgstr "با استفاده از قالب %2$s | توسعه با ❤ توسط %1$s"
 
 #: inc/template-tags.php:388
 msgid "http://wordpress.org"

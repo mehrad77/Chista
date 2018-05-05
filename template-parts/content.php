@@ -24,7 +24,7 @@
 	</header><!-- .entry-header -->
 	
 
-		<?php chronus_entry_meta(); ?>
+		<?php //chronus_entry_meta(); ?>
 
 	</header><!-- .entry-header -->
 
