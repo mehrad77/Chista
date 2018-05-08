@@ -41,9 +41,9 @@
      <span style="display:block;">به اشتراک بگذارید!</span>
 
                                  <ul>
-<li class="linkedin"><a data-toggle="tooltip" data-placement="right" title="<?php _e('اشتراک گذاشتن در لینکدین','chista') ?>" href="http://www.linkedin.com/shareArticle?title=<?php the_title(); ?>&url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-<li class="twitter"><a data-toggle="tooltip" data-placement="right" href="https://twitter.com/home?status=<?php the_title(); ?>&nbsp;&nbsp;&nbsp;<?php echo wp_get_shortlink(); ?>" title="<?php _e('اشتراک گذاشتن در توییتر','chista') ?>" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-<li class="google"><a data-toggle="tooltip" data-placement="right" title="<?php _e('اشتراک گذاشتن در تلگرام','chista') ?>" href="tg://msg_url?url=<?php echo urlencode(esc_url(wp_get_shortlink() )) ?>&text=<?php the_title(); ?>"><i class="fa fa-send"></i></a></li>
+<li class="linkedin"><a data-toggle="tooltip" data-placement="right" onclick="ga('send', 'event', 'engagement', 'share', 'Linkedin','<?php echo wp_get_shortlink(); ?>')" title="<?php _e('اشتراک گذاشتن در لینکدین','chista') ?>" href="http://www.linkedin.com/shareArticle?title=<?php the_title(); ?>&url=<?php wp_get_shortlink(); ?>" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+<li class="twitter"><a data-toggle="tooltip" data-placement="right" onclick="ga('send', 'event', 'engagement', 'share', 'Twitter','<?php echo wp_get_shortlink(); ?>')" href="https://twitter.com/home?status=<?php the_title(); ?>&nbsp;&nbsp;&nbsp;<?php echo wp_get_shortlink(); ?>" title="<?php _e('اشتراک گذاشتن در توییتر','chista') ?>" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+<li class="google"><a data-toggle="tooltip" data-placement="right" onclick="ga('send', 'event', 'engagement', 'share', 'Telegram','<?php echo wp_get_shortlink(); ?>')" title="<?php _e('اشتراک گذاشتن در تلگرام','chista') ?>" href="tg://msg_url?url=<?php echo urlencode(esc_url(wp_get_shortlink() )) ?>&text=<?php the_title(); ?>"><i class="fa fa-send"></i></a></li>
              
                        </ul>
 

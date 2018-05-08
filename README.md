@@ -34,6 +34,10 @@ For more information about chista please go to https://mehrad.js.org
 
 ## Changelog
 
+### 1.4.2
+
+* add GA event tracking for (social share / footer social links)
+
 ### 1.4.1
 
 * fix IRANSans font issues
