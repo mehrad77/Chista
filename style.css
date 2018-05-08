@@ -2845,8 +2845,10 @@ article,
 .comment-content p {
   margin-top: 5px !important;
 }
-.header-main {
-  padding-bottom: 0em !important;
+@media only screen and (min-width: 768px) {
+  .header-main {
+    padding-bottom: 0em !important;
+  }
 }
 /* Comment load more css es */
 .comment-list {
@@ -2905,11 +2907,15 @@ ol {
   list-style-type: arabic-indic;
 }
 
-ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+ol ol ul,
+ol ul ul,
+ul ol ul,
+ul ul ul {
   list-style-type: square;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
