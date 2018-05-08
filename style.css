@@ -2905,6 +2905,14 @@ ol {
   list-style-type: arabic-indic;
 }
 
+ol ol ul, ol ul ul, ul ol ul, ul ul ul {
+  list-style-type: square;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
 /* end of must remove this block */
 
 .badge {
