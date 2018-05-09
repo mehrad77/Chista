@@ -8,156 +8,285 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+    <?php get_template_part( 'head'); ?>
 
-
-<?php wp_head();
-?>
-<meta property="og:image" content="https://www.nima.today/wp-content/uploads/2018/02/LogoType-NimaShafiezadeh-768x388.jpg" />
-<meta property="og:image:width" content="840" />
-<meta property="og:image:height" content="400" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="اولین تجربه‌های من از دنیای دیجیتال مارکتینگ، با حضورم در «فرندفید» و بعد «گودر» شکل گرفت و نهایتا در «توییتر» به شکل حرفه‌ای و جدی‌تری ادامه پیدا کرد. من علاقۀ زیادی به بلندپروازی دارم و به نظرم تو هیچ کاری مثل دیجیتال مارکتینگ نمی‌شه بلندپرواز بود." />
-<meta property="og:description" content="اولین تجربه‌های من از دنیای دیجیتال مارکتینگ، با حضورم در «فرندفید» و بعد «گودر» شکل گرفت و نهایتا در «توییتر» به شکل حرفه‌ای و جدی‌تری ادامه پیدا کرد. من علاقۀ زیادی به بلندپروازی دارم و به نظرم تو هیچ کاری مثل دیجیتال مارکتینگ نمی‌شه بلندپرواز بود." />
-<meta name="description" content="گیک بازاریابی دیجیتال"/>
-<meta name="twitter:title" content="گیک بازاریابی دیجیتال | نیما شفیع‌زاده" />
-<meta name="twitter:site" content="@Retooeter" />
-<meta name="twitter:image" content="https://www.nima.today/wp-content/uploads/2018/02/LogoType-NimaShafiezadeh-768x388.jpg" />
-
-<!-- Colors -->
-<meta name="theme-color" content="#81007f">
-<meta name="apple-mobile-web-app-status-bar-style" content="#81007f">
-<meta name="application-name" content="نیما شفیع‌زاده"/>
-<meta name="msapplication-TileColor" content="#d90073" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
-<script src='https://cdn.taxus.ir/script/search-wp.js' data-taxus-api-key='eyJhbGciOiJIUzUxMiJ9.eyJjIjoiM2FmN2NhYjctYmFiMS00ZDJhLTk1YmItYjRhMzNkMWMwNmY3IiwidSI6IjNhZGZmNjNkLTdmNzUtNDRjZC04ZmE1LTgyNmY2MWU5OWRiZCJ9.1v0_3Hjy-gpr-gwzxYYYJjQG-55PuBe3S8jGuoC-B5fb2mtvqji5e7tV0ck-oP8LvfMa8Jsu5G49SIiwB3QbXQ'></script>
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri())  ?>/css/font-awesome.min.css">
-<!— MailerLite Universal —>
-<script>
-(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-var ml_account = ml('accounts', '1059636', 'r8x8l6s0j7', 'load');
-</script>
-<!— End MailerLite Universal —>
-
+    <link href="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/css/404.css" media="all" rel="stylesheet" type="text/css">
+    
 </head>
-
 <body <?php body_class(); ?>>
 
-	<section id="primary" class="content-single content-area">
-		<main id="main" class="site-main" role="main">
+<div class="wall-overlay-gradient">
 
-			<div class="error-404 not-found type-page">
-			
-				<header class="entry-header">
-		
-					<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'chista' ); ?></h1>
-					
-				</header><!-- .entry-header -->
-				
-				<div class="entry-content clearfix">
-						<div class="card">
-							<header id="masthead" class="site-header clearfix" role="banner">
-									<?php get_template_part( 'template-parts/header/navigation', 'main' ); ?>
-								</header><!-- #masthead -->
-					        <div class="card-content white-text">
-								<span class="card-title"><h1 class="page-title"><?php esc_html_e( '404: Page not found', 'chista' ); ?></h1></span>						
-<div>
-حتی چیزهایی که ما دوست داریم، گاهی اوقات می‌شکنند. دیگه یه لینک که این حرف‌ها رو نداره :)
-<br/>				
-پیوند درخواست‌شده پیدا نشد و این تمام چیزی است که من می‌دانم و از صبر و شکیبایی شما متشکرم.
-<br/><br/>	
-با‌این‌حال شما می‌توانید:
-	<ul>
-		<li>یا یک ایمیل به من بزنید و مشکل را با من در میان بگذارید؛</li>
-		<li>یا دربارۀ من بیشتر بخوانید؛</li>
-		<li>&nbsp;با استفاده از کادر جست&zwnj;وجوی زیر، در بلاگم جست&zwnj;وجو کنید یا به صفحۀ اصلی بروید.</li>
-	</ul>
+
 </div>
-<img src="https://www.nima.today/wp-content/themes/chista-yekan/assets/images/404.gif" class="gif404" style="width: 128px; left: 0; position: absolute; bottom: 77px;">
+<div id="viewport">
+    <div id="wall"></div>
+</div>
 
-								
-							</div>
-							<div class="card-action">
-								<?php get_search_form(); ?>
-							</div>
-						 <div>
-					
-					<?php the_widget( 'WP_Widget_Categories', 'dropdown=1' ); ?>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-					
-					
-				</div>
-				
-			</div>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
-<style>
+<section id="primary" class="content-single content-area">
+    <main id="main" class="site-main" role="main">
 
-body {
-  background:
-     url('https://www.nima.today/wp-content/themes/chista-yekan/assets/images/404.jpg') top center no-repeat fixed  padding-box content-box #f9f9f9;
-	background-image: linear-gradient(to left bottom, #c50048, #bc368b, #9561bd, #5781d3, #0097d0);
-}
-.site {
-    background: #ffffff00;
-}
-.site-header {
-    background: white;
-    padding: 0px 10px;
-}
-.card {
-    position: relative;
-    margin: .5rem 0 1rem 0;
-    background-color: #fff;
-    -webkit-transition: -webkit-box-shadow .25s;
-    transition: -webkit-box-shadow .25s;
-    transition: box-shadow .25s;
-    transition: box-shadow .25s, -webkit-box-shadow .25s;
-    border-radius: 2px;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-}
-.card .card-content {
-    padding: 0px 24px;
-    border-radius: 0 0 2px 2px;
-}
-.card .card-action {
-    background-color: inherit;
-    border-top: 1px solid rgba(160,160,160,0.2);
-    position: relative;
-    padding: 16px 24px;
-}
-.card header {
-    background-color: inherit;
-    border-bottom: 1px solid rgba(160,160,160,0.2);
-    position: relative;
-    padding: 0px
-}
-.primary-navigation-wrap {
-    border-top: none;
-}
-#main{
-	width: 900px;
-	max-width: 100%;
-	margin: 30px;
-}
-#primary{
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-h1 {
-    margin: 15px 0 13px;
-}
-</style>
-<?php //wp_footer(); ?>
+        <div class="error-404 not-found type-page">
+
+
+            <div class="entry-content clearfix">
+
+                <div class="card">
+                    
+                    <!-- #masthead -->
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            <header id="masthead" class="site-header clearfix" role="banner">
+                                <h1 class="page-title">
+                                    <?php esc_html_e( '404: Page not found', 'chista' ); ?>
+                                </h1>
+                            </header>
+                        </span>
+                        <div>
+                            حتی چیزهایی که ما دوست داریم، گاهی اوقات می‌شکنند؛ دیگه یه لینک که این حرف‌ها رو نداره :)
+                            <br/> پیوند درخواست‌شده پیدا نشد و این تمام چیزی است که من می‌دانم و از صبر و شکیبایی شما متشکرم.
+                            <br/>
+                            <br/> با‌این حال شما می‌توانید:
+                            <ul>
+                                <li>یا یک <a target="_blank" href="https://www.nima.today/contact/"> ایمیل به من </a> بزنید و مشکل را با من در میان بگذارید؛</li>
+                                <li>یا <a target="_blank" href="https://www.nima.today/about/">دربارۀ من</a> بیشتر بخوانید؛</li>
+                                <li>&nbsp;با استفاده از کادر جست&zwnj;وجوی زیر، در بلاگم جست&zwnj;وجو کنید یا به <a target="_blank" href="<?php echo get_home_url(); ?>" >صفحۀ اصلی</a> بروید.</li>
+                            </ul>
+                        </div>
+                        <img src="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/images/404.gif" class="" id="gif404" style="display:none;">
+                    </div>
+                    <div class="card-action">
+                        <?php get_search_form(); ?>
+                    </div>
+                    <div>
+
+
+
+                    </div>
+
+                </div>
+
+    </main>
+    <!-- #main -->
+</section>
+<!-- #primary -->
+
+
+<!-- scripts start -->
+<script src="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/js/mootools.js" type="text/javascript">
+</script>
+<script src="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/js/plugins.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    $(function () {
+        "use strict";
+
+        function initAnim() {
+            $(".border-top-1, .border-top-2, .border-bottom-1, .border-bottom-2").css(
+                "width",
+                "50%"
+            );
+            $(".border-left, .border-right").css("height", "100%");
+            var heightLaterals = $(".border-right").height();
+            $(".border-left, .border-right").css("height", "0px");
+            $(".border-left, .border-right").css("top", heightLaterals / 2 + "px");
+            var widthFramework = $(".border-top-1").width();
+            var widthTop = $(".center-space-top span").width();
+            var widthBottom = $(".center-space-bottom span").width();
+            var calculateTop = widthFramework - widthTop / 2 - 8;
+            var calculateBottom = widthFramework - widthBottom / 2 - 8;
+            $(".border-top-1, .border-top-2, .border-bottom-1, .border-bottom-2")
+                .delay(1400)
+                .css("width", "0%");
+            $(".border-left, .border-right")
+                .delay(1400)
+                .animate(
+                    {
+                        height: heightLaterals + "px",
+                        top: "0px"
+                    },
+                    600,
+                    function () {
+                        $(".border-left, .border-right").css({
+                            height: "100%"
+                        });
+                        $(".border-top-1, .border-top-2").animate(
+                            {
+                                width: calculateTop - 25 + "px"
+                            },
+                            600
+                        );
+                        $(".border-bottom-1, .border-bottom-2").animate(
+                            {
+                                width: calculateBottom - 25 + "px"
+                            },
+                            600
+                        );
+                        $(
+                            ".center-space-top, .center-space-bottom, .titleOT, nav, h6, #slidePositionIndicator"
+                        )
+                            .stop(true, true)
+                            .delay(400)
+                            .animate(
+                                {
+                                    opacity: 1
+                                },
+                                1800
+                            );
+                    }
+                );
+        }
+        function init() {
+            $(
+                ".center-space-top, .center-space-bottom, .titleOT, nav, h6, #slidePositionIndicator"
+            ).css("opacity", "0");
+            $(".border-top-1, .border-top-2, .border-bottom-1, .border-bottom-2").css(
+                "width",
+                "0%"
+            );
+            $(".border-left, .border-right").css("height", "0px");
+        }
+    });
+    // the Wall
+    window.addEvent("domready", function () {
+        var imagewall = [
+            <?php
+                $args = array( 'posts_per_page' => '21' );
+                $recent_posts = new WP_Query($args);
+                while( $recent_posts->have_posts() ) { 
+                
+                $recent_posts->the_post() ; 
+                
+                if ( has_post_thumbnail() ) {
+
+                    /* grab the url for the full size featured image */
+                    $featured_img_url = get_the_post_thumbnail_url(get_the_ID()); 
+                    echo '[ "' . esc_url($featured_img_url)  . '", [["' . esc_url($featured_img_url)  . '", " <a target=\"_blank\" href=\"' . esc_url(get_permalink()) . '\">' . get_the_title() . '</a>"]] ],';
+                    }
+                }
+                
+                wp_reset_postdata();
+
+            ?>
+        ];
+        var maxLength = 20;
+        var wallFluid = new Wall("wall", {
+            draggable: true,
+            slideshow: true, // options: true, false
+            speed: 1000,
+            showDuration: 4000,
+            transition: Fx.Transitions.Quad.easeOut,
+            inertia: true,
+            autoposition: true,
+            width: 420,
+            height: 200,
+            rangex: [-100, 100],
+            rangey: [-100, 100],
+            callOnUpdate: function (items) {
+                var root = Math.ceil(Math.sqrt(maxLength));
+                document.id("wall").setStyle("margin-left", 0);
+                var i = 0;
+                (function () {
+                    try {
+                        var position =
+                            (Math.abs(items[i].y) % root) * root + Math.abs(items[i].x) % root;
+                        if (position > maxLength) {
+                            position = Math.floor(Math.random() * maxLength);
+                        }
+                        var file = imagewall[position][0];
+                        var img = new Element("img[src=" + file + "]");
+                        img
+                            .inject(items[i].node)
+                            .fade("hide")
+                            .fade("in");
+                        var list = new Element("ul");
+                        list.setProperty("class", "slideshow");
+                        for (var j = 0; j < imagewall[position][1].length; j++) {
+                            var slide = new Element("li");
+                            new Element("img", {
+                                src: imagewall[position][1][j][0]
+                            }).inject(slide);
+                            var desc = new Element("span", {
+                                html: imagewall[position][1][j][1]
+                            });
+                            var div = new Element("div");
+                            div.setProperty("class", "wall-item-description");
+                            desc.inject(div);
+                            div.inject(slide);
+                            slide.inject(list);
+                        }
+                        list.inject(items[i].node);
+                        var stop = false;
+                        var firstSlide = true;
+                        items[i].node.addEvents({
+                            mouseenter: function (event) {
+                                list.getChildren("li").setStyles({
+                                    visibility: "hidden",
+                                    opacity: 0
+                                });
+                                stop = false;
+                                if (imagewall[position][1].length) {
+                                    (function (item) {
+                                        item.fade("in");
+                                        if (firstSlide) {
+                                            delay = 1000;
+                                            firstSlide = false;
+                                        } else {
+                                            delay = 2000;
+                                        }
+                                        if (item.getNext("li") != null) {
+                                            var tmpslide = arguments.callee;
+                                            (function () {
+                                                item.fade("out");
+                                                if (!stop) tmpslide(item.getNext("li"));
+                                            }.delay(delay));
+                                        } else if (item.getSiblings("li").length > 0) {
+                                            var tmpslide = arguments.callee;
+                                            (function () {
+                                                item.fade("out");
+                                                if (!stop) tmpslide(item.getSiblings("li").pop());
+                                            }.delay(delay));
+                                        }
+                                    })(new Element(list.getFirst("li")));
+                                    img.fade("out");
+                                }
+                                return false;
+                            },
+                            mouseleave: function () {
+                                stop = true;
+                                firstSlide = true;
+                                if (imagewall[position][1].length) {
+                                    list.getChildren("li").fade("out");
+                                    img.fade("in");
+                                }
+                            }
+                        });
+                        i++;
+                        if (i < items.length) {
+                            var tmp = arguments.callee;
+                            (function () {
+                                tmp();
+                            }.delay(40));
+                        } else {
+                        }
+                    } catch (e) { }
+                })();
+            }
+        });
+        window.setTimeout(function () {
+            wallFluid.initWall();
+        }, 1800);
+    });
+
+// GOOGLE ANALYTICS [for demonstration purposes only]
+// intentionally REMOVED!
+
+</script>
+<!-- scripts end -->
+
+<?php wp_footer(); ?>
 </body>
 </html>
