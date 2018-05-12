@@ -241,9 +241,11 @@ function child_hook_for_wp_head() {?>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
 	// ShortLink styles
+	<?php if (is_singular()) : ?>
     document.addEventListener("DOMContentLoaded", function(event) { 
         document.getElementById("shortlink").innerHTML = document.getElementById("shortlink").innerHTML + '/';
     });
+	<?php endif; ?>
 
     function copyToClipboard(element) {
         jQuery(function ($) {
