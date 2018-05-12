@@ -20,7 +20,7 @@
 			    <ul>
 				<li class="linkedin"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Linkedin')" target="_blank" href="https://www.linkedin.com/in/NimaShafiezadeh/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 				<li class="twitter"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Twitter'" target="_blank" href="https://www.twitter.com/Retooeter/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			      <li class="instagram"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Telegram')" target="_blank" href="https://www.instagram.com/NimaShafiezadeh/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			      <li class="instagram"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Instagram')" target="_blank" href="https://www.instagram.com/NimaShafiezadeh/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 			    </ul>
 			</div>
               
