@@ -45,7 +45,7 @@
                                 </h1>
                             </header>
                         </span>
-                        <div>
+                        <div class="content">
                             حتی چیزهایی که ما دوست داریم، گاهی اوقات می‌شکنند؛ دیگه یه لینک که این حرف‌ها رو نداره :)
                             <br/> پیوند درخواست‌شده پیدا نشد و این تمام چیزی است که من می‌دانم و از صبر و شکیبایی شما متشکرم.
                             <br/>
@@ -57,10 +57,11 @@
                             </ul>
                         </div>
                         <img src="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/images/404.gif" class="" id="gif404" style="display:none;">
+                        <div class="card-action">
+                            <?php get_search_form(); ?>
+                        </div>
                     </div>
-                    <div class="card-action">
-                        <?php get_search_form(); ?>
-                    </div>
+                    
                     <div>
 
 

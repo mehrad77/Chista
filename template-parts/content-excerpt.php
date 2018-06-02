@@ -22,8 +22,12 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content entry-excerpt clearfix">
-		<?php the_excerpt(); ?>
-		<?php chista_more_link(); ?>
+<!-- 		<?php the_excerpt(); ?>
+		<?php chista_more_link(); ?> -->
+		<?php 
+		echo wp_trim_words(get_the_content(''),75);
+		chista_more_link()
+		?>
 	</div><!-- .entry-content -->
 
 </article>
