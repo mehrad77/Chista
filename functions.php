@@ -126,6 +126,9 @@ function chista_widgets_init() {
 }
 add_action( 'widgets_init', 'chista_widgets_init' );
 
+// ========== load setting page files ========== //
+get_template_part('setting-defination');
+// ========== load setting page files ========== //
 
 /**
  * Enqueue scripts and styles.
