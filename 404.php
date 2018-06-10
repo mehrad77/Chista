@@ -51,8 +51,8 @@
                             <br/>
                             <br/> با‌این حال شما می‌توانید:
                             <ul>
-                                <li>یا یک <a target="_blank" href="https://www.nima.today/contact/"> ایمیل به من </a> بزنید و مشکل را با من در میان بگذارید؛</li>
-                                <li>یا <a target="_blank" href="https://www.nima.today/about/">دربارۀ من</a> بیشتر بخوانید؛</li>
+                                <li>یا یک <a target="_blank" href="<?php echo get_site_url(); ?>/contact/"> ایمیل به من </a> بزنید و مشکل را با من در میان بگذارید؛</li>
+                                <li>یا <a target="_blank" href="<?php echo get_site_url(); ?>/about/">دربارۀ من</a> بیشتر بخوانید؛</li>
                                 <li>&nbsp;با استفاده از کادر جست&zwnj;وجوی زیر، در بلاگم جست&zwnj;وجو کنید یا به <a target="_blank" href="<?php echo get_home_url(); ?>" >صفحۀ اصلی</a> بروید.</li>
                             </ul>
                         </div>

@@ -49,7 +49,13 @@ function display_twitter_element()
 function display_instagram_element()
 {
 	?>
-    	<input type="text" name="instagram_url" id="twitter_url" value="<?php echo get_option('twitter_url'); ?>" />
+    	<input type="text" name="instagram_url" id="instagram_url" value="<?php echo get_option('instagram_url'); ?>" />
+    <?php
+}
+function display_instagram_element()
+{
+	?>
+    	<input type="text" name="linkedin_url" id="linkedin_url" value="<?php echo get_option('linkedin_url'); ?>" />
     <?php
 }
 /****************************************4*/
@@ -69,8 +75,6 @@ function display_copyright_element()
 }
 /****************************************5*/
 
-
-
 function display_theme_panel_fields()
 {
 	add_settings_section("section", "تنظیمات عمومی", null, "theme-options");
@@ -78,12 +82,14 @@ function display_theme_panel_fields()
 	add_settings_field("twitter_url", "نام‌کاربری توییتر", "display_twitter_element", "theme-options", "section");
     add_settings_field("instagram_url", "نام‌کاربری اینستاگرام", "display_instagram_element", "theme-options", "section");
     add_settings_field("telegram_url", "نام‌کاربری تلگرام", "display_telegram_element", "theme-options", "section");
+    add_settings_field("linkedin_url", "نام‌کاربری تلگرام", "display_linkedin_element", "theme-options", "section");
     add_settings_field("copyright", "متن کپی‌رایت", "display_copyright_element", "theme-options", "section");
     add_settings_field("theme_layout", "Do you want the layout to be responsive?", "display_layout_element", "theme-options", "section");
 
     register_setting("section", "twitter_url");
     register_setting("section", "instagram_url");
     register_setting("section", "telegram_url");
+    register_setting("section", "linkedin_url");
     register_setting("section", "copyright");
     register_setting("section", "theme_layout");
 
@@ -118,5 +124,4 @@ add_action("admin_init", "display_theme_panel_fields");
 
 /************************************6*/
 $layout = get_option('theme_layout');
-$facebook_url = get_option('facebook_url');
 $twitter_url = get_option('twitter_url');

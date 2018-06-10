@@ -25,7 +25,7 @@
 			</div>
               
             
-            <span onclick="ga('send', 'event', 'engagement', 'footer_click', 'copyright')">از حقوق مادی و معنوی سایتم گذشتم :)</span>
+            <span onclick="ga('send', 'event', 'engagement', 'footer_click', 'copyright')"><?php echo get_option('copyright'); ?></span>
 			<div id="footer-text" class="site-info">
 				<?php do_action( 'chista_footer_text' ); ?>
 				<?php //chista_credit_link(); ?>
