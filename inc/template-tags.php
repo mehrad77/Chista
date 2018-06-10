@@ -309,7 +309,7 @@ if ( ! function_exists( 'chista_more_link' ) ) :
 	function chista_more_link() {
 		?>
 
-		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link" target="_blank"><?php esc_html_e( 'Continue reading &raquo;', 'chista' ); ?></a>
+		<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Continue reading &raquo;', 'chista' ); ?></a>
 
 		<?php
 	}
