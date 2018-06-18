@@ -258,7 +258,7 @@ function child_hook_for_wp_head() {?>
 				document.execCommand("copy");
 				$temp.remove();
 				$.notify.defaults({ className: "success" });
-				$("#shortlink").notify("کپی شد",{ position:"left" });
+				$("#shortlink").notify("<?php esc_html_e('کپی شد','chista'); ?>",{ position:"left" });
 			});
 		}
 

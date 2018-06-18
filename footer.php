@@ -31,12 +31,12 @@
 				<?php do_action( 'chista_footer_text' ); ?>
 				<?php //chista_credit_link(); ?>
 				<small class="credit-link" onclick="ga('send', 'event', 'engagement', 'footer_click', 'credit')" >
-					قدرت گرفته از  <a href="https://mehrad.js.org/Chista" title="قالب وردپرس چیستا">چیستا</a> 
-		<?php if(!get_option('copyright_theme')):  ?>
+				<?php esc_html_e('قدرت گرفته از','chista'); ?>  <a href="https://mehrad.js.org/Chista" title="قالب وردپرس چیستا"><?php esc_html_e('چیستا','chista'); ?></a> 
+				<?php if(!get_option('copyright_theme')):  ?>
 					| طراحی با <i class="fa fa-heart" aria-hidden="true"></i> توسط <a href="https://mehrad.js.org" title="مهراد روستا">مهراد روستا</a>
-		<?php else:  
-			echo get_option('copyright_theme'); ?>
-		<?php endif; ?>
+				<?php else:  
+					echo get_option('copyright_theme'); ?>
+				<?php endif; ?>
 
 				</span>
 			</div><!-- .site-info -->

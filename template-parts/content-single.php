@@ -38,7 +38,7 @@
 	<?php the_tags( 'برچسب‎ها: ','، ' ); ?>
 	<hr>
 	<div class="social-share-single social">
-     <span style="display:block;">به اشتراک بگذارید!</span>
+     <span style="display:block;"><?php esc_html_e('به اشتراک بگذارید!','chista'); ?></span>
 
                                  <ul>
 <li class="linkedin"><a data-toggle="tooltip" data-placement="right" onclick="ga('send', 'event', 'engagement', 'share', 'Linkedin','<?php echo wp_get_shortlink(); ?>')" title="<?php _e('اشتراک گذاشتن در لینکدین','chista') ?>" href="http://www.linkedin.com/shareArticle?title=<?php the_title(); ?>&url=<?php wp_get_shortlink(); ?>" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>

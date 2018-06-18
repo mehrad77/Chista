@@ -32,7 +32,7 @@
 		<?php //the_content( esc_html__( 'Continue reading &raquo;', 'chista' ) ); ?>
 		<p>
 		<?php echo wp_trim_words(get_the_content(''),70,'... ') ?>
-		<a href="<?php the_permalink(); ?>" target="_blank" class="more-link">ادامه مطلب »</a>
+		<a href="<?php the_permalink(); ?>" target="_blank" class="more-link"><?php esc_html_e('ادامه مطلب','chista'); ?> »</a>
 		</p>
 		
 	</div><!-- .entry-content -->
