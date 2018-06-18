@@ -48,5 +48,5 @@ endif;
 wp_head();
 ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() )  ?>/css/font-awesome.min.css">
+<script src="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/js/notify.min.js"></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/css/font-awesome.min.css">
