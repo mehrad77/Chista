@@ -241,54 +241,55 @@ require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php'
 
 // Add custom scripts here
 function child_hook_for_wp_head() {?>
-<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
 	// ShortLink styles
-	<?php if (is_singular()) : ?>
-    document.addEventListener("DOMContentLoaded", function(event) { 
-        document.getElementById("shortlink").innerHTML = document.getElementById("shortlink").innerHTML + '/';
-    });
-	<?php endif; ?>
+	jQuery(document).ready(function($) {
+		<?php if (is_singular()) : ?>
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			document.getElementById("shortlink").innerHTML = document.getElementById("shortlink").innerHTML + '/';
+		});
+		<?php endif; ?>
 
-    function copyToClipboard(element) {
-        jQuery(function ($) {
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($(element).text()).select();
-            document.execCommand("copy");
-            $temp.remove();
-            $.notify.defaults({ className: "success" });
-            $("#shortlink").notify("کپی شد",{ position:"left" });
-        });
-    }
-
-	var toFaDigit = function(digit) {
-	var ret = "";
-	for (var i = 0, len = digit.length; i < len; i++) {
-		if ("0123456789".indexOf(digit.charAt(i)) !== -1) {
-		// Is a number
-		ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
-		} else {
-		ret += digit.charAt(i);
+		function copyToClipboard(element) {
+			jQuery(function ($) {
+				var $temp = $("<input>");
+				$("body").append($temp);
+				$temp.val($(element).text()).select();
+				document.execCommand("copy");
+				$temp.remove();
+				$.notify.defaults({ className: "success" });
+				$("#shortlink").notify("کپی شد",{ position:"left" });
+			});
 		}
-	}
 
-	return ret;
-	};
-	$(document).ready(function() {
-	if ($(".page-numbers").length) {
-		$(".page-numbers").each(function(index) {
-		console.log(index + ": " + $(this).text());
-		$(this).text(toFaDigit($(this).text()));
-		});
-	}
+		var toFaDigit = function(digit) {
+		var ret = "";
+		for (var i = 0, len = digit.length; i < len; i++) {
+			if ("0123456789".indexOf(digit.charAt(i)) !== -1) {
+			// Is a number
+			ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
+			} else {
+			ret += digit.charAt(i);
+			}
+		}
 
-	if ($(".meta-reading-time").length) {
-		$(".meta-reading-time").each(function(index) {
-		console.log(index + ": " + $(this).text());
-		$(this).text(toFaDigit($(this).text()));
+		return ret;
+		};
+		$(document).ready(function() {
+		if ($(".page-numbers").length) {
+			$(".page-numbers").each(function(index) {
+			console.log(index + ": " + $(this).text());
+			$(this).text(toFaDigit($(this).text()));
+			});
+		}
+
+		if ($(".meta-reading-time").length) {
+			$(".meta-reading-time").each(function(index) {
+			console.log(index + ": " + $(this).text());
+			$(this).text(toFaDigit($(this).text()));
+			});
+		}
 		});
-	}
 	});
 </script>
 <?php
