@@ -47,6 +47,11 @@ function chista_body_classes( $classes ) {
 		$classes[] = 'categories-hidden';
 	}
 
+	// Hide Time?
+	if ( false === $theme_options['meta_time'] ) {
+		$classes[] = 'times-hidden';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'chista_body_classes' );

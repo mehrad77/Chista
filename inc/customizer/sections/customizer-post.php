@@ -79,6 +79,22 @@ function chista_customize_register_post_settings( $wp_customize ) {
 		'priority' => 40,
 	) );
 
+	// Add Setting and Control for showing post readingtime.
+	$wp_customize->add_setting( 'chista_theme_options[meta_time]', array(
+		'default'           => true,
+		'type'           	=> 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'chista_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[meta_time]', array(
+		'label'    => esc_html__( 'Display time to read', 'chista' ),
+		'section'  => 'chista_section_post',
+		'settings' => 'chista_theme_options[meta_time]',
+		'type'     => 'checkbox',
+		'priority' => 50,
+	) );
+
 	// Add Single Post Headline.
 	$wp_customize->add_control( new chista_Customize_Header_Control(
 		$wp_customize, 'chista_theme_options[single_post]', array(
@@ -87,7 +103,7 @@ function chista_customize_register_post_settings( $wp_customize ) {
 			'settings' => array(),
 			'priority' => 50,
 		)
-	) );
+	));
 
 	// Add Setting and Control for showing post tags.
 	$wp_customize->add_setting( 'chista_theme_options[meta_tags]', array(

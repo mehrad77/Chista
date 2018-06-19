@@ -60,6 +60,7 @@ function chista_default_options() {
 		'meta_date'             => true,
 		'meta_author'           => true,
 		'meta_category'         => true,
+		'meta_time'         	=> false,
 		'meta_tags'             => true,
 		'post_navigation'       => true,
 		'post_image_archives'   => true,

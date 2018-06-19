@@ -253,7 +253,7 @@ if ( ! function_exists( 'chista_meta_time' ) ) :
 	 * Displays the post time
 	 */
 	function chista_meta_time() {
-		return '<span class="meta-date meta-reading-time">' . ' مدت زمان مطالعه ' . round(word_count()) . ' دقیقه ' . '</span>';
+		return '<span class="meta-time">' . ' مدت زمان مطالعه ' . round(word_count()) . ' دقیقه ' . '</span>';
 	}
 endif;
 
