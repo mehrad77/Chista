@@ -164,6 +164,71 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 80,
 	) );
+
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_twitter]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_twitter]', array(
+		'label'    => esc_html__( 'Twitter url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_twitter]',
+		'type'     => 'text',
+		'priority' => 81,
+	) );
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_instagram]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_instagram]', array(
+		'label'    => esc_html__( 'Instagram url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_instagram]',
+		'type'     => 'text',
+		'priority' => 82,
+	) );
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_linkedin]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_linkedin]', array(
+		'label'    => esc_html__( 'Linkedin url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_linkedin]',
+		'type'     => 'text',
+		'priority' => 81,
+	) );
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_slideshare]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_slideshare]', array(
+		'label'    => esc_html__( 'Slideshare url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_slideshare]',
+		'type'     => 'text',
+		'priority' => 81,
+	) );
 }
 add_action( 'customize_register', 'chista_customize_register_blog_settings' );
 
