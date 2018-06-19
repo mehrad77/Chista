@@ -137,6 +137,33 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 60,
 	) );
+
+
+	// Add Social Widgets Headline.
+	$wp_customize->add_control( new chista_Customize_Header_Control(
+		$wp_customize, 'chista_theme_options[blog_social_widgets_title]', array(
+			'label' => esc_html__( 'Social Widgets', 'chista' ),
+			'section' => 'chista_section_blog',
+			'settings' => array(),
+			'priority' => 70,
+		)
+	) );
+
+	// Add Setting and Control for showing social widgets.
+	$wp_customize->add_setting( 'chista_theme_options[blog_social_widgets]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chista_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[blog_social_widgets]', array(
+		'label'    => esc_html__( 'Display social widgets on blog index', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[blog_social_widgets]',
+		'type'     => 'checkbox',
+		'priority' => 80,
+	) );
 }
 add_action( 'customize_register', 'chista_customize_register_blog_settings' );
 

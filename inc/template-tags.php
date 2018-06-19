@@ -402,3 +402,18 @@ function chista_credit_link() {
 
 	<?php
 }
+
+function chista_social_widgets() {
+	// check that social widgets are activated on blog.
+	if ( true === chista_get_option( 'blog_social_widgets' ) ) {
+	    ?> <div class="social">
+			    <ul>
+					<li class="linkedin"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Linkedin')" target="_blank" href="<?php echo get_option('linkedin_url') ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li class="twitter"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Twitter'" target="_blank" href="<?php echo get_option('twitter_url') ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li class="instagram"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Instagram')" target="_blank" href="<?php echo get_option('instagram_url') ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+			    	<li class="slideshare"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Slideshare')" target="_blank" href="<?php echo get_option('slideshare_url') ?>"><i class="fa fa-slideshare" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		<?php
+	}
+}
