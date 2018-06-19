@@ -45,8 +45,7 @@ function chista_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'chista' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/chista/', 'chista' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=chista&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'chista' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=chista&utm_source=theme-info&utm_campaign=chista" target="_blank"><?php esc_html_e( 'Theme Demo', 'chista' ); ?></a>
-				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/chista-documentation/', 'chista' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=chista&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'chista' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://mehrad.js.org/Chista/docs', 'chista' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=chista&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'chista' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/chista/reviews/?filter=5', 'chista' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'chista' ); ?></a>
 			</p>
 		</div>
@@ -98,7 +97,7 @@ function chista_theme_info_page() {
 
 		<hr>
 
-		<div id="more-features">
+		<!-- <div id="more-features">
 
 			<h3><?php esc_html_e( 'Get more features', 'chista' ); ?></h3>
 
@@ -140,7 +139,7 @@ function chista_theme_info_page() {
 
 			</div>
 
-		</div>
+		</div> -->
 
 		<hr>
 
@@ -148,7 +147,7 @@ function chista_theme_info_page() {
 
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'chista' ),
 				$theme->display( 'Name' ),
-				'<a target="_blank" href="' . __( 'https://themezee.com/', 'chista' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=chista" title="ThemeZee">ThemeZee</a>',
+				'<a target="_blank" href="' . __( 'https://mehrad.js.org/', 'chista' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=chista" title="ThemeZee">مهراد روستا</a>',
 				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/chista/reviews/?filter=5', 'chista' ) . '" title="' . esc_attr__( 'Review chista', 'chista' ) . '">' . esc_html__( 'rate it', 'chista' ) . '</a>'); ?>
 			</p>
 
