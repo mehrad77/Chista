@@ -58,6 +58,7 @@ function chista_default_options() {
 		'excerpt_length'        => 35,
 		'blog_magazine_widgets' => true,
 		'blog_social_widgets' 	=> false,
+		'blog_social_metatags' 	=> false,
 		'meta_date'             => true,
 		'meta_author'           => true,
 		'meta_category'         => true,

@@ -165,6 +165,22 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'priority' => 80,
 	) );
 
+	// Add Setting and Control for showing social meta tags.
+	$wp_customize->add_setting( 'chista_theme_options[blog_social_metatags]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chista_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[blog_social_metatags]', array(
+		'label'    => esc_html__( 'Display social Metatags (if you dont have any plugin for it)', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[blog_social_metatags]',
+		'type'     => 'checkbox',
+		'priority' => 85,
+	) );
+
 
 	// Add Social Links
 	$wp_customize->add_setting( 'chista_theme_options[social_twitter]', array(
@@ -179,7 +195,7 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'chista_section_blog',
 		'settings' => 'chista_theme_options[social_twitter]',
 		'type'     => 'text',
-		'priority' => 81,
+		'priority' => 90,
 	) );
 
 	// Add Social Links
@@ -195,7 +211,7 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'chista_section_blog',
 		'settings' => 'chista_theme_options[social_instagram]',
 		'type'     => 'text',
-		'priority' => 82,
+		'priority' => 92,
 	) );
 
 	// Add Social Links
@@ -211,7 +227,7 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'chista_section_blog',
 		'settings' => 'chista_theme_options[social_linkedin]',
 		'type'     => 'text',
-		'priority' => 81,
+		'priority' => 91,
 	) );
 
 	// Add Social Links
@@ -227,7 +243,7 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'chista_section_blog',
 		'settings' => 'chista_theme_options[social_slideshare]',
 		'type'     => 'text',
-		'priority' => 81,
+		'priority' => 91,
 	) );
 }
 add_action( 'customize_register', 'chista_customize_register_blog_settings' );
