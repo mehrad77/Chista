@@ -253,7 +253,12 @@ if ( ! function_exists( 'chista_meta_time' ) ) :
 	 * Displays the post time
 	 */
 	function chista_meta_time() {
-		return '<span class="meta-time">' . ' مدت زمان مطالعه ' . round(word_count()) . ' دقیقه ' . '</span>';
+		if (round(word_count()) == 0){
+			return '';
+		}
+		else {
+			return '<span class="meta-time">' . ' زمان مطالعه ' . round(word_count()) . ' دقیقه ' . '</span>';
+		}
 	}
 endif;
 
@@ -401,20 +406,4 @@ function chista_credit_link() {
 	</span>
 
 	<?php
-}
-
-function chista_social_widgets() {
-	// check that social widgets are activated on blog.
-	if ( true === chista_get_option( 'blog_social_widgets' ) ) {
-		$theme_options = chista_theme_options();
-	    ?> <div class="social">
-			    <ul>
-					<li class="linkedin"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Linkedin')" target="_blank" href="<?php echo $theme_options['social_linkedin'] ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-					<li class="twitter"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Twitter'" target="_blank" href="<?php echo $theme_options['social_twitter'] ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li class="instagram"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Instagram')" target="_blank" href="<?php echo $theme_options['social_instagram'] ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-			    	<li class="slideshare"><a class="transition2s"  onclick="ga('send', 'event', 'engagement', 'social_click', 'Slideshare')" target="_blank" href="<?php echo $theme_options['social_slideshare'] ?>"><i class="fa fa-slideshare" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-		<?php
-	}
 }

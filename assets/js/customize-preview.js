@@ -6,165 +6,153 @@
  * @package chista
  */
 
-(function($) {
-  // Site Title textfield.
-  wp.customize("blogname", function(value) {
-    value.bind(function(to) {
-      $(".site-title a").text(to);
-    });
-  });
+( function( $ ) {
 
-  // Site Description textfield.
-  wp.customize("blogdescription", function(value) {
-    value.bind(function(to) {
-      $(".site-description").text(to);
-    });
-  });
+	// Site Title textfield.
+	wp.customize( 'blogname', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-title a' ).text( to );
+		} );
+	} );
 
-  // Site Title checkbox.
-  wp.customize("chista_theme_options[site_title]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        hideElement(".site-title");
-      } else {
-        showElement(".site-title");
-      }
-    });
-  });
+	// Site Description textfield.
+	wp.customize( 'blogdescription', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-description' ).text( to );
+		} );
+	} );
 
-  // Site Description checkbox.
-  wp.customize("chista_theme_options[site_description]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        hideElement(".site-description");
-      } else {
-        showElement(".site-description");
-      }
-    });
-  });
+	// Site Title checkbox.
+	wp.customize( 'chista_theme_options[site_title]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.site-title' );
+			} else {
+				showElement( '.site-title' );
+			}
+		} );
+	} );
 
-  // Sidebar Position.
-  wp.customize("chista_theme_options[sidebar_position]", function(value) {
-    value.bind(function(newval) {
-      if (
-        "left-sidebar" === newval &&
-        false === $("body").hasClass("no-sidebar")
-      ) {
-        $("body").addClass("sidebar-left");
-      } else {
-        $("body").removeClass("sidebar-left");
-      }
-    });
-  });
+	// Site Description checkbox.
+	wp.customize( 'chista_theme_options[site_description]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.site-description' );
+			} else {
+				showElement( '.site-description' );
+			}
+		} );
+	} );
 
-  // Blog Title textfield.
-  wp.customize("chista_theme_options[blog_title]", function(value) {
-    value.bind(function(to) {
-      $(".blog-header .blog-title").text(to);
-    });
-  });
+	// Sidebar Position.
+	wp.customize( 'chista_theme_options[sidebar_position]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'left-sidebar' === newval && false === $( 'body' ).hasClass( 'no-sidebar' ) ) {
+				$( 'body' ).addClass( 'sidebar-left' );
+			} else {
+				$( 'body' ).removeClass( 'sidebar-left' );
+			}
+		} );
+	} );
 
-  // Blog Description textfield.
-  wp.customize("chista_theme_options[blog_description]", function(value) {
-    value.bind(function(to) {
-      $(".blog-header .blog-description").text(to);
-    });
-  });
+	// Blog Title textfield.
+	wp.customize( 'chista_theme_options[blog_title]', function( value ) {
+		value.bind( function( to ) {
+			$( '.blog-header .blog-title' ).text( to );
+		} );
+	} );
 
-  // Post Date checkbox.
-  wp.customize("chista_theme_options[meta_date]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        $("body").addClass("date-hidden");
-      } else {
-        $("body").removeClass("date-hidden");
-      }
-    });
-  });
+	// Blog Description textfield.
+	wp.customize( 'chista_theme_options[blog_description]', function( value ) {
+		value.bind( function( to ) {
+			$( '.blog-header .blog-description' ).text( to );
+		} );
+	} );
 
-  // Post Author checkbox.
-  wp.customize("chista_theme_options[meta_author]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        $("body").addClass("author-hidden");
-      } else {
-        $("body").removeClass("author-hidden");
-      }
-    });
-  });
+	// Post Date checkbox.
+	wp.customize( 'chista_theme_options[meta_date]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				$( 'body' ).addClass( 'date-hidden' );
+			} else {
+				$( 'body' ).removeClass( 'date-hidden' );
+			}
+		} );
+	} );
 
-  // Post Category checkbox.
-  wp.customize("chista_theme_options[meta_category]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        $("body").addClass("categories-hidden");
-      } else {
-        $("body").removeClass("categories-hidden");
-      }
-    });
-  });
+	// Post Author checkbox.
+	wp.customize( 'chista_theme_options[meta_author]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				$( 'body' ).addClass( 'author-hidden' );
+			} else {
+				$( 'body' ).removeClass( 'author-hidden' );
+			}
+		} );
+	} );
 
-  // Post Time checkbox.
-  wp.customize("chista_theme_options[meta_time]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        $("body").addClass("times-hidden");
-      } else {
-        $("body").removeClass("times-hidden");
-      }
-    });
-  });
+	// Post Category checkbox.
+	wp.customize( 'chista_theme_options[meta_category]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				$( 'body' ).addClass( 'categories-hidden' );
+			} else {
+				$( 'body' ).removeClass( 'categories-hidden' );
+			}
+		} );
+	} );
 
-  // Post Tags checkbox.
-  wp.customize("chista_theme_options[meta_tags]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        hideElement(".type-post .entry-footer .entry-tags");
-      } else {
-        showElement(".type-post .entry-footer .entry-tags");
-      }
-    });
-  });
+	// Post Tags checkbox.
+	wp.customize( 'chista_theme_options[meta_tags]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.type-post .entry-footer .entry-tags' );
+			} else {
+				showElement( '.type-post .entry-footer .entry-tags' );
+			}
+		} );
+	} );
 
-  // Post Navigation checkbox.
-  wp.customize("chista_theme_options[post_navigation]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        hideElement(".type-post .entry-footer .post-navigation");
-      } else {
-        showElement(".type-post .entry-footer .post-navigation");
-      }
-    });
-  });
+	// Post Navigation checkbox.
+	wp.customize( 'chista_theme_options[post_navigation]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.type-post .entry-footer .post-navigation' );
+			} else {
+				showElement( '.type-post .entry-footer .post-navigation' );
+			}
+		} );
+	} );
 
-  // Site Description checkbox.
-  wp.customize("chista_theme_options[credit_link]", function(value) {
-    value.bind(function(newval) {
-      if (false === newval) {
-        hideElement(".site-info .credit-link");
-      } else {
-        showElement(".site-info .credit-link");
-      }
-    });
-  });
+	// Site Description checkbox.
+	wp.customize( 'chista_theme_options[credit_link]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				hideElement( '.site-info .credit-link' );
+			} else {
+				showElement( '.site-info .credit-link' );
+			}
+		} );
+	} );
 
-  function hideElement(element) {
-    $(element).css({
-      clip: "rect(1px, 1px, 1px, 1px)",
-      position: "absolute",
-      width: "1px",
-      height: "1px",
-      overflow: "hidden"
-    });
-  }
+	function hideElement( element ) {
+		$( element ).css({
+			clip: 'rect(1px, 1px, 1px, 1px)',
+			position: 'absolute',
+			width: '1px',
+			height: '1px',
+			overflow: 'hidden'
+		});
+	}
 
-  function showElement(element) {
-    $(element).css({
-      clip: "auto",
-      position: "relative",
-      width: "auto",
-      height: "auto",
-      overflow: "visible"
-    });
-  }
-})(jQuery);
+	function showElement( element ) {
+		$( element ).css({
+			clip: 'auto',
+			position: 'relative',
+			width: 'auto',
+			height: 'auto',
+			overflow: 'visible'
+		});
+	}
+
+} )( jQuery );

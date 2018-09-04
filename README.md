@@ -34,57 +34,61 @@ For more information about chista please go to https://mehrad.js.org
 
 ## Changelog
 
+### 1.4.3
+
+- // To Do
+
 ### 1.4.2
 
-* add GA event tracking for (social share / footer social links)
+- add GA event tracking for (social share / footer social links)
 
 ### 1.4.1
 
-* fix IRANSans font issues
+- fix IRANSans font issues
 
 ### 1.4
 
-* added IRANSans v5
-* added font-awesome
-* improve metatags
-* added badge class to catageroy widgets
-* added legacy 404 page
-* changed post style to overly mode (reverting to classic mode will be available in next versions)
-* translating to persian
-* added footnote_plugin css's
-* added time to read to metas
-* added login page css
+- added IRANSans v5
+- added font-awesome
+- improve metatags
+- added badge class to catageroy widgets
+- added legacy 404 page
+- changed post style to overly mode (reverting to classic mode will be available in next versions)
+- translating to persian
+- added footnote_plugin css's
+- added time to read to metas
+- added login page css
 
 ### 1.3
 
-* added default theme fonts as local fonts
-* use local fonts instead of Google fonts for GDPR compliance
+- added default theme fonts as local fonts
+- use local fonts instead of Google fonts for GDPR compliance
 
 ### 1.2.3
 
-* improved styling of image captions
-* improved styling of galleries
+- improved styling of image captions
+- improved styling of galleries
 
 ### 1.2.2
 
-* added action hook for author bio
-* set fallback refresh to false for blog title and description
+- added action hook for author bio
+- set fallback refresh to false for blog title and description
 
 ### 1.2.1
 
-* added new setting to deactivate Magazine widgets on blog index
-* fixed styling of site title
+- added new setting to deactivate Magazine widgets on blog index
+- fixed styling of site title
 
 ### 1.2
 
-* added selective refresh to all theme settings
-* added function to return single theme option
-* improved structure of theme options
+- added selective refresh to all theme settings
+- added function to return single theme option
+- improved structure of theme options
 
 ### 1.1
 
-* added SVG Icons instead of Genericons font
-* added custom Magazine Widget Control in Customizer
+- added SVG Icons instead of Genericons font
+- added custom Magazine Widget Control in Customizer
 
 ### 1.0
 

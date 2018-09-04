@@ -42,6 +42,7 @@ if ( ! function_exists( 'chista_setup' ) ) :
 		// Register Navigation Menus.
 		register_nav_menus( array(
 			'primary'   => esc_html__( 'Main Navigation', 'chista' ),
+			'footer'   => esc_html__( 'Footer Navigation', 'chista' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -242,55 +243,54 @@ require get_template_directory() . '/inc/widgets/widget-magazine-posts-grid.php'
 // Add custom scripts here
 function child_hook_for_wp_head() {?>
 <script>
+jQuery(document).ready(function($) {
 	// ShortLink styles
-	jQuery(document).ready(function($) {
-		<?php if (is_singular()) : ?>
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			document.getElementById("shortlink").innerHTML = document.getElementById("shortlink").innerHTML + '/';
+	<?php if (is_singular()) : ?>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        document.getElementById("shortlink").innerHTML = document.getElementById("shortlink").innerHTML + '/';
+    });
+	<?php endif; ?>
+
+    function copyToClipboard(element) {
+        jQuery(function ($) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+            $.notify.defaults({ className: "success" });
+            $("#shortlink").notify("کپی شد",{ position:"left" });
+        });
+    }
+
+	var toFaDigit = function(digit) {
+	var ret = "";
+	for (var i = 0, len = digit.length; i < len; i++) {
+		if ("0123456789".indexOf(digit.charAt(i)) !== -1) {
+		// Is a number
+		ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
+		} else {
+		ret += digit.charAt(i);
+		}
+	}
+
+	return ret;
+	};
+	
+	if ($(".page-numbers").length) {
+		$(".page-numbers").each(function(index) {
+		console.log(index + ": " + $(this).text());
+		$(this).text(toFaDigit($(this).text()));
 		});
-		<?php endif; ?>
+	}
 
-		function copyToClipboard(element) {
-			jQuery(function ($) {
-				var $temp = $("<input>");
-				$("body").append($temp);
-				$temp.val($(element).text()).select();
-				document.execCommand("copy");
-				$temp.remove();
-				$.notify.defaults({ className: "success" });
-				$("#shortlink").notify("<?php esc_html_e('کپی شد','chista'); ?>",{ position:"left" });
-			});
-		}
-
-		var toFaDigit = function(digit) {
-		var ret = "";
-		for (var i = 0, len = digit.length; i < len; i++) {
-			if ("0123456789".indexOf(digit.charAt(i)) !== -1) {
-			// Is a number
-			ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
-			} else {
-			ret += digit.charAt(i);
-			}
-		}
-
-		return ret;
-		};
-		$(document).ready(function() {
-		if ($(".page-numbers").length) {
-			$(".page-numbers").each(function(index) {
-			console.log(index + ": " + $(this).text());
-			$(this).text(toFaDigit($(this).text()));
-			});
-		}
-
-		if ($(".meta-reading-time").length) {
-			$(".meta-reading-time").each(function(index) {
-			console.log(index + ": " + $(this).text());
-			$(this).text(toFaDigit($(this).text()));
-			});
-		}
+	if ($(".meta-time").length) {
+		$(".meta-time").each(function(index) {
+		console.log(index + ": " + $(this).text());
+		$(this).text(toFaDigit($(this).text()));
 		});
-	});
+	}
+});
 </script>
 <?php
 }
@@ -326,7 +326,7 @@ function word_count() {
 function my_login_logo() { ?>
     <style type="text/css">
     body {
-        background-image: linear-gradient(to left bottom, #c50048, #bc368b, #9561bd, #5781d3, #0097d0);
+        background-image: linear-gradient(to left bottom, #c50048, #bc368b, #9561bd, #5781d3, #0097d0) !important;
     }
     .login #backtoblog, .login #nav {
       display: none;
@@ -338,7 +338,7 @@ function my_login_logo() { ?>
       box-shadow: inset -20px -19px 20px 0px rgba(0,0,0,.13) !important;
     }
     .login h1 a {
-      background-image: none,url(https://www.nima.today/wp-content/uploads/2018/02/NimaShafiezadeh-300x300.jpg) !important;
+      background-image: none,url('https://www.nima.today/wp-content/uploads/2018/02/NimaShafiezadeh-300x300.jpg') !important;
       background-size: 90px !important;
       height: 100px !important;
       width: 100px !important;
