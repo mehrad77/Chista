@@ -137,6 +137,114 @@ function chista_customize_register_blog_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 60,
 	) );
+
+
+	// Add Social Widgets Headline.
+	$wp_customize->add_control( new chista_Customize_Header_Control(
+		$wp_customize, 'chista_theme_options[blog_social_widgets_title]', array(
+			'label' => esc_html__( 'Social Widgets', 'chista' ),
+			'section' => 'chista_section_blog',
+			'settings' => array(),
+			'priority' => 70,
+		)
+	) );
+
+	// Add Setting and Control for showing social widgets.
+	$wp_customize->add_setting( 'chista_theme_options[blog_social_widgets]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chista_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[blog_social_widgets]', array(
+		'label'    => esc_html__( 'Display social widgets on blog index', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[blog_social_widgets]',
+		'type'     => 'checkbox',
+		'priority' => 80,
+	) );
+
+	// Add Setting and Control for showing social meta tags.
+	$wp_customize->add_setting( 'chista_theme_options[blog_social_metatags]', array(
+		'default'           => true,
+		'type'              => 'option',
+		'transport'         => 'refresh',
+		'sanitize_callback' => 'chista_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[blog_social_metatags]', array(
+		'label'    => esc_html__( 'Display social Metatags (if you dont have any plugin for it)', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[blog_social_metatags]',
+		'type'     => 'checkbox',
+		'priority' => 85,
+	) );
+
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_twitter]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_twitter]', array(
+		'label'    => esc_html__( 'Twitter url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_twitter]',
+		'type'     => 'text',
+		'priority' => 90,
+	) );
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_instagram]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_instagram]', array(
+		'label'    => esc_html__( 'Instagram url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_instagram]',
+		'type'     => 'text',
+		'priority' => 92,
+	) );
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_linkedin]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_linkedin]', array(
+		'label'    => esc_html__( 'Linkedin url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_linkedin]',
+		'type'     => 'text',
+		'priority' => 91,
+	) );
+
+	// Add Social Links
+	$wp_customize->add_setting( 'chista_theme_options[social_slideshare]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'wp_kses_post',
+	) );
+
+	$wp_customize->add_control( 'chista_theme_options[social_slideshare]', array(
+		'label'    => esc_html__( 'Slideshare url', 'chista' ),
+		'section'  => 'chista_section_blog',
+		'settings' => 'chista_theme_options[social_slideshare]',
+		'type'     => 'text',
+		'priority' => 91,
+	) );
 }
 add_action( 'customize_register', 'chista_customize_register_blog_settings' );
 
