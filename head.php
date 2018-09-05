@@ -17,6 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#81007f">
 
 <?php
+wp_head();
 	if ( true === chista_get_option( 'blog_social_metatags' ) ):  
 		//Meta tags start ?>
 		<meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +37,7 @@
 		<?php if (is_singular()) :
 			global $post;
 			setup_postdata($post); ?>
-	
+
 			<meta name="twitter:title" content="<?php the_title() ?>" />
 			<meta name="twitter:description" content="<?php echo wp_trim_words(get_the_content(''),40,'... ') ?>" />
 			<meta property="og:description" content="<?php echo wp_trim_words(get_the_content(''),40,'... ') ?>" />
@@ -47,9 +48,13 @@
 			echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
 			echo '<meta name="twitter:image" content="' . esc_attr( $thumbnail_src[0] ) . '" />';
 		endif;
+		// if ( has_custom_logo() && is_front_page() ) :
+ 
+		// 	$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+		// 	echo '<meta name="twitter:image" content="' . esc_url( $image[0] ) . '" />';
+		// endif;
 	endif;
 //Meta tags end
-wp_head();
 ?>
 <script src="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/js/notify.min.js"></script>
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() )  ?>/assets/css/font-awesome.min.css">
